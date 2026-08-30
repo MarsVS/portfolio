@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Comprehensive Veterinary Care | VetCare</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            teal: '#087d72',
+                            tealHover: '#06635a',
+                            navy: '#0b1727',
+                            lightBg: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-lightBg font-sans text-slate-800 antialiased selection:bg-brand-teal selection:text-white min-h-screen flex flex-col justify-between">
+
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-brand-teal flex items-center justify-center text-white shadow-sm">
+                        <i class="fa-solid fa-shield-dog text-lg"></i>
+                    </div>
+                    <span class="font-bold text-slate-900 text-base sm:text-lg tracking-tight">Dr. Christopher Ngumu</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#" class="hover:text-brand-teal transition">Home</a>
+                    <a href="#" class="hover:text-brand-teal transition">About</a>
+                    <a href="#" class="text-brand-teal transition font-bold">Services</a>
+                    <a href="#" class="hover:text-brand-teal transition">Virtual Hospital</a>
+                    <a href="#" class="hover:text-brand-teal transition">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center">
+                    <a href="#" class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-semibold px-4 py-2 rounded-xl transition shadow-xs">
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-teal focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-3 font-medium text-sm">
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">Home</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">About</a>
+            <a href="#" class="block text-brand-teal font-semibold py-1.5">Services</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">Virtual Hospital</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">Contact</a>
+            <div class="pt-2">
+                <a href="#" class="block text-center bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition shadow-xs">
+                    Book a Consultation
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 flex-1 flex flex-col justify-center items-center space-y-10 sm:space-y-12">
+        
+        <div class="text-center space-y-2 max-w-2xl mx-auto">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-navy tracking-tight leading-tight">
+                Comprehensive Veterinary Care <br class="hidden sm:inline" />
+                For Every Stage of Your Pet's Life
+            </h1>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 w-full">
+            
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-notes-medical"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">General Consultations</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">Routine checkups & advice</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-syringe"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">Preventive Care</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">Vaccinations & wellness plans</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">Diagnostics</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">Lab, imaging & advanced tests</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">Surgery</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">Soft tissue, ortho & more</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">Dental Care</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">Teeth cleaning & oral health</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">Internal Medicine</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">Management of medical conditions</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-dna"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">Reproductive Care</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">Breeding & fertility management</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-clover"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">Nutrition & Wellness</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">Diet, weight & lifestyle management</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-hand-holding-medical"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">Emergency Care</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">Urgent, after-hours support</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-200 flex flex-col items-center text-center space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-xl mb-1">
+                    <i class="fa-solid fa-house-medical"></i>
+                </div>
+                <h2 class="font-bold text-slate-900 text-sm leading-snug">Home / Mobile Visits</h2>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed">At home care for your convenience</p>
+            </div>
+
+        </div>
+
+        <div class="pt-4">
+            <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-sm font-semibold px-8 py-3.5 rounded-xl shadow-sm transition transform hover:-translate-y-0.5">
+                Book a Consultation
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 font-medium">
+        <p>© 2026 Dr. Christopher Ngumu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (!menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
