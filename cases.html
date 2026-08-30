@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Cases - Dr. Christopher Ngumu | VetCare</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            teal: '#087d72',
+                            tealHover: '#06635a',
+                            navy: '#0b1727',
+                            lightBg: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-brand-lightBg font-sans text-slate-800 antialiased selection:bg-brand-teal selection:text-white min-h-screen flex flex-col justify-between">
+
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-brand-teal flex items-center justify-center text-white shadow-sm">
+                        <i class="fa-solid fa-stethoscope text-lg"></i>
+                    </div>
+                    <span class="font-bold text-slate-900 text-base sm:text-lg tracking-tight">Dr. Christopher Ngumu</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#" class="hover:text-brand-teal transition">Home</a>
+                    <a href="#" class="hover:text-brand-teal transition">About</a>
+                    <a href="#" class="text-brand-teal transition font-bold">Clinical Cases</a>
+                    <a href="#" class="hover:text-brand-teal transition">Virtual Hospital</a>
+                    <a href="#" class="hover:text-brand-teal transition">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center">
+                    <a href="#" class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-semibold px-4 py-2 rounded-xl transition shadow-xs">
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-teal focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-3 font-medium text-sm">
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">Home</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">About</a>
+            <a href="#" class="block text-brand-teal font-semibold py-1.5">Clinical Cases</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">Virtual Hospital</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">Contact</a>
+            <div class="pt-2">
+                <a href="#" class="block text-center bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition shadow-xs">
+                    Book a Consultation
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-1 flex flex-col justify-start items-center space-y-8 w-full">
+        
+        <div class="flex items-center gap-3 overflow-x-auto hide-scrollbar w-full justify-start sm:justify-center pb-1">
+            <button class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-brand-teal text-white shadow-xs whitespace-nowrap">
+                All Cases
+            </button>
+            <button class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                Surgery
+            </button>
+            <button class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                Internal Medicine
+            </button>
+            <button class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                Diagnostics
+            </button>
+            <button class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                Dentistry
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition duration-200 flex flex-col">
+                <div class="h-48 w-full bg-slate-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Foreign Body Removal" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 space-y-1">
+                    <h2 class="font-bold text-slate-900 text-sm sm:text-base">Foreign Body Removal</h2>
+                    <p class="text-xs text-slate-400 font-medium">Canine – Surgery</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition duration-200 flex flex-col">
+                <div class="h-48 w-full bg-slate-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Fracture Repair" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 space-y-1">
+                    <h2 class="font-bold text-slate-900 text-sm sm:text-base">Fracture Repair</h2>
+                    <p class="text-xs text-slate-400 font-medium">Canine – Orthopedics</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition duration-200 flex flex-col">
+                <div class="h-48 w-full bg-slate-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Pyometra Treatment" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 space-y-1">
+                    <h2 class="font-bold text-slate-900 text-sm sm:text-base">Pyometra Treatment</h2>
+                    <p class="text-xs text-slate-400 font-medium">Canine – Surgery</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition duration-200 flex flex-col">
+                <div class="h-48 w-full bg-slate-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Tumor Removal" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 space-y-1">
+                    <h2 class="font-bold text-slate-900 text-sm sm:text-base">Tumor Removal</h2>
+                    <p class="text-xs text-slate-400 font-medium">Feline – Surgery</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition duration-200 flex flex-col">
+                <div class="h-48 w-full bg-slate-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Skin Allergy Management" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 space-y-1">
+                    <h2 class="font-bold text-slate-900 text-sm sm:text-base">Skin Allergy Management</h2>
+                    <p class="text-xs text-slate-400 font-medium">Feline – Dermatology</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition duration-200 flex flex-col">
+                <div class="h-48 w-full bg-slate-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Dental Cleaning" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 space-y-1">
+                    <h2 class="font-bold text-slate-900 text-sm sm:text-base">Dental Cleaning</h2>
+                    <p class="text-xs text-slate-400 font-medium">Canine – Dentistry</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pt-4">
+            <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl shadow-sm transition transform hover:-translate-y-0.5">
+                View All Cases
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 font-medium">
+        <p>© 2026 Dr. Christopher Ngumu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (!menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
