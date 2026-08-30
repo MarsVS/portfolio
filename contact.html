@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Christopher Ngumu Mutavi - Veterinary Surgeon</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            teal: '#087d72',
+                            tealHover: '#06635a',
+                            tealLight: '#e6f2f1',
+                            navy: '#0b1727',
+                            navyLight: '#132337',
+                            lightBg: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-brand-lightBg font-sans text-slate-800 antialiased selection:bg-brand-teal selection:text-white min-h-screen flex flex-col justify-between">
+
+    <nav class="bg-brand-navy text-white sticky top-0 z-50 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-teal flex items-center justify-center text-white shadow-md border border-teal-400/30">
+                        <i class="fa-solid fa-shield-halved text-xl"></i>
+                    </div>
+                    <span class="font-bold text-white text-lg tracking-tight group-hover:text-teal-300 transition">Dr. Christopher Ngumu</span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-300">
+                    <a href="#home" class="hover:text-teal-400 transition text-teal-400 font-semibold">Home</a>
+                    <a href="#about" class="hover:text-teal-400 transition">About</a>
+                    <a href="#services" class="hover:text-teal-400 transition">Services</a>
+                    <a href="#virtual-hospital" class="hover:text-teal-400 transition">Virtual Hospital</a>
+                    <a href="#portfolio" class="hover:text-teal-400 transition">Portfolio</a>
+                    <a href="#articles" class="hover:text-teal-400 transition">Articles</a>
+                    <a href="#contact" class="hover:text-teal-400 transition">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex items-center">
+                    <a href="#contact" class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-bold px-5 py-2.5 rounded-xl transition shadow-md">
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-navy border-b border-slate-800 px-6 pt-3 pb-6 space-y-3 font-medium text-sm text-slate-300">
+            <a href="#home" class="block hover:text-teal-400 py-2 border-b border-slate-800/50">Home</a>
+            <a href="#about" class="block hover:text-teal-400 py-2 border-b border-slate-800/50">About</a>
+            <a href="#services" class="block hover:text-teal-400 py-2 border-b border-slate-800/50">Services</a>
+            <a href="#virtual-hospital" class="block hover:text-teal-400 py-2 border-b border-slate-800/50">Virtual Hospital</a>
+            <a href="#portfolio" class="block hover:text-teal-400 py-2 border-b border-slate-800/50">Portfolio</a>
+            <a href="#articles" class="block hover:text-teal-400 py-2 border-b border-slate-800/50">Articles</a>
+            <a href="#contact" class="block hover:text-teal-400 py-2">Contact</a>
+            <div class="pt-2">
+                <a href="#contact" class="block text-center bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-bold px-4 py-3 rounded-xl transition shadow-md">
+                    Book a Consultation
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="bg-brand-navy text-white pt-8 pb-20 sm:pb-28 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="space-y-2">
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+                            Dr. Christopher<br>Ngumu Mutavi
+                        </h1>
+                        <p class="text-xl sm:text-2xl text-teal-400 font-semibold tracking-wide pt-1">
+                            Veterinary Surgeon
+                        </p>
+                    </div>
+
+                    <div class="space-y-3 text-slate-300 font-medium text-base sm:text-lg">
+                        <p class="text-white font-semibold text-lg sm:text-xl">
+                            Compassionate care.<br>Clinical excellence.<br>Stronger bonds.
+                        </p>
+                        <p class="text-sm sm:text-base text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                            Dedicated to improving animal health and advancing veterinary medicine through expertise, innovation and empathy.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contact" class="w-full sm:w-auto bg-brand-teal hover:bg-brand-tealHover text-white text-sm font-semibold px-6 py-3.5 rounded-xl transition shadow-lg text-center">
+                            Book a Consultation
+                        </a>
+                        <a href="#portfolio" class="w-full sm:w-auto border border-slate-700 hover:border-slate-500 text-slate-200 hover:text-white text-sm font-semibold px-6 py-3.5 rounded-xl transition text-center">
+                            Explore My Work
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md lg:max-w-none rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Dr. Christopher Ngumu Mutavi with Golden Retriever" 
+                             class="w-full h-[400px] sm:h-[480px] object-cover object-center">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="relative -mt-12 sm:-mt-16 z-20 max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="flex items-center gap-4 p-2">
+                <div class="w-12 h-12 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-dna text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Clinical Excellence</h3>
+                    <p class="text-xs text-slate-500 font-medium">Evidence Based Care</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-2">
+                <div class="w-12 h-12 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-crosshairs text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Advanced Diagnostics</h3>
+                    <p class="text-xs text-slate-500 font-medium">Modern Technology</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-2">
+                <div class="w-12 h-12 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-scissors text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Surgical Expertise</h3>
+                    <p class="text-xs text-slate-500 font-medium">Soft Tissue & Ortho</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-2">
+                <div class="w-12 h-12 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-heart-pulse text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Compassionate Care</h3>
+                    <p class="text-xs text-slate-500 font-medium">For Every Animal</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="virtual-hospital" class="py-16 sm:py-24 bg-brand-navy text-white mt-12 sm:mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
+                    <div class="space-y-3">
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-brand-teal tracking-tight">
+                            Virtual Veterinary Hospital
+                        </h2>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">
+                            Care. Connected.
+                        </h3>
+                    </div>
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                        A secure digital platform connecting pet parents and veterinarians — anytime, anywhere.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#virtual-portal" class="w-full sm:w-auto bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-xl transition shadow-md text-center">
+                            Enter Virtual Hospital
+                        </a>
+                        <a href="#virtual-portal" class="w-full sm:w-auto border border-slate-700 hover:border-slate-500 text-slate-200 text-xs sm:text-sm font-semibold px-6 py-3 rounded-xl transition text-center">
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <div class="bg-slate-900 border border-slate-700 rounded-2xl p-2 shadow-2xl w-full max-w-md">
+                        <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-800">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                            <span class="text-[10px] text-slate-400 font-mono ml-2">vetcare-portal.com</span>
+                        </div>
+                        <div class="p-4 bg-slate-950 rounded-b-xl space-y-3">
+                            <div class="flex justify-between items-center text-xs border-b border-slate-800 pb-2">
+                                <span class="font-bold text-teal-400">Welcome, Dr. Christopher</span>
+                                <span class="text-slate-400 text-[10px]">Today: 8 Consultations</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 text-[10px]">
+                                <div class="bg-slate-900 p-2.5 rounded-lg border border-slate-800">
+                                    <p class="text-slate-400">Appointments</p>
+                                    <p class="text-base font-bold text-white">8</p>
+                                </div>
+                                <div class="bg-slate-900 p-2.5 rounded-lg border border-slate-800">
+                                    <p class="text-slate-400">Pending Labs</p>
+                                    <p class="text-base font-bold text-white">5</p>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900 p-2.5 rounded-lg text-[10px] space-y-1">
+                                <p class="text-teal-400 font-semibold">Live Consultation</p>
+                                <p class="text-slate-300">Patient: Max (Golden Retriever)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 border border-slate-700 rounded-3xl p-3 shadow-2xl w-48 shrink-0">
+                        <div class="w-16 h-3 bg-slate-800 rounded-full mx-auto mb-3"></div>
+                        <div class="bg-slate-950 rounded-2xl p-3 space-y-2 text-[10px]">
+                            <div class="w-full h-20 rounded-xl bg-slate-800 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover">
+                            </div>
+                            <p class="font-bold text-white">Video Call Active</p>
+                            <span class="inline-block px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[9px]">Connected</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+                
+                <div class="md:col-span-7 space-y-6">
+                    <div>
+                        <span class="text-brand-teal text-xs font-bold uppercase tracking-wider">About Me</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
+                            Dedicated to Animals.<br>Driven by Purpose.
+                        </h2>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        I am a veterinary surgeon with a deep passion for animal health and welfare. My mission is to provide excellent veterinary care and build lasting bonds with the animals and people I serve.
+                    </p>
+
+                    <ul class="space-y-2.5 text-xs sm:text-sm font-medium text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-brand-teal text-white flex items-center justify-center text-[10px] shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            Bachelor of Veterinary Medicine (BVM)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-brand-teal text-white flex items-center justify-center text-[10px] shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            Registered Veterinary Surgeon
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-brand-teal text-white flex items-center justify-center text-[10px] shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            Experience in Clinical Practice & Surgery
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-brand-teal text-white flex items-center justify-center text-[10px] shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            Passionate about Preventive Care
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-brand-teal text-white flex items-center justify-center text-[10px] shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            Focused on Animal Welfare & Education
+                        </li>
+                    </ul>
+
+                    <div class="pt-2">
+                        <p class="font-serif italic font-bold text-slate-800 text-base sm:text-lg">Dr. Christopher Ngumu.</p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-100 max-w-xs md:max-w-none w-full">
+                        <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Dr. Christopher holding cat" 
+                             class="w-full h-80 sm:h-96 object-cover">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                <div class="bg-brand-lightBg p-5 rounded-2xl border border-slate-100 text-center">
+                    <p class="text-2xl sm:text-3xl font-black text-brand-navy">5+</p>
+                    <p class="text-xs text-slate-500 font-semibold mt-1">Years Experience</p>
+                </div>
+                <div class="bg-brand-lightBg p-5 rounded-2xl border border-slate-100 text-center">
+                    <p class="text-2xl sm:text-3xl font-black text-brand-navy">1000+</p>
+                    <p class="text-xs text-slate-500 font-semibold mt-1">Animals Treated</p>
+                </div>
+                <div class="bg-brand-lightBg p-5 rounded-2xl border border-slate-100 text-center">
+                    <p class="text-2xl sm:text-3xl font-black text-brand-navy">10+</p>
+                    <p class="text-xs text-slate-500 font-semibold mt-1">Surgical Procedures</p>
+                </div>
+                <div class="bg-brand-lightBg p-5 rounded-2xl border border-slate-100 text-center">
+                    <p class="text-2xl sm:text-3xl font-black text-brand-navy">∞</p>
+                    <p class="text-xs text-slate-500 font-semibold mt-1">Passion for Animals</p>
+                </div>
+            </div>
+
+            <div class="bg-brand-navy text-white rounded-2xl p-6 sm:p-8 mt-8 shadow-lg relative overflow-hidden">
+                <div class="relative z-10 space-y-2">
+                    <div class="flex items-center gap-2 text-brand-teal text-xl">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <span class="font-bold text-sm text-white">My Philosophy</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl pl-6">
+                        Every animal deserves compassion.<br>
+                        Every pet parent deserves honesty.<br>
+                        Every case deserves excellence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="#" class="inline-flex items-center gap-2 bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-xl transition shadow-xs">
+                    Download My CV <i class="fa-solid fa-download text-xs"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="virtual-portal" class="py-16 sm:py-20 bg-brand-lightBg border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center space-y-3 max-w-xl mx-auto mb-10">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
+                    Your Pet's Health. Anytime. Anywhere.
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Access professional veterinary care, manage records, book appointments, consult online and more on our secure digital platform.
+                </p>
+            </div>
+
+            <div class="flex justify-center gap-3 mb-10">
+                <button class="bg-brand-teal text-white text-xs font-bold px-6 py-2.5 rounded-xl shadow-xs">
+                    For Pet Owners
+                </button>
+                <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-semibold px-6 py-2.5 rounded-xl transition">
+                    For Veterinarians
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center space-y-2 shadow-xs hover:shadow-md transition">
+                        <div class="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-sm">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xs">Book Appointments</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center space-y-2 shadow-xs hover:shadow-md transition">
+                        <div class="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-sm">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xs">Virtual Consultations</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center space-y-2 shadow-xs hover:shadow-md transition">
+                        <div class="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-sm">
+                            <i class="fa-solid fa-file-medical"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xs">Medical Records</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center space-y-2 shadow-xs hover:shadow-md transition">
+                        <div class="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-sm">
+                            <i class="fa-solid fa-prescription-bottle-medical"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xs">Prescriptions</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center space-y-2 shadow-xs hover:shadow-md transition">
+                        <div class="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-sm">
+                            <i class="fa-solid fa-vial"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xs">Lab Results</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center space-y-2 shadow-xs hover:shadow-md transition">
+                        <div class="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-sm">
+                            <i class="fa-solid fa-syringe"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xs">Vaccination History</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center space-y-2 shadow-xs hover:shadow-md transition">
+                        <div class="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-sm">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xs">Payments</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center space-y-2 shadow-xs hover:shadow-md transition">
+                        <div class="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-sm">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xs">Reminders</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 text-center space-y-2 shadow-xs hover:shadow-md transition">
+                        <div class="w-9 h-9 rounded-xl bg-red-50 text-red-500 flex items-center justify-center mx-auto text-sm">
+                            <i class="fa-solid fa-truck-medical"></i>
+                        </div>
+                        <p class="font-bold text-slate-800 text-xs">Emergency Help</p>
+                    </div>
+
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-xs bg-white rounded-3xl border-4 border-slate-800 p-4 shadow-xl space-y-4">
+                        <div class="flex justify-between items-center text-xs border-b border-slate-100 pb-2">
+                            <div>
+                                <p class="text-[10px] text-slate-400">Welcome,</p>
+                                <p class="font-bold text-slate-900">Sarah</p>
+                            </div>
+                            <span class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 text-xs"><i class="fa-solid fa-user"></i></span>
+                        </div>
+
+                        <div>
+                            <p class="text-xs font-bold text-slate-800 mb-2">My Pets</p>
+                            <div class="flex gap-2">
+                                <div class="bg-slate-50 p-2 rounded-xl text-center flex-1 border border-slate-100">
+                                    <div class="w-8 h-8 rounded-full bg-amber-100 mx-auto mb-1 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover">
+                                    </div>
+                                    <p class="font-bold text-[10px] text-slate-800">Max</p>
+                                    <p class="text-[8px] text-slate-400">Retriever</p>
+                                </div>
+                                <div class="bg-slate-50 p-2 rounded-xl text-center flex-1 border border-slate-100">
+                                    <div class="w-8 h-8 rounded-full bg-slate-200 mx-auto mb-1 overflow-hidden">
+                                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover">
+                                    </div>
+                                    <p class="font-bold text-[10px] text-slate-800">Luna</p>
+                                    <p class="text-[8px] text-slate-400">Cat</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-teal-50/60 p-3 rounded-2xl border border-teal-100 space-y-1">
+                            <p class="text-[9px] font-bold text-brand-teal uppercase">Upcoming Consultation</p>
+                            <p class="text-xs font-bold text-slate-900">Today 2:30 PM</p>
+                            <p class="text-[10px] text-slate-600">Video Call with Dr. Christopher</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+                <a href="#contact" class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl transition text-center shadow-xs">
+                    Enter as Pet Owner
+                </a>
+                <a href="#contact" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl transition text-center">
+                    Enter as Veterinarian
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center space-y-2 max-w-xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
+                    Comprehensive Veterinary Care<br>For Every Stage of Your Pet's Life
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">General Consultations</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">Routine checkups & advice</p>
+                </div>
+
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">Preventive Care</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">Vaccinations & wellness plans</p>
+                </div>
+
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">Diagnostics</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">Lab, imaging & advanced tests</p>
+                </div>
+
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">Surgery</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">Soft tissue, ortho & more</p>
+                </div>
+
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-tooth"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">Dental Care</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">Teeth cleaning & oral health</p>
+                </div>
+
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">Internal Medicine</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">Management of medical conditions</p>
+                </div>
+
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">Reproductive Care</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">Breeding & fertility management</p>
+                </div>
+
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">Nutrition & Wellness</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">Diet, weight & lifestyle management</p>
+                </div>
+
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-kit-medical"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">Emergency Care</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">Urgent, after-hours support</p>
+                </div>
+
+                <div class="bg-brand-lightBg p-4 rounded-2xl border border-slate-100 text-center space-y-2 hover:border-teal-200 transition">
+                    <div class="w-10 h-10 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center mx-auto text-base">
+                        <i class="fa-solid fa-house-medical"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-xs">Home / Mobile Visits</h3>
+                    <p class="text-[11px] text-slate-500 leading-tight">At home care for your convenience</p>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#contact" class="inline-block bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl transition shadow-xs">
+                    Book a Consultation
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-16 sm:py-24 bg-brand-lightBg border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="flex items-center gap-3 overflow-x-auto hide-scrollbar w-full justify-start sm:justify-center pb-6">
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-brand-teal text-white shadow-xs whitespace-nowrap">
+                    All Cases
+                </button>
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Surgery
+                </button>
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Internal Medicine
+                </button>
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Diagnostics
+                </button>
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Dentistry
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-xs hover:shadow-md transition space-y-3 p-3">
+                    <div class="aspect-[16/10] bg-slate-200 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Foreign Body Removal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-1 pb-1">
+                        <h3 class="font-bold text-slate-900 text-sm">Foreign Body Removal</h3>
+                        <p class="text-xs text-slate-400 font-medium">Canine - Surgery</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-xs hover:shadow-md transition space-y-3 p-3">
+                    <div class="aspect-[16/10] bg-slate-200 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fracture Repair" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-1 pb-1">
+                        <h3 class="font-bold text-slate-900 text-sm">Fracture Repair</h3>
+                        <p class="text-xs text-slate-400 font-medium">Canine - Orthopedics</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-xs hover:shadow-md transition space-y-3 p-3">
+                    <div class="aspect-[16/10] bg-slate-200 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pyometra Treatment" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-1 pb-1">
+                        <h3 class="font-bold text-slate-900 text-sm">Pyometra Treatment</h3>
+                        <p class="text-xs text-slate-400 font-medium">Canine - Surgery</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-xs hover:shadow-md transition space-y-3 p-3">
+                    <div class="aspect-[16/10] bg-slate-200 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tumor Removal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-1 pb-1">
+                        <h3 class="font-bold text-slate-900 text-sm">Tumor Removal</h3>
+                        <p class="text-xs text-slate-400 font-medium">Feline - Surgery</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-xs hover:shadow-md transition space-y-3 p-3">
+                    <div class="aspect-[16/10] bg-slate-200 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Skin Allergy Management" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-1 pb-1">
+                        <h3 class="font-bold text-slate-900 text-sm">Skin Allergy Management</h3>
+                        <p class="text-xs text-slate-400 font-medium">Feline - Dermatology</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-xs hover:shadow-md transition space-y-3 p-3">
+                    <div class="aspect-[16/10] bg-slate-200 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dental Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-1 pb-1">
+                        <h3 class="font-bold text-slate-900 text-sm">Dental Cleaning</h3>
+                        <p class="text-xs text-slate-400 font-medium">Canine - Dentistry</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-10">
+                <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl transition shadow-xs">
+                    View All Cases
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-xs grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <div class="md:col-span-5 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                         alt="Locum Veterinary Surgeon" 
+                         class="rounded-2xl object-cover h-64 sm:h-72 w-full shadow-md">
+                </div>
+
+                <div class="md:col-span-7 space-y-4">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        Need a Locum<br>Veterinary Surgeon?
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        I offer reliable locum and emergency veterinary services for clinics and hospitals.
+                    </p>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
+                            Locum & Relief Services
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
+                            Emergency & After-hours Coverage
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
+                            Surgical Assistance
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
+                            Weekend & Holiday Cover
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
+                            Professional, Dependable, Discreet
+                        </li>
+                    </ul>
+
+                    <div class="pt-2">
+                        <a href="#contact" class="inline-block bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-xl transition shadow-xs">
+                            Request a Locum
+                        </a>
+                    </div>
+
+                    <p class="text-[11px] text-slate-400 font-medium flex items-center gap-1.5 pt-1">
+                        <i class="fa-regular fa-clock"></i> Available on short notice. Send request and I will get back to you.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="articles" class="py-16 sm:py-24 bg-brand-lightBg border-t border-slate-200">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 space-y-8">
+            
+            <div class="flex items-center gap-3 overflow-x-auto hide-scrollbar w-full justify-start sm:justify-center pb-2">
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-brand-teal text-white shadow-xs whitespace-nowrap">
+                    All
+                </button>
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Pet Health
+                </button>
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Surgery
+                </button>
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Preventive Care
+                </button>
+                <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Wellness
+                </button>
+            </div>
+
+            <div class="space-y-3">
+                
+                <div class="bg-white rounded-2xl p-3 sm:p-4 border border-slate-100 flex items-center justify-between gap-4 shadow-xs hover:shadow-md transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-12 sm:w-20 sm:h-14 rounded-xl bg-slate-200 overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Rabies" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">
+                            Understanding Rabies: Prevention and Protection
+                        </h3>
+                    </div>
+                    <span class="text-[10px] sm:text-xs text-slate-400 font-medium shrink-0">May 18, 2025</span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-3 sm:p-4 border border-slate-100 flex items-center justify-between gap-4 shadow-xs hover:shadow-md transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-12 sm:w-20 sm:h-14 rounded-xl bg-slate-200 overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Speying" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">
+                            Speying & Neutering Benefits
+                        </h3>
+                    </div>
+                    <span class="text-[10px] sm:text-xs text-slate-400 font-medium shrink-0">Apr 25, 2025</span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-3 sm:p-4 border border-slate-100 flex items-center justify-between gap-4 shadow-xs hover:shadow-md transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-12 sm:w-20 sm:h-14 rounded-xl bg-slate-200 overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Nutrition" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">
+                            Nutrition Basics for a Healthy Pet
+                        </h3>
+                    </div>
+                    <span class="text-[10px] sm:text-xs text-slate-400 font-medium shrink-0">Apr 10, 2025</span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-3 sm:p-4 border border-slate-100 flex items-center justify-between gap-4 shadow-xs hover:shadow-md transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-12 sm:w-20 sm:h-14 rounded-xl bg-slate-200 overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Post-Op" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">
+                            Post-Operative Care Tips for Dogs
+                        </h3>
+                    </div>
+                    <span class="text-[10px] sm:text-xs text-slate-400 font-medium shrink-0">Mar 28, 2025</span>
+                </div>
+
+                <div class="bg-white rounded-2xl p-3 sm:p-4 border border-slate-100 flex items-center justify-between gap-4 shadow-xs hover:shadow-md transition">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-12 sm:w-20 sm:h-14 rounded-xl bg-slate-200 overflow-hidden shrink-0">
+                            <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Checkups" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">
+                            Why Regular Check-ups Matter
+                        </h3>
+                    </div>
+                    <span class="text-[10px] sm:text-xs text-slate-400 font-medium shrink-0">Mar 12, 2025</span>
+                </div>
+
+            </div>
+
+            <div class="text-center pt-2">
+                <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl transition shadow-xs">
+                    View All Articles
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 sm:py-24 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
+            
+            <div class="flex items-center gap-3 overflow-x-auto hide-scrollbar w-full justify-start sm:justify-center pb-1">
+                <button class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-brand-teal text-white shadow-xs whitespace-nowrap">
+                    Clinic Life
+                </button>
+                <button class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Surgery
+                </button>
+                <button class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Patients
+                </button>
+                <button class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition whitespace-nowrap">
+                    Events
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                
+                <div class="aspect-[4/3] rounded-2xl bg-slate-200 overflow-hidden shadow-xs hover:shadow-md transition duration-300 group">
+                    <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vet Care" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl bg-slate-200 overflow-hidden shadow-xs hover:shadow-md transition duration-300 group">
+                    <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Surgery" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl bg-slate-200 overflow-hidden shadow-xs hover:shadow-md transition duration-300 group">
+                    <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dog Patient" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl bg-slate-200 overflow-hidden shadow-xs hover:shadow-md transition duration-300 group">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Golden Retriever" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl bg-slate-200 overflow-hidden shadow-xs hover:shadow-md transition duration-300 group">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cat Patient" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+
+                <div class="aspect-[4/3] rounded-2xl bg-slate-200 overflow-hidden shadow-xs hover:shadow-md transition duration-300 group">
+                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vet Team" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+
+            </div>
+
+            <div class="text-center pt-2">
+                <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl shadow-xs transition">
+                    View More Photos
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 sm:py-24 bg-brand-lightBg border-t border-slate-200">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 space-y-8">
+            
+            <div class="flex items-center gap-4">
+                <span class="text-brand-navy text-4xl sm:text-5xl font-black leading-none select-none">
+                    <i class="fa-solid fa-quote-left"></i>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
+                    What Pet Parents Say
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 shadow-xs space-y-3">
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sarah W." class="w-12 h-12 rounded-full object-cover shrink-0">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">Sarah W.</h3>
+                                <p class="text-xs text-slate-400 font-medium">Max <span class="text-slate-400">(Golden Retriever)</span></p>
+                            </div>
+                        </div>
+                        <div class="flex text-amber-400 text-xs gap-0.5 shrink-0">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                        Dr. Christopher is amazing! He treated Max with so much care and explained everything clearly.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 shadow-xs space-y-3">
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="James O." class="w-12 h-12 rounded-full object-cover shrink-0">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">James O.</h3>
+                                <p class="text-xs text-slate-400 font-medium">Luna <span class="text-slate-400">(Domestic Shorthair)</span></p>
+                            </div>
+                        </div>
+                        <div class="flex text-amber-400 text-xs gap-0.5 shrink-0">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                        Professional, compassionate and always available. Highly recommend!
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 shadow-xs space-y-3">
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Linda A." class="w-12 h-12 rounded-full object-cover shrink-0">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">Linda A.</h3>
+                                <p class="text-xs text-slate-400 font-medium">Rocky <span class="text-slate-400">(German Shepherd)</span></p>
+                            </div>
+                        </div>
+                        <div class="flex text-amber-400 text-xs gap-0.5 shrink-0">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                        Excellent surgeon and even better human being. Our go-to vet!
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="text-center pt-2">
+                <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl shadow-xs transition">
+                    View More Reviews
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-24 bg-white border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                
+                <div class="md:col-span-5 space-y-6">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                            Let's Work Together<br>I'm Here to Help.
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2">
+                            Whether you are a pet owner, clinic, organization or partner, I'd love to hear from you.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Pet Owners</h3>
+                                <p class="text-[11px] text-slate-500">Book a consultation or ask a question</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
+                                <i class="fa-solid fa-stethoscope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Clinics & Hospitals</h3>
+                                <p class="text-[11px] text-slate-500">Request locum or surgical support</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Organizations</h3>
+                                <p class="text-[11px] text-slate-500">Partnerships & collaborations</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-xs sm:text-sm">General Inquiries</h3>
+                                <p class="text-[11px] text-slate-500">Send me a message</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pt-4 space-y-2 border-t border-slate-100">
+                        <a href="tel:+254741098855" class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 hover:text-brand-teal transition">
+                            <i class="fa-solid fa-phone text-brand-teal"></i> +254 741 098 855
+                        </a>
+                        <a href="mailto:christopher@drchristopherngumu.vet" class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 hover:text-brand-teal transition break-all">
+                            <i class="fa-solid fa-envelope text-brand-teal"></i> christopher@drchristopherngumu.vet
+                        </a>
+                    </div>
+
+                    <div class="flex gap-3 pt-2">
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 bg-brand-lightBg p-6 sm:p-8 rounded-3xl border border-slate-200/80">
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition">
+                        </div>
+                        <div>
+                            <select class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition text-slate-500">
+                                <option value="">What do you need?</option>
+                                <option value="consultation">Book a Consultation</option>
+                                <option value="locum">Request Locum Surgeon</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea rows="4" placeholder="Your Message" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition resize-none"></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold py-3.5 rounded-xl transition shadow-xs">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-navy text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+                
+                <div class="md:col-span-5 space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-teal-500/30 flex items-center justify-center text-teal-400">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base sm:text-lg">Dr. Christopher Ngumu Mutavi</h3>
+                        <p class="text-xs text-slate-400 font-medium">Veterinary Surgeon</p>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
+                        Compassionate care.<br>
+                        Clinical excellence.<br>
+                        Stronger bonds.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:border-brand-teal transition text-sm"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:border-brand-teal transition text-sm"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:border-brand-teal transition text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:border-brand-teal transition text-sm"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-bold text-white text-sm tracking-wide">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+                        <li><a href="#about" class="hover:text-teal-400 transition">About Me</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition">Services</a></li>
+                        <li><a href="#virtual-hospital" class="hover:text-teal-400 transition">Virtual Hospital</a></li>
+                        <li><a href="#portfolio" class="hover:text-teal-400 transition">Portfolio</a></li>
+                        <li><a href="#articles" class="hover:text-teal-400 transition">Articles</a></li>
+                        <li><a href="#contact" class="hover:text-teal-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="font-bold text-white text-sm tracking-wide">Services</h4>
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+                        <li><a href="#services" class="hover:text-teal-400 transition">Consultations</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition">Surgery</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition">Diagnostics</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition">Preventive Care</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition">Emergency Care</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition">Mobile Visits</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-medium">
+                <p>© 2026 Dr. Christopher Ngumu Mutavi. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (!mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
