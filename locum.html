@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locum Veterinary Surgeon - Dr. Christopher Ngumu | VetCare</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            teal: '#087d72',
+                            tealHover: '#06635a',
+                            navy: '#0b1727',
+                            lightBg: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-lightBg font-sans text-slate-800 antialiased selection:bg-brand-teal selection:text-white min-h-screen flex flex-col justify-between">
+
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-brand-teal flex items-center justify-center text-white shadow-sm">
+                        <i class="fa-solid fa-stethoscope text-lg"></i>
+                    </div>
+                    <span class="font-bold text-slate-900 text-base sm:text-lg tracking-tight">Dr. Christopher Ngumu</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#" class="hover:text-brand-teal transition">Home</a>
+                    <a href="#" class="hover:text-brand-teal transition">About</a>
+                    <a href="#" class="hover:text-brand-teal transition">Services</a>
+                    <a href="#" class="text-brand-teal transition font-bold">Locum Services</a>
+                    <a href="#" class="hover:text-brand-teal transition">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center">
+                    <a href="#" class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-semibold px-4 py-2 rounded-xl transition shadow-xs">
+                        Book a Consultation
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-teal focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-3 font-medium text-sm">
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">Home</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">About</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">Services</a>
+            <a href="#" class="block text-brand-teal font-semibold py-1.5">Locum Services</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-1.5">Contact</a>
+            <div class="pt-2">
+                <a href="#" class="block text-center bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition shadow-xs">
+                    Book a Consultation
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-14 flex-1 flex items-center justify-center w-full">
+        
+        <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12 w-full">
+            
+            <div class="md:col-span-5 relative bg-slate-100 min-h-[320px] md:min-h-full">
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Dr. Christopher Ngumu - Veterinary Surgeon" 
+                     class="w-full h-full object-cover object-top">
+            </div>
+
+            <div class="md:col-span-7 p-6 sm:p-10 flex flex-col justify-between space-y-6">
+                
+                <div class="space-y-4">
+                    <div class="space-y-2">
+                        <h1 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight leading-tight">
+                            Need a Locum <br class="hidden sm:inline" />Veterinary Surgeon?
+                        </h1>
+                        <p class="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed">
+                            I offer reliable locum and emergency veterinary services for clinics and hospitals.
+                        </p>
+                    </div>
+
+                    <ul class="space-y-3 pt-2 text-xs sm:text-sm font-semibold text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-teal-50 text-brand-teal flex items-center justify-center text-xs shrink-0">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </span>
+                            <span>Locum & Relief Services</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-teal-50 text-brand-teal flex items-center justify-center text-xs shrink-0">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </span>
+                            <span>Emergency & After-hours Coverage</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-teal-50 text-brand-teal flex items-center justify-center text-xs shrink-0">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </span>
+                            <span>Surgical Assistance</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-teal-50 text-brand-teal flex items-center justify-center text-xs shrink-0">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </span>
+                            <span>Weekend & Holiday Cover</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-teal-50 text-brand-teal flex items-center justify-center text-xs shrink-0">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </span>
+                            <span>Professional, Dependable, Discreet</span>
+                        </li>
+                    </ul>
+
+                    <div class="pt-3">
+                        <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-xl shadow-xs transition transform hover:-translate-y-0.5">
+                            Request a Locum
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3 pt-4 border-t border-slate-50 text-slate-500">
+                    <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 text-xs shrink-0 mt-0.5">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div class="text-[11px] sm:text-xs font-medium leading-tight">
+                        <p class="font-semibold text-slate-700">Available on short notice.</p>
+                        <p class="text-slate-400 mt-0.5">Send request and I will get back to you.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 font-medium">
+        <p>© 2026 Dr. Christopher Ngumu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (!menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
