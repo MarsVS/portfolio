@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Dr. Christopher Ngumu</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            teal: '#0a9b8e',
+                            tealhover: '#088075',
+                            dark: '#07101e',
+                            gold: '#f59e0b',
+                            bgLight: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        signature: ['Caveat', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 400px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-brand-bgLight font-sans text-gray-800 antialiased selection:bg-brand-teal selection:text-white">
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-md bg-brand-teal flex items-center justify-center text-white">
+                        <i class="fa-solid fa-shield-dog text-xl"></i>
+                    </div>
+                    <span class="font-bold text-lg text-brand-dark tracking-tight">Dr. Christopher Ngumu</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
+                    <a href="#" class="hover:text-brand-teal transition">Home</a>
+                    <a href="#" class="text-brand-teal transition">About</a>
+                    <a href="#" class="hover:text-brand-teal transition">Services</a>
+                    <a href="#" class="hover:text-brand-teal transition">Virtual Hospital</a>
+                    <a href="#" class="hover:text-brand-teal transition">Contact</a>
+                    <a href="#" class="bg-brand-teal hover:bg-brand-tealhover text-white px-5 py-2.5 rounded-md transition">Book Consultation</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-teal focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-white border-b border-gray-200">
+            <div class="px-4 pt-2 pb-6 space-y-3 flex flex-col text-center font-medium">
+                <a href="#" class="text-gray-700 hover:text-brand-teal py-2">Home</a>
+                <a href="#" class="text-brand-teal py-2 font-bold">About</a>
+                <a href="#" class="text-gray-700 hover:text-brand-teal py-2">Services</a>
+                <a href="#" class="text-gray-700 hover:text-brand-teal py-2">Virtual Hospital</a>
+                <a href="#" class="text-gray-700 hover:text-brand-teal py-2">Contact</a>
+                <a href="#" class="bg-brand-teal hover:bg-brand-tealhover text-white py-3 rounded-md font-semibold mx-4">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <h3 class="text-brand-teal font-bold text-lg tracking-wide">
+                    About Me
+                </h3>
+                
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-dark leading-tight">
+                    Dedicated to Animals.<br/>
+                    Driven by Purpose.
+                </h1>
+
+                <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                    I am a veterinary surgeon with a deep passion for animal health and welfare. My mission is to provide excellent veterinary care and build lasting bonds with the animals and people I serve.
+                </p>
+
+                <ul class="space-y-3 pt-2 text-gray-700 font-medium text-sm sm:text-base">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-teal text-lg"></i>
+                        <span>Bachelor of Veterinary Medicine (BVM)</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-teal text-lg"></i>
+                        <span>Registered Veterinary Surgeon</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-teal text-lg"></i>
+                        <span>Experience in Clinical Practice & Surgery</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-teal text-lg"></i>
+                        <span>Passionate about Preventive Care</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-brand-teal text-lg"></i>
+                        <span>Focused on Animal Welfare & Education</span>
+                    </li>
+                </ul>
+
+                <div class="pt-4">
+                    <span class="font-signature text-3xl sm:text-4xl text-brand-dark tracking-wide">
+                        Dr. Christopher Ngumu.
+                    </span>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-sm">
+                    <img src="https://images.unsplash.com/photo-1628009368231-7bb7cbcb8127?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Dr. Christopher Ngumu with pet" 
+                         class="w-full h-auto rounded-2xl object-cover shadow-lg">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-16">
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm text-center border border-gray-100">
+                <div class="text-2xl sm:text-3xl font-extrabold text-brand-dark">5+</div>
+                <div class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Years Experience</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm text-center border border-gray-100">
+                <div class="text-2xl sm:text-3xl font-extrabold text-brand-dark">1000+</div>
+                <div class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Animals Treated</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm text-center border border-gray-100">
+                <div class="text-2xl sm:text-3xl font-extrabold text-brand-dark">10+</div>
+                <div class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Surgical Procedures</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm text-center border border-gray-100">
+                <div class="text-2xl sm:text-3xl font-extrabold text-brand-dark">∞</div>
+                <div class="text-xs sm:text-sm font-medium text-gray-500 mt-1">Passion for Animals</div>
+            </div>
+
+        </div>
+
+        <div class="mt-8 bg-brand-dark text-white rounded-2xl p-8 sm:p-10 relative overflow-hidden shadow-xl">
+            <div class="absolute top-6 left-6 text-brand-gold text-4xl sm:text-5xl opacity-80 font-serif">
+                <i class="fa-solid fa-quote-left"></i>
+            </div>
+            
+            <div class="absolute bottom-6 right-6 text-brand-gold text-4xl sm:text-5xl opacity-80 font-serif">
+                <i class="fa-solid fa-quote-right"></i>
+            </div>
+
+            <div class="max-w-md mx-auto text-center space-y-3 relative z-10 py-2">
+                <h4 class="text-lg font-bold text-white mb-4">My Philosophy</h4>
+                <p class="text-gray-200 text-sm sm:text-base font-medium">Every animal deserves compassion.</p>
+                <p class="text-gray-200 text-sm sm:text-base font-medium">Every pet parent deserves honesty.</p>
+                <p class="text-gray-200 text-sm sm:text-base font-medium">Every case deserves excellence.</p>
+            </div>
+        </div>
+
+        <div class="mt-10 flex justify-center">
+            <a href="#" class="inline-flex items-center gap-2 bg-brand-teal hover:bg-brand-tealhover text-white font-semibold px-6 py-3 rounded-lg shadow-md transition text-sm sm:text-base">
+                Download My CV
+                <i class="fa-solid fa-download"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+            if (menu.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
