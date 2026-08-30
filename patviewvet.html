@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Medical Record - Max | VetCare</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            teal: '#087d72',
+                            tealHover: '#06635a',
+                            lightBg: '#f8fafc',
+                            navy: '#061325'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased selection:bg-brand-teal selection:text-white min-h-screen">
+
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-brand-teal flex items-center justify-center text-white shadow-sm">
+                        <i class="fa-solid fa-shield-dog text-lg"></i>
+                    </div>
+                    <span class="font-bold text-slate-900 text-base sm:text-lg tracking-tight">VetCare Medical Records</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                    <a href="#" class="hover:text-brand-teal transition">Dashboard</a>
+                    <a href="#" class="text-brand-teal transition">Patients</a>
+                    <a href="#" class="hover:text-brand-teal transition">Appointments</a>
+                    <a href="#" class="hover:text-brand-teal transition">Prescriptions</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-teal focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 font-medium text-sm">
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-2">Dashboard</a>
+            <a href="#" class="block text-brand-teal font-semibold py-2">Patients</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-2">Appointments</a>
+            <a href="#" class="block text-slate-700 hover:text-brand-teal py-2">Prescriptions</a>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6">
+        
+        <div class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" 
+                     alt="Max" 
+                     class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover shadow-xs border border-slate-100">
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Max</h1>
+                    <p class="text-xs sm:text-sm text-slate-500 font-medium mt-1">
+                        Golden Retriever <span class="mx-1">•</span> 3 yrs <span class="mx-1">•</span> Male
+                    </p>
+                </div>
+            </div>
+
+            <div class="self-start sm:self-center">
+                <span class="bg-slate-100 border border-slate-200 text-slate-600 text-xs font-semibold px-3 py-1.5 rounded-lg">
+                    ID: PET-00023
+                </span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1">
+            <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-brand-teal/40 text-brand-teal shadow-xs whitespace-nowrap">
+                Overview
+            </button>
+            <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-500 hover:text-slate-900 hover:bg-white/60 transition whitespace-nowrap">
+                History
+            </button>
+            <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-500 hover:text-slate-900 hover:bg-white/60 transition whitespace-nowrap">
+                Examination
+            </button>
+            <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-500 hover:text-slate-900 hover:bg-white/60 transition whitespace-nowrap">
+                Lab Results
+            </button>
+            <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-500 hover:text-slate-900 hover:bg-white/60 transition whitespace-nowrap">
+                Imaging
+            </button>
+            <button class="px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-500 hover:text-slate-900 hover:bg-white/60 transition whitespace-nowrap">
+                Prescriptions
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+                <h2 class="text-base font-bold text-slate-900 border-b border-slate-50 pb-3">Medical Summary</h2>
+                
+                <div class="space-y-3 text-xs sm:text-sm">
+                    <div class="flex justify-between items-center py-1">
+                        <span class="text-slate-500 font-medium">Weight</span>
+                        <span class="font-bold text-slate-800">28.5 kg</span>
+                    </div>
+                    <div class="flex justify-between items-center py-1">
+                        <span class="text-slate-500 font-medium">B.C.S</span>
+                        <span class="font-bold text-slate-800">4/9</span>
+                    </div>
+                    <div class="flex justify-between items-center py-1">
+                        <span class="text-slate-500 font-medium">Microchip</span>
+                        <span class="font-bold text-slate-800">900215000123456</span>
+                    </div>
+                    <div class="flex justify-between items-center py-1">
+                        <span class="text-slate-500 font-medium">Allergies</span>
+                        <span class="font-bold text-slate-800">None</span>
+                    </div>
+                    <div class="flex justify-between items-center py-1">
+                        <span class="text-slate-500 font-medium">Last Visit</span>
+                        <span class="font-bold text-slate-800">May 20, 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+                <h2 class="text-base font-bold text-slate-900 border-b border-slate-50 pb-3">Recent Visits</h2>
+                
+                <div class="space-y-3.5 text-xs sm:text-sm">
+                    <div class="flex items-center justify-between py-1">
+                        <span class="text-slate-800 font-semibold w-28">May 20, 2025</span>
+                        <span class="text-slate-600 font-medium flex-1 text-center">Skin irritation</span>
+                        <span class="text-slate-500 font-medium text-right w-28">Dr. C. Ngumu</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-t border-slate-50 pt-3">
+                        <span class="text-slate-800 font-semibold w-28">Apr 10, 2025</span>
+                        <span class="text-slate-600 font-medium flex-1 text-center">Vaccination</span>
+                        <span class="text-slate-500 font-medium text-right w-28">Dr. C. Ngumu</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-t border-slate-50 pt-3">
+                        <span class="text-slate-800 font-semibold w-28">Feb 15, 2025</span>
+                        <span class="text-slate-600 font-medium flex-1 text-center">Deworming</span>
+                        <span class="text-slate-500 font-medium text-right w-28">Dr. C. Ngumu</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+                <h2 class="text-base font-bold text-slate-900 border-b border-slate-50 pb-3">Active Medications</h2>
+                
+                <div class="space-y-4 text-xs sm:text-sm">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-slate-800">Apoquel 16mg</h3>
+                            <p class="text-[11px] text-slate-400 font-medium mt-0.5">Once daily</p>
+                        </div>
+                        <span class="text-slate-500 font-medium">Start: May 20, 2025</span>
+                    </div>
+
+                    <div class="flex justify-between items-start border-t border-slate-50 pt-3">
+                        <div>
+                            <h3 class="font-bold text-slate-800">Omega-3</h3>
+                            <p class="text-[11px] text-slate-400 font-medium mt-0.5">Once daily</p>
+                        </div>
+                        <span class="text-slate-500 font-medium">Start: May 20, 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between space-y-6">
+                <div class="space-y-3">
+                    <h2 class="text-base font-bold text-slate-900 border-b border-slate-50 pb-3">Notes</h2>
+                    <div class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed space-y-1">
+                        <p>Mild allergy suspected.</p>
+                        <p>Monitor diet.</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-end pt-2">
+                    <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition shadow-xs">
+                        Add Note
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (!menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
