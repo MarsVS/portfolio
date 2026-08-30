@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare Dashboard</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#061325',
+                            teal: '#087d72',
+                            tealHover: '#06635a',
+                            lightBg: '#f8fafc',
+                            cardBg: '#ffffff',
+                            textDark: '#0f172a',
+                            textMuted: '#64748b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        /* Mobile sidebar slide animation */
+        #sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-teal selection:text-white">
+
+    <div class="min-h-screen flex flex-col md:flex-row">
+
+        <div class="md:hidden bg-brand-navy text-white px-4 py-3 flex justify-between items-center sticky top-0 z-50 border-b border-slate-800">
+            <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-brand-teal flex items-center justify-center text-white">
+                    <i class="fa-solid fa-shield-dog text-base"></i>
+                </div>
+                <span class="font-bold text-lg tracking-tight">VetCare</span>
+            </div>
+            <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-1.5">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-brand-navy text-slate-300 flex flex-col transform -translate-x-full md:translate-x-0 md:static md:inset-0 shadow-2xl md:shadow-none">
+            
+            <div class="p-6 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-brand-teal flex items-center justify-center text-white shadow-md">
+                    <i class="fa-solid fa-shield-dog text-lg"></i>
+                </div>
+                <span class="font-bold text-xl text-white tracking-tight">VetCare</span>
+            </div>
+
+            <nav class="flex-1 px-4 py-2 space-y-1.5 overflow-y-auto text-sm font-medium">
+                <a href="#" class="flex items-center gap-3.5 px-4 py-3 rounded-xl bg-brand-teal text-white font-semibold transition">
+                    <i class="fa-solid fa-table-cells-large w-5 text-center text-base"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-paw w-5 text-center text-base"></i>
+                    <span>My Pets</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-regular fa-calendar-check w-5 text-center text-base"></i>
+                    <span>Appointments</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-user-doctor w-5 text-center text-base"></i>
+                    <span>Consultations</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-regular fa-file-lines w-5 text-center text-base"></i>
+                    <span>My Records</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-prescription-bottle-medical w-5 text-center text-base"></i>
+                    <span>Prescriptions</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-flask w-5 text-center text-base"></i>
+                    <span>Lab Results</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-regular fa-credit-card w-5 text-center text-base"></i>
+                    <span>Payments</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-regular fa-bell w-5 text-center text-base"></i>
+                    <span>Reminders</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-regular fa-comments w-5 text-center text-base"></i>
+                    <span>Messages</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-regular fa-user w-5 text-center text-base"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="flex items-center gap-3.5 px-4 py-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+                    <i class="fa-solid fa-gear w-5 text-center text-base"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <div id="sidebar-overlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-30 hidden md:hidden"></div>
+
+        <main class="flex-1 px-4 sm:px-8 py-6 max-w-5xl mx-auto w-full space-y-8">
+            
+            <div class="flex justify-between items-center pt-2">
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-2">
+                        Welcome back, Sarah <span class="text-2xl">🐻</span>
+                    </h1>
+                </div>
+                <div class="flex items-center gap-3 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                         alt="Sarah" 
+                         class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm ring-2 ring-slate-100">
+                </div>
+            </div>
+
+            <section class="space-y-4">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-800">My Pets</h2>
+                    <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-1.5 rounded-lg text-xs font-semibold border border-slate-200 transition">
+                        Add Pet
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Max" class="w-20 h-20 rounded-xl object-cover mb-3 shadow-xs">
+                        <h3 class="font-bold text-sm text-slate-900">Max</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Golden Retriever</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Luna" class="w-20 h-20 rounded-xl object-cover mb-3 shadow-xs">
+                        <h3 class="font-bold text-sm text-slate-900">Luna</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Domestic Shorthair</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                             alt="Simba" class="w-20 h-20 rounded-xl object-cover mb-3 shadow-xs">
+                        <h3 class="font-bold text-sm text-slate-900">Simba</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">German Shepherd</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-base sm:text-lg font-bold text-slate-800">Upcoming</h2>
+
+                <div class="space-y-3">
+                    
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1628009368231-7bb7cbcb8127?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                 alt="Dr. Christopher Ngumu" 
+                                 class="w-11 h-11 rounded-full object-cover flex-shrink-0 border border-slate-100">
+                            <div>
+                                <span class="text-xs font-semibold text-slate-400 block mb-0.5">Today, 2:30 PM</span>
+                                <h3 class="font-bold text-sm text-slate-800">Video Consultation</h3>
+                                <p class="text-xs text-slate-500">with Dr. Christopher Ngumu</p>
+                            </div>
+                        </div>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs px-5 py-2 rounded-xl transition shadow-sm sm:self-center self-start">
+                            Join
+                        </button>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-syringe text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-slate-400 block mb-0.5">May 28, 2025</span>
+                                <h3 class="font-bold text-sm text-slate-800">Vaccination Reminder – Max</h3>
+                                <p class="text-xs text-slate-500">Rabies • DHP • Deworming</p>
+                            </div>
+                        </div>
+                        <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs px-4 py-2 rounded-xl border border-slate-200 transition sm:self-center self-start">
+                            View All
+                        </button>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-flask text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-slate-400 block mb-0.5">May 30, 2025</span>
+                                <h3 class="font-bold text-sm text-slate-800">Lab Results Ready – Luna</h3>
+                                <p class="text-xs text-slate-500">Blood Test – CBC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="space-y-4 pb-8">
+                <h2 class="text-base sm:text-lg font-bold text-slate-800">Quick Access</h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                    
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer group">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-2.5 group-hover:scale-105 transition">
+                            <i class="fa-regular fa-calendar-check text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-800 leading-snug">Book Appointment</span>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer group">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-2.5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-video text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-800 leading-snug">Video Consult</span>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer group">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-2.5 group-hover:scale-105 transition">
+                            <i class="fa-regular fa-file-lines text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-800 leading-snug">My Records</span>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer group">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-2.5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-prescription-bottle-medical text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-800 leading-snug">Prescriptions</span>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer group">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-2.5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-flask text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-800 leading-snug">Lab Results</span>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer group">
+                        <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center mb-2.5 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-heart-pulse text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-800 leading-snug">Emergency Help</span>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer group">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-2.5 group-hover:scale-105 transition">
+                            <i class="fa-regular fa-credit-card text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-800 leading-snug">Payments</span>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center hover:shadow-md transition cursor-pointer group">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-2.5 group-hover:scale-105 transition">
+                            <i class="fa-regular fa-bell text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-800 leading-snug">Reminders</span>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        const icon = document.getElementById('menu-icon');
+
+        function toggleSidebar() {
+            const isOpen = !sidebar.classList.contains('-translate-x-full');
+            
+            if (isOpen) {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        }
+
+        btn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+</html>
