@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Consultations | Routine Checkups & Advice | Veterinary Care</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        mint: {
+                            50: '#f0fdf9',
+                            100: '#e6f7f3',
+                            200: '#bbf7d0',
+                            500: '#10b981',
+                            600: '#0d7a5f',
+                            700: '#0f6b58',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-mint-100 flex items-center justify-center text-mint-600 text-lg font-bold">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+                <span class="font-bold text-xl text-slate-900 tracking-tight">VetCare Clinic</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="#overview" class="hover:text-mint-600 transition-colors">Overview</a>
+                <a href="#what-is-included" class="hover:text-mint-600 transition-colors">What's Included</a>
+                <a href="#expectations" class="hover:text-mint-600 transition-colors">What to Expect</a>
+                <a href="#faq" class="hover:text-mint-600 transition-colors">FAQs</a>
+            </nav>
+
+            <!-- Book Action -->
+            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                Book Consultation
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-b from-mint-50/60 to-slate-50 border-b border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Service Icon matching image badge style -->
+                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-mint-100 border border-mint-200/50 flex items-center justify-center text-mint-600 text-3xl shadow-sm">
+                    <i class="fa-solid fa-notes-medical"></i>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    General Consultations
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto mb-8">
+                    Routine checkups & veterinary advice to ensure your pet lives a long, healthy, and happy life.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-mint-600 text-white font-semibold shadow-md hover:bg-mint-700 transition-all hover:shadow-lg">
+                        Schedule an Appointment
+                    </a>
+                    <a href="#overview" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                        Proactive Pet Healthcare
+                    </span>
+                    <h2 class="text-3xl font-bold text-slate-900">
+                        Comprehensive Routine Checkups & Veterinary Guidance
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Regular veterinary consultations are the cornerstone of proactive pet healthcare. Because animals often hide signs of pain or illness, routine physical checkups allow us to detect potential health issues before they become serious.
+                    </p>
+                    
+                    <ul class="space-y-3 font-medium text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Complete nose-to-tail physical examination
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Personalized nutrition, weight, and lifestyle guidance
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Early detection of dental, skin, joint, or metabolic conditions
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Highlight Box -->
+                <div id="expectations" class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/80 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+                        <i class="fa-solid fa-stethoscope text-mint-600"></i> What to Expect
+                    </h3>
+                    <div class="space-y-4 divide-y divide-slate-100">
+                        <div class="pt-2">
+                            <h4 class="font-semibold text-slate-800">Consultation Duration</h4>
+                            <p class="text-slate-500 text-sm">20 to 30 minutes of dedicated time with our veterinarian.</p>
+                        </div>
+                        <div class="pt-4">
+                            <h4 class="font-semibold text-slate-800">Recommended Frequency</h4>
+                            <p class="text-slate-500 text-sm">Annually for adult pets; every 6 months for senior pets (&gt; 7 years).</p>
+                        </div>
+                        <div class="pt-4">
+                            <h4 class="font-semibold text-slate-800">Personalized Care Plan</h4>
+                            <p class="text-slate-500 text-sm">Tailored recommendations for vaccinations, parasite prevention, and diet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included Section -->
+        <section id="what-is-included" class="py-16 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Included in Every Routine Consultation</h2>
+                    <p class="text-slate-600">We evaluate every aspect of your pet's health during a general wellness visit.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Nose-to-Tail Exam</h3>
+                        <p class="text-slate-600 text-sm">Checking heart, lungs, eyes, ears, mouth, joints, skin, and abdominal organs.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-weight-scale"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Weight & Nutrition Check</h3>
+                        <p class="text-slate-600 text-sm">Body condition scoring and custom dietary recommendations for life stage needs.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Parasite Risk Assessment</h3>
+                        <p class="text-slate-600 text-sm">Review of preventive treatments for fleas, ticks, heartworm, and intestinal worms.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-clipboard-user"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Behavior & Routine Advice</h3>
+                        <p class="text-slate-600 text-sm">Professional advice on behavior changes, activity levels, and senior care options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking CTA Section -->
+        <section id="book" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-mint-600 to-mint-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
+                <h2 class="text-3xl font-bold">Book Your Pet's General Consultation</h2>
+                <p class="text-mint-100 max-w-xl mx-auto text-lg">
+                    Keep your companion healthy and happy. Reach out to schedule a convenient appointment with our veterinary team.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:+1234567890" class="bg-white text-mint-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-mint-50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Call Clinic
+                    </a>
+                    <a href="mailto:appointments@vetclinic.com" class="bg-mint-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-mint-900/50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Email Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>How often should my pet have a general consultation?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Healthy adult pets should have a general consultation at least once a year. Senior pets (generally over 7 years old) or pets with chronic health issues should be examined every 6 months.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>What should I bring to my pet's consultation?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Please bring any previous medical or vaccination records, details about your pet's current diet and food brand, and a list of any medications or supplements they are currently taking.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>Are vaccinations included in the general consultation?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        The physical consultation covers the health assessment. If vaccinations or preventive medications are due during the visit, they can be administered during the consultation (see our Preventive Care service).
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-paw text-mint-600"></i>
+                <p class="text-slate-500 text-sm">
+                    &copy; 2026 VetCare Clinic. All rights reserved.
+                </p>
+            </div>
+            <div class="flex items-center gap-6 text-slate-400 text-sm">
+                <a href="#" class="hover:text-mint-600 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
