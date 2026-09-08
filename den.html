@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Care | Teeth Cleaning & Oral Health | VetCare Clinic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        mint: {
+                            50: '#f0fdf9',
+                            100: '#e6f7f3',
+                            200: '#bbf7d0',
+                            500: '#10b981',
+                            600: '#0d7a5f',
+                            700: '#0f6b58',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-mint-100 flex items-center justify-center text-mint-600 text-lg font-bold">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+                <span class="font-bold text-xl text-slate-900 tracking-tight">VetCare Clinic</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="#overview" class="hover:text-mint-600 transition-colors">Overview</a>
+                <a href="#services" class="hover:text-mint-600 transition-colors">Dental Services</a>
+                <a href="#process" class="hover:text-mint-600 transition-colors">The Process</a>
+                <a href="#faq" class="hover:text-mint-600 transition-colors">FAQs</a>
+            </nav>
+
+            <!-- Book Action -->
+            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                Book Dental Exam
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-b from-mint-50/60 to-slate-50 border-b border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Service Icon matching screenshot badge -->
+                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-mint-100 border border-mint-200/50 flex items-center justify-center text-mint-600 text-3xl shadow-sm">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    Veterinary Dental Care
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto mb-8">
+                    Teeth cleaning & oral health care to eliminate bad breath, prevent infection, and protect your pet’s vitality.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-mint-600 text-white font-semibold shadow-md hover:bg-mint-700 transition-all hover:shadow-lg">
+                        Schedule Dental Checkup
+                    </a>
+                    <a href="#overview" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all">
+                        Learn About Periodontal Disease
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                        Oral Health & Systemic Wellness
+                    </span>
+                    <h2 class="text-3xl font-bold text-slate-900">
+                        Healthy Mouth, Healthy Pet
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        By age three, over 80% of dogs and cats show signs of periodontal disease. Dental bacteria doesn't just cause foul breath and tooth loss—it can enter the bloodstream and damage vital organs like the heart, liver, and kidneys. Routine veterinary dental cleaning is essential to long-term health.
+                    </p>
+                    
+                    <ul class="space-y-3 font-medium text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Ultrasonic scaling above and below the gumline to remove calculus
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Digital dental X-rays to detect hidden tooth root disease and bone loss
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Polishing, fluoride treatments, and custom home oral care plans
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Highlight Box -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/80 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Signs of Dental Disease
+                    </h3>
+                    <p class="text-slate-500 text-sm">
+                        Contact us if you notice any of these common symptoms in your dog or cat:
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">Persistent bad breath (halitosis)</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">Yellow or brown tartar build-up on teeth</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">Red, swollen, or bleeding gums</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">Difficulty chewing, dropping food, or loss of appetite</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">Loose, broken, or missing teeth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dental Services Section -->
+        <section id="services" class="py-16 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Comprehensive Dental Procedures</h2>
+                    <p class="text-slate-600">Complete oral healthcare performed under safe, monitored anesthesia.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Ultrasonic Cleaning</h3>
+                        <p class="text-slate-600 text-sm">Professional scaling to strip away hardened plaque and calculus from all enamel surfaces.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-x-ray"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Digital Intraoral X-Rays</h3>
+                        <p class="text-slate-600 text-sm">Evaluates the 60% of tooth structure hidden below the gums, diagnosing abscesses and bone loss.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-kit-medical"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Surgical Extractions</h3>
+                        <p class="text-slate-600 text-sm">Safe removal of fractured, severely diseased, or painful teeth with local nerve blocks.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Polishing & Barrier Sealants</h3>
+                        <p class="text-slate-600 text-sm">Smooths enamel scratches after scaling to slow future plaque buildup and protect teeth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                    Patient Safety First
+                </span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-2">What Happens During a Dental Procedure?</h2>
+                <p class="text-slate-600">A step-by-step overview of your pet's dental cleaning day.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">1</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Pre-Dental Assessment</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Pre-anesthetic blood testing ensures internal organs can safely clear medications. We place an IV catheter for fluids and precise drug delivery.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">2</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Cleaning & Treatment</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Under general anesthesia with an endotracheal tube protecting the airway, we take full dental X-rays, scale, probe, polish, and extract diseased teeth if necessary.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">3</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Home Care Strategy</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        After smooth recovery, we review dental photos/X-rays with you and send you home with personalized toothbrushing guidance or VOHC-approved dental diets.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking CTA Section -->
+        <section id="book" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-mint-600 to-mint-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
+                <h2 class="text-3xl font-bold">Give Your Pet a Fresher, Pain-Free Smile</h2>
+                <p class="text-mint-100 max-w-xl mx-auto text-lg">
+                    Schedule a pre-dental oral examination today to evaluate your pet's teeth and receive a custom estimate.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:+1234567890" class="bg-white text-mint-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-mint-50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Call Dental Desk
+                    </a>
+                    <a href="mailto:dental@vetclinic.com" class="bg-mint-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-mint-900/50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Request Oral Exam
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>Why does my pet need general anesthesia for a dental cleaning?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Anesthesia is required to clean beneath the gumline where 80% of bacteria live, take accurate intraoral X-rays, and protect the pet's airway from water mist and debris. Non-anesthetic dental cleanings are purely cosmetic and cannot treat underlying periodontal disease.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>How often should my pet get professional dental cleanings?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Most dogs and cats benefit from annual professional dental cleanings starting around age 2 to 3. Small breed dogs and pets prone to heavy tartar buildup may require dental evaluation every 6 to 12 months.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>How can I maintain my pet's teeth at home?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Daily brushing using pet-safe toothpaste (never human toothpaste) is the gold standard. Additionally, dental chews, water additives, and prescription dental diets approved by the Veterinary Oral Health Council (VOHC) help reduce plaque formation.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-paw text-mint-600"></i>
+                <p class="text-slate-500 text-sm">
+                    &copy; 2026 VetCare Clinic. All rights reserved.
+                </p>
+            </div>
+            <div class="flex items-center gap-6 text-slate-400 text-sm">
+                <a href="#" class="hover:text-mint-600 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
