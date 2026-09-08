@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Mobile Veterinary Visits | VetCare Clinic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        mint: {
+                            50: '#f0fdf9',
+                            100: '#e6f7f3',
+                            200: '#bbf7d0',
+                            500: '#10b981',
+                            600: '#0d7a5f',
+                            700: '#0f6b58',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-mint-100 flex items-center justify-center text-mint-600 text-lg font-bold">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+                <span class="font-bold text-xl text-slate-900 tracking-tight">VetCare Clinic</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="#overview" class="hover:text-mint-600 transition-colors">Overview</a>
+                <a href="#services" class="hover:text-mint-600 transition-colors">Mobile Services</a>
+                <a href="#process" class="hover:text-mint-600 transition-colors">How It Works</a>
+                <a href="#faq" class="hover:text-mint-600 transition-colors">FAQs</a>
+            </nav>
+
+            <!-- Book Action -->
+            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                Request Mobile Visit
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-b from-mint-50/60 to-slate-50 border-b border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Service Icon -->
+                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-mint-100 border border-mint-200/50 flex items-center justify-center text-mint-600 text-3xl shadow-sm">
+                    <i class="fa-solid fa-house-medical"></i>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    Home & Mobile Veterinary Visits
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto mb-8">
+                    Stress-free, compassionate clinical care delivered directly to your front door for maximum comfort and convenience.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-mint-600 text-white font-semibold shadow-md hover:bg-mint-700 transition-all hover:shadow-lg">
+                        Schedule House Call
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all">
+                        View In-Home Care Options
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                        At-Home Care
+                    </span>
+                    <h2 class="text-3xl font-bold text-slate-900">
+                        Veterinary Medicine in the Comfort of Home
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        For pets that experience severe anxiety during car rides or clinic visits, senior pets with painful mobility issues, or busy multi-pet households, our mobile unit brings full-service veterinary care directly to you. We examine and treat your pets in their natural environment where they feel safe and secure.
+                    </p>
+                    
+                    <ul class="space-y-3 font-medium text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Eliminates carrier stress, car sickness, and busy waiting room encounters
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Ideal for multi-pet families needing simultaneous routine wellness exams
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Peaceful, peaceful hospice support and gentle in-home end-of-life care
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Highlight Box -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/80 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+                        <i class="fa-solid fa-van-shuttle text-mint-600"></i> Why Choose Mobile Visits?
+                    </h3>
+                    <p class="text-slate-500 text-sm">
+                        House calls offer distinct advantages for pet parents seeking personalized clinical attention:
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">Zero travel stress for fearful, reactive, or senior pets</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">One-on-one time with your veterinarian without clinical rush</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">Comprehensive home environment and lifestyle evaluation</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">Convenient scheduling that fits seamlessly into your workday</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <span class="text-sm text-slate-700">Reduced exposure to contagious illnesses in public settings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Available Mobile Services</h2>
+                    <p class="text-slate-600">Most routine clinic procedures can be performed comfortably inside your home.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Service 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Wellness & Physicals</h3>
+                        <p class="text-slate-600 text-sm">Full nose-to-tail physical exams, annual vaccinations, heartworm tests, and parasite prevention.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-vial-circle-check"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Diagnostics & Bloodwork</h3>
+                        <p class="text-slate-600 text-sm">In-home blood draws, urinalysis, blood glucose checks, and diagnostic specimen collection.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-notes-medical"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Chronic Disease Care</h3>
+                        <p class="text-slate-600 text-sm">Ongoing monitoring and treatment for diabetes, arthritis, kidney disease, and mobility support.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Hospice & Euthanasia</h3>
+                        <p class="text-slate-600 text-sm">Dignified, peaceful, and compassionate end-of-life care surrounded by family in familiar home surroundings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                    How It Works
+                </span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-2">Your Mobile Visit Experience</h2>
+                <p class="text-slate-600">Simple scheduling and seamless care delivery without ever leaving your living room.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">1</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Book & Verify Radius</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Request your appointment online or by phone. We verify your address within our service area and confirm pre-visit details.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">2</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">We Arrive Ready</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Our mobile veterinarian arrives with all necessary medical gear, vaccines, diagnostic kits, and treatments.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">3</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Relaxed Consultation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Your pet receives focused examination and care in their favorite spot on the couch or rug, followed by digital record delivery.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking CTA Section -->
+        <section id="book" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-mint-600 to-mint-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
+                <h2 class="text-3xl font-bold">Ready to Book an At-Home Visit?</h2>
+                <p class="text-mint-100 max-w-xl mx-auto text-lg">
+                    Contact our mobile care dispatch team to check availability in your neighborhood and secure your appointment.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:+1234567890" class="bg-white text-mint-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-mint-50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Call Mobile Coordinator
+                    </a>
+                    <a href="mailto:mobile@vetclinic.com" class="bg-mint-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-mint-900/50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Request House Visit
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>What geographic areas do mobile visits cover?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Our primary service zone covers a 20-mile radius around our main facility. Extended travel outside this radius may be available for a modest mileage surcharge—contact our dispatch desk to verify your address.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>What procedures cannot be performed at home?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Major surgical procedures under general anesthesia, dental cleanings requiring specialized equipment, high-grade radiology (X-rays), and intensive critical care monitoring must be performed at our main hospital. If needed, we can facilitate transport.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>How should I prepare my home for the vet's arrival?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Please secure cats in a small room (like a bathroom or bedroom) 15 minutes before arrival so they don't hide under furniture. Ensure a well-lit area with a clean table or blanketed floor space where the exam can take place comfortably.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-paw text-mint-600"></i>
+                <p class="text-slate-500 text-sm">
+                    &copy; 2026 VetCare Clinic. All rights reserved.
+                </p>
+            </div>
+            <div class="flex items-center gap-6 text-slate-400 text-sm">
+                <a href="#" class="hover:text-mint-600 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
