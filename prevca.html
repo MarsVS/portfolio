@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventive Care | Vaccinations & Wellness Plans | VetCare Clinic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        mint: {
+                            50: '#f0fdf9',
+                            100: '#e6f7f3',
+                            200: '#bbf7d0',
+                            500: '#10b981',
+                            600: '#0d7a5f',
+                            700: '#0f6b58',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-mint-100 flex items-center justify-center text-mint-600 text-lg font-bold">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+                <span class="font-bold text-xl text-slate-900 tracking-tight">VetCare Clinic</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="#overview" class="hover:text-mint-600 transition-colors">Overview</a>
+                <a href="#services" class="hover:text-mint-600 transition-colors">What's Included</a>
+                <a href="#plans" class="hover:text-mint-600 transition-colors">Wellness Plans</a>
+                <a href="#faq" class="hover:text-mint-600 transition-colors">FAQs</a>
+            </nav>
+
+            <!-- Book Action -->
+            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                Book Preventive Care
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-b from-mint-50/60 to-slate-50 border-b border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Service Icon matching screenshot style -->
+                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-mint-100 border border-mint-200/50 flex items-center justify-center text-mint-600 text-3xl shadow-sm">
+                    <i class="fa-solid fa-syringe"></i>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    Preventive Care
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto mb-8">
+                    Vaccinations & wellness plans designed to protect your pet against preventable diseases at every stage of life.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-mint-600 text-white font-semibold shadow-md hover:bg-mint-700 transition-all hover:shadow-lg">
+                        Schedule Vaccination / Plan
+                    </a>
+                    <a href="#plans" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all">
+                        Explore Wellness Plans
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                        Lifelong Protection
+                    </span>
+                    <h2 class="text-3xl font-bold text-slate-900">
+                        Prevention is the Best Medicine
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Preventive care helps shield your pets from dangerous, contagious viruses and parasites before they start. From core puppy/kitten vaccine series to comprehensive annual wellness plans, our proactive protocols keep your companions protected for life.
+                    </p>
+                    
+                    <ul class="space-y-3 font-medium text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Tailored core & non-core vaccine schedules (Rabies, DHPP, FVRCP, Kennel Cough)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Year-round protection against fleas, ticks, heartworm, and parasites
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Budget-friendly structured annual wellness packages for all life stages
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Highlight Card -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/80 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+                        <i class="fa-solid fa-shield-virus text-mint-600"></i> Why Preventive Care Matters
+                    </h3>
+                    <div class="space-y-4 divide-y divide-slate-100">
+                        <div class="pt-2">
+                            <h4 class="font-semibold text-slate-800">Disease Defense</h4>
+                            <p class="text-slate-500 text-sm">Vaccines build active immunity against life-threatening diseases like Parvovirus, Rabies, and Feline Leukemia.</p>
+                        </div>
+                        <div class="pt-4">
+                            <h4 class="font-semibold text-slate-800">Cost Savings</h4>
+                            <p class="text-slate-500 text-sm">Preventing illnesses early costs a fraction of emergency treatment or intensive chronic care.</p>
+                        </div>
+                        <div class="pt-4">
+                            <h4 class="font-semibold text-slate-800">Peace of Mind</h4>
+                            <p class="text-slate-500 text-sm">Stay compliant with local licensing regulations and travel requirements effortlessly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included / Services Section -->
+        <section id="services" class="py-16 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Our Preventive Services</h2>
+                    <p class="text-slate-600">Complete, medical-grade protection customized to your pet's lifestyle and risk factors.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-syringe"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Core Vaccinations</h3>
+                        <p class="text-slate-600 text-sm">Essential vaccines for all dogs and cats including Rabies, DHPP, and FVRCP booster series.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-bugs"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Parasite Prevention</h3>
+                        <p class="text-slate-600 text-sm">Prescription treatments for monthly flea, tick, heartworm, and intestinal worm control.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-vial"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Early Screenings</h3>
+                        <p class="text-slate-600 text-sm">Routine bloodwork, fecal tests, and heartworm testing to identify hidden issues early.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Microchipping</h3>
+                        <p class="text-slate-600 text-sm">Permanent microchip identification & registry registration to keep your pet safe if lost.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wellness Plans Section -->
+        <section id="plans" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                    Life Stage Packages
+                </span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-2">Tailored Wellness Plans</h2>
+                <p class="text-slate-600">Comprehensive preventative healthcare designed for every phase of growth.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Puppy / Kitten Plan -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="text-mint-600 text-sm font-bold uppercase tracking-wider mb-2">Ages 0 - 1 Year</div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Puppy & Kitten Plan</h3>
+                        <p class="text-slate-600 text-sm mb-6">Build strong immunity during crucial early development months.</p>
+                        
+                        <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Initial booster vaccine series</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Deworming & fecal screening</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Microchip placement & registration</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Growth & nutrition consultation</li>
+                        </ul>
+                    </div>
+                    <a href="#book" class="w-full py-3 text-center rounded-xl font-semibold bg-mint-100 text-mint-700 hover:bg-mint-200 transition-colors">Select Plan</a>
+                </div>
+
+                <!-- Adult Plan -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-mint-500 shadow-xl relative flex flex-col justify-between">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-mint-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+                        Most Popular
+                    </div>
+                    <div>
+                        <div class="text-mint-600 text-sm font-bold uppercase tracking-wider mb-2">Ages 1 - 7 Years</div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Adult Wellness Plan</h3>
+                        <p class="text-slate-600 text-sm mb-6">Sustain optimal health and keep core protections up to date.</p>
+                        
+                        <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Annual comprehensive checkup</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Core vaccine annual boosters</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Heartworm & parasite test</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Dental health screening</li>
+                        </ul>
+                    </div>
+                    <a href="#book" class="w-full py-3 text-center rounded-xl font-semibold bg-mint-600 text-white hover:bg-mint-700 transition-colors shadow-md">Select Plan</a>
+                </div>
+
+                <!-- Senior Plan -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="text-mint-600 text-sm font-bold uppercase tracking-wider mb-2">Ages 7+ Years</div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Senior Care Plan</h3>
+                        <p class="text-slate-600 text-sm mb-6">Advanced care and early disease detection for aging pets.</p>
+                        
+                        <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Bi-annual physical exams</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Comprehensive senior blood panel</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Urinalysis & organ monitoring</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mint-600"></i> Joint & mobility management</li>
+                        </ul>
+                    </div>
+                    <a href="#book" class="w-full py-3 text-center rounded-xl font-semibold bg-mint-100 text-mint-700 hover:bg-mint-200 transition-colors">Select Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking CTA Section -->
+        <section id="book" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-mint-600 to-mint-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
+                <h2 class="text-3xl font-bold">Keep Your Pet Protected Year-Round</h2>
+                <p class="text-mint-100 max-w-xl mx-auto text-lg">
+                    Contact us to update your pet's vaccines or enroll in an annual wellness plan today.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:+1234567890" class="bg-white text-mint-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-mint-50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Call Clinic
+                    </a>
+                    <a href="mailto:appointments@vetclinic.com" class="bg-mint-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-mint-900/50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Book Appointment
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>What is the difference between core and non-core vaccines?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Core vaccines are recommended for all pets regardless of lifestyle (e.g., Rabies, Canine Distemper/Parvo, Feline Viral Rhinotracheitis). Non-core vaccines are lifestyle-dependent (e.g., Bordetella for dogs visiting boarding facilities, or Lyme vaccine for outdoor ticks exposure).
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>How often do pets need vaccinations?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Puppies and kittens require booster vaccines every 3-4 weeks until around 16 weeks of age. Adult pets generally require booster vaccinations every 1 to 3 years depending on the vaccine type and local laws.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>Are indoor pets required to be vaccinated?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Yes. Rabies vaccination is legally mandated in most regions even for indoor pets. Additionally, viruses can enter homes via clothing or shoes, and indoor pets may accidentally escape outside.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-paw text-mint-600"></i>
+                <p class="text-slate-500 text-sm">
+                    &copy; 2026 VetCare Clinic. All rights reserved.
+                </p>
+            </div>
+            <div class="flex items-center gap-6 text-slate-400 text-sm">
+                <a href="#" class="hover:text-mint-600 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
