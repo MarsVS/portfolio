@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostics | Lab, Imaging & Advanced Tests | VetCare Clinic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        mint: {
+                            50: '#f0fdf9',
+                            100: '#e6f7f3',
+                            200: '#bbf7d0',
+                            500: '#10b981',
+                            600: '#0d7a5f',
+                            700: '#0f6b58',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-mint-100 flex items-center justify-center text-mint-600 text-lg font-bold">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+                <span class="font-bold text-xl text-slate-900 tracking-tight">VetCare Clinic</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="#overview" class="hover:text-mint-600 transition-colors">Overview</a>
+                <a href="#capabilities" class="hover:text-mint-600 transition-colors">Lab & Imaging</a>
+                <a href="#process" class="hover:text-mint-600 transition-colors">Process</a>
+                <a href="#faq" class="hover:text-mint-600 transition-colors">FAQs</a>
+            </nav>
+
+            <!-- Book Action -->
+            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                Book Diagnostic Workup
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-b from-mint-50/60 to-slate-50 border-b border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Service Icon matching screenshot badge -->
+                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-mint-100 border border-mint-200/50 flex items-center justify-center text-mint-600 text-3xl shadow-sm">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    Diagnostics
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto mb-8">
+                    Lab, imaging & advanced tests to provide rapid, accurate medical answers for your pet.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-mint-600 text-white font-semibold shadow-md hover:bg-mint-700 transition-all hover:shadow-lg">
+                        Schedule Evaluation
+                    </a>
+                    <a href="#capabilities" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all">
+                        Explore Diagnostic Tests
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                        Precision Medicine
+                    </span>
+                    <h2 class="text-3xl font-bold text-slate-900">
+                        Fast & Accurate Answers When Time Matters Most
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Because our patients cannot tell us where it hurts, advanced veterinary diagnostics are critical. Equipped with state-of-the-art in-house laboratory analyzers, digital X-rays, and ultrasound technology, we can evaluate internal organs, bones, and bloodwork within minutes.
+                    </p>
+                    
+                    <ul class="space-y-3 font-medium text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            In-house laboratory for rapid same-day blood & urine results
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            High-definition digital radiology (X-rays) with instant imaging
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            Non-invasive veterinary ultrasound & advanced pathology panels
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Highlight Box -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/80 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+                        <i class="fa-solid fa-microscope text-mint-600"></i> In-House Lab Advantages
+                    </h3>
+                    <div class="space-y-4 divide-y divide-slate-100">
+                        <div class="pt-2">
+                            <h4 class="font-semibold text-slate-800">Rapid Results</h4>
+                            <p class="text-slate-500 text-sm">Most critical blood and urine panel results are ready in under 20 minutes.</p>
+                        </div>
+                        <div class="pt-4">
+                            <h4 class="font-semibold text-slate-800">Immediate Treatment</h4>
+                            <p class="text-slate-500 text-sm">Eliminates days of waiting so we can begin target therapy right away during sick visits.</p>
+                        </div>
+                        <div class="pt-4">
+                            <h4 class="font-semibold text-slate-800">Pre-Surgical Safety</h4>
+                            <p class="text-slate-500 text-sm">Screen organ function before anesthesia to minimize surgical risk factors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included / Diagnostic Capabilities Section -->
+        <section id="capabilities" class="py-16 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Diagnostic Services & Technology</h2>
+                    <p class="text-slate-600">Comprehensive diagnostic tools under one roof to diagnose illness, injury, or monitor chronic disease.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-vial"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">In-House Bloodwork</h3>
+                        <p class="text-slate-600 text-sm">Complete Blood Count (CBC), biochemistry panels, electrolytes, and thyroid testing.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-x-ray"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Digital Radiology</h3>
+                        <p class="text-slate-600 text-sm">Clear X-ray images for bone fractures, joint health, foreign body ingestion, and chest exams.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-wave-square"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Ultrasonography</h3>
+                        <p class="text-slate-600 text-sm">Real-time soft-tissue visualization of internal organs, pregnancy, fluid, and abdominal masses.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-dna"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Cytology & Specialized Tests</h3>
+                        <p class="text-slate-600 text-sm">Microscopic examination of skin swabs, fine needle aspirates, biopsies, and infectious panels.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diagnostic Process Section -->
+        <section id="process" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                    Streamlined Care
+                </span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-2">How Diagnostics Work</h2>
+                <p class="text-slate-600">From symptoms to targeted treatment in three straightforward steps.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">1</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Clinical Examination</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Our veterinarian examines your pet, reviews symptoms and medical history, and determines which diagnostic tests are necessary.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">2</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Testing & Imaging</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Gentle blood draws, urinalysis, digital X-rays, or ultrasound scans are performed safely by our veterinary care team.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">3</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Results & Care Plan</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        We walk you through test results and diagnostic images directly, establishing an immediate, personalized treatment plan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking CTA Section -->
+        <section id="book" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-mint-600 to-mint-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
+                <h2 class="text-3xl font-bold">Need Diagnostic Testing for Your Pet?</h2>
+                <p class="text-mint-100 max-w-xl mx-auto text-lg">
+                    Contact us to schedule diagnostic imaging, routine lab screenings, or pre-surgical bloodwork.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:+1234567890" class="bg-white text-mint-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-mint-50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Call Clinic
+                    </a>
+                    <a href="mailto:appointments@vetclinic.com" class="bg-mint-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-mint-900/50 transition-colors inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-envelope"></i> Request Appointment
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>Does my pet need to fast before diagnostic tests?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        For routine blood work or abdominal ultrasound imaging, a 8–12 hour fast is often recommended to ensure accurate blood parameters and clear imaging, unless otherwise advised by the vet.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>Will my pet require sedation for X-rays or ultrasound?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Most pets tolerate digital X-rays and ultrasound without sedation. However, if a pet is in pain, anxious, or precise positioning is required (such as orthopedic X-rays), mild sedation may be recommended for safety and comfort.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>How quickly will I receive the results?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        In-house blood panels and digital X-rays are completed while you wait during your appointment. Special biopsy histology or specialized reference lab tests typically take 3 to 5 business days.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-paw text-mint-600"></i>
+                <p class="text-slate-500 text-sm">
+                    &copy; 2026 VetCare Clinic. All rights reserved.
+                </p>
+            </div>
+            <div class="flex items-center gap-6 text-slate-400 text-sm">
+                <a href="#" class="hover:text-mint-600 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
