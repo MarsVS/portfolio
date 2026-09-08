@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Care & Urgent Support | VetCare Clinic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        mint: {
+                            50: '#f0fdf9',
+                            100: '#e6f7f3',
+                            200: '#bbf7d0',
+                            500: '#10b981',
+                            600: '#0d7a5f',
+                            700: '#0f6b58',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Emergency Urgent Alert Bar -->
+    <div class="bg-rose-600 text-white py-2.5 px-4 text-center text-sm font-semibold flex items-center justify-center gap-2">
+        <i class="fa-solid fa-circle-exclamation animate-pulse"></i>
+        <span>Experiencing an active pet emergency? Call us immediately: </span>
+        <a href="tel:+1234567890" class="underline font-extrabold hover:text-rose-100 transition-colors">+1 (234) 567-890</a>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-mint-100 flex items-center justify-center text-mint-600 text-lg font-bold">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+                <span class="font-bold text-xl text-slate-900 tracking-tight">VetCare Clinic</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="#overview" class="hover:text-mint-600 transition-colors">Overview</a>
+                <a href="#services" class="hover:text-mint-600 transition-colors">Emergency Services</a>
+                <a href="#triage" class="hover:text-mint-600 transition-colors">Emergency Steps</a>
+                <a href="#faq" class="hover:text-mint-600 transition-colors">FAQs</a>
+            </nav>
+
+            <!-- Book / Direct Call Action -->
+            <a href="tel:+1234567890" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-rose-600 text-white shadow-md hover:bg-rose-700 transition-all hover:shadow-lg hover:-translate-y-0.5 gap-2">
+                <i class="fa-solid fa-phone"></i> Call Emergency Desk
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-b from-rose-50/50 via-mint-50/30 to-slate-50 border-b border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Service Icon -->
+                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-rose-100 border border-rose-200/50 flex items-center justify-center text-rose-600 text-3xl shadow-sm">
+                    <i class="fa-solid fa-truck-medical"></i>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    Emergency Care & Urgent Support
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto mb-8">
+                    Rapid triage, life-saving critical care, and dedicated after-hours veterinary support when every second counts.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="tel:+1234567890" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-rose-600 text-white font-bold shadow-md hover:bg-rose-700 transition-all hover:shadow-lg inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone-volume"></i> Call Hotline Now
+                    </a>
+                    <a href="#triage" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all">
+                        View Immediate Action Steps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-rose-600 font-bold uppercase tracking-wider text-xs bg-rose-100 px-3 py-1 rounded-full">
+                        24/7 Critical Response
+                    </span>
+                    <h2 class="text-3xl font-bold text-slate-900">
+                        When Every Second Counts
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Medical emergencies are unpredictable and stressful. Our trauma room and intensive care unit (ICU) are continuously equipped with advanced monitoring equipment, oxygen therapy, instant point-of-care diagnostics, and experienced veterinary critical care staff ready to stabilize your pet immediately.
+                    </p>
+                    
+                    <ul class="space-y-3 font-medium text-slate-700">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-rose-600 text-lg"></i>
+                            Immediate clinical triage with priority access for critical cases
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-rose-600 text-lg"></i>
+                            On-site emergency surgery, trauma resuscitation, and blood transfusions
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-rose-600 text-lg"></i>
+                            In-house FAST ultrasound, digital X-rays, and stat laboratory panels
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Highlight Box: Red Flag Symptoms -->
+                <div class="bg-white p-8 rounded-3xl border border-rose-100 shadow-xl shadow-rose-100/40 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> Critical Symptoms Requiring Immediate Care
+                    </h3>
+                    <p class="text-slate-500 text-sm">
+                        If your pet exhibits any of the following symptoms, bring them to our emergency facility immediately:
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-600 mt-1"></i>
+                            <span class="text-sm text-slate-700 font-medium">Difficulty breathing, severe panting, or pale/blue gums</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-600 mt-1"></i>
+                            <span class="text-sm text-slate-700 font-medium">Acute abdominal swelling, unproductive retching (GDV/Bloat)</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-600 mt-1"></i>
+                            <span class="text-sm text-slate-700 font-medium">Inability to urinate or extreme distress while straining</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-600 mt-1"></i>
+                            <span class="text-sm text-slate-700 font-medium">Seizures lasting over 2 minutes or multiple cluster seizures</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-600 mt-1"></i>
+                            <span class="text-sm text-slate-700 font-medium">Suspected toxin ingestion, severe trauma, or active arterial bleeding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Emergency & ICU Capabilities</h2>
+                    <p class="text-slate-600">Comprehensive emergency interventions and specialized critical support.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Service 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-rose-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Trauma & Resuscitation</h3>
+                        <p class="text-slate-600 text-sm">Advanced CPR protocols, shock therapy, intravenous fluid resuscitation, and oxygen support cages.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-rose-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-syringe"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Toxin & Poisoning Care</h3>
+                        <p class="text-slate-600 text-sm">Immediate decontamination, antidote administration, and continuous renal/hepatic protection protocols.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-rose-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-user-nurse"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Emergency Surgery</h3>
+                        <p class="text-slate-600 text-sm">On-call surgical team for gastric torsion (GDV), internal bleeding, foreign body removals, and lacerations.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-rose-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-vial-virus"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">STAT Lab & Diagnostics</h3>
+                        <p class="text-slate-600 text-sm">15-minute blood gas, electrolyte, coagulation, and emergency imaging for rapid clinical decision making.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Steps Section -->
+        <section id="triage" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-rose-600 font-bold uppercase tracking-wider text-xs bg-rose-100 px-3 py-1 rounded-full">
+                    Action Plan
+                </span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-2">What to Do in a Pet Emergency</h2>
+                <p class="text-slate-600">Follow these key steps to prepare your pet for safe, rapid emergency treatment.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold mb-6">1</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Call Ahead Immediately</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Notify our emergency desk while en route so our surgical and critical care team can prepare oxygen, medications, and the trauma suite for your arrival.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold mb-6">2</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Safe Transport</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Keep your pet calm and warm. Wrap injured pets in a blanket to prevent shock, keep the spine stable if trauma is suspected, and do not muzzle if breathing is impaired.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold mb-6">3</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Immediate Triage</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Upon arrival, our veterinary staff will evaluate vital signs. Patients with life-threatening conditions are taken directly to treatment for immediate stabilization.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking / Hotline Call CTA Section -->
+        <section id="book" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-rose-600 to-rose-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
+                <h2 class="text-3xl font-bold">Need Emergency Assistance Right Now?</h2>
+                <p class="text-rose-100 max-w-xl mx-auto text-lg">
+                    Do not wait if your pet shows signs of distress. Our emergency response team is standing by.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:+1234567890" class="bg-white text-rose-700 font-extrabold px-8 py-4 rounded-xl shadow-md hover:bg-rose-50 transition-colors inline-flex items-center justify-center gap-3 text-lg">
+                        <i class="fa-solid fa-phone-flip text-xl"></i> +1 (234) 567-890
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>Do I need an appointment for emergency care?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-rose-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        No appointment is ever required for an emergency. Walk-ins are welcomed, but calling ahead allows us to prepare life-saving equipment before you walk through the door.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>How does triage work in a veterinary emergency room?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-rose-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        Just like a human hospital emergency room, patients are prioritized based on medical severity. Critical, life-threatening cases (such as cardiac arrest, respiratory failure, or severe bleeding) receive immediate attention before stable conditions.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                        <span>What should I bring with me to the emergency clinic?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-rose-600"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
+                        If possible, bring any packaging or containers of toxins/medications your pet may have ingested, a list of current prescription drugs, medical records if available, and a leash or secure pet carrier.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-paw text-mint-600"></i>
+                <p class="text-slate-500 text-sm">
+                    &copy; 2026 VetCare Clinic. All rights reserved.
+                </p>
+            </div>
+            <div class="flex items-center gap-6 text-slate-400 text-sm">
+                <a href="#" class="hover:text-mint-600 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-mint-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
