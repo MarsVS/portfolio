@@ -102,11 +102,12 @@
 
     <main class="pt-20 lg:pt-28 pb-16">
         
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-hidden lg:overflow-visible">
+        <!-- Removed side padding on mobile here, only applying it on large screens (lg:px-8) -->
+        <section class="max-w-7xl mx-auto lg:px-8 relative overflow-hidden lg:overflow-visible">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative py-12 lg:py-0">
                 
-                <!-- Hero Text Content -->
-                <div class="relative z-10 space-y-6 lg:pr-10">
+                <!-- Hero Text Content (Added the mobile padding here so text stays aligned) -->
+                <div class="relative z-10 space-y-6 px-4 sm:px-6 lg:px-0 lg:pr-10">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
                         Dr. Christopher <br/> Ngumu Mutavi
                     </h1>
@@ -135,7 +136,7 @@
                     </div>
                 </div>
 
-                <!-- Hero Image Container (End-to-End full width on mobile, Side card on desktop) -->
+                <!-- Hero Image Container (Now stretches completely side-to-side on mobile) -->
                 <div class="absolute inset-0 lg:relative lg:inset-auto z-0 lg:z-10 flex justify-center lg:justify-end pointer-events-none lg:pointer-events-auto">
                     <div class="relative w-full h-full lg:max-w-lg lg:aspect-[4/5] rounded-none lg:rounded-2xl overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border lg:border-white/10">
                         <img src="images/doc.jpeg" 
