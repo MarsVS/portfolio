@@ -33,106 +33,7 @@
         }
     </script>
     <style>
-        body {
-            background-color: #000080;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-        .glass-nav {
-            background: rgba(0, 0, 128, 0.9);
-            backdrop-filter: blur(10px);
-        }
-        /* Mobile menu transition */
-        #mobile-menu {
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-        }
-        #mobile-menu.open {
-            max-height: 500px;
-            opacity: 1;
-        }
-    </style>
-</head>
-<body class="font-sans antialiased selection:bg-brand-teal selection:text-white">
-
-    <nav class="fixed w-full z-50 glass-nav border-b border-white/10 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-3 cursor-pointer">
-                    <div class="w-10 h-10 rounded-md border-2 border-brand-teal flex items-center justify-center text-brand-teal">
-                        <i class="fa-solid fa-shield-dog text-xl"></i>
-                    </div>
-                    <span class="font-semibold text-lg tracking-wide">Dr. Christopher Ngumu</span>
-                </div>
-
-                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-300">
-                    <a href="index.html" class="text-brand-teal hover:text-brand-teal transition">Home</a>
-                    <a href="about.html" class="hover:text-white transition">About</a>
-                    <a href="services.html" class="hover:text-white transition">Services</a>
-                    <a href="virthosp.html" class="hover:text-white transition">Virtual Hospital</a>
-                    <a href="articles.html" class="hover:text-white transition">Publications</a>
-                    <a href="gallery.html" class="hover:text-white transition">Portfolio</a>
-                    <a href="contact.html" class="hover:text-white transition">Contact</a>
-                    <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white px-5 py-2.5 rounded-md transition font-semibold">Book a Consultation</a>
-                </div>
-
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="md:hidden bg-[#000080] border-b border-white/10">
-            <div class="px-4 pt-2 pb-6 space-y-2 text-center flex flex-col">
-                <a href="index.html" class="text-brand-teal block px-3 py-2 rounded-md font-medium">Home</a>
-                <a href="about.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md font-medium">About</a>
-                <a href="services.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md font-medium">Services</a>
-                <a href="virthosp.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md font-medium">Virtual Hospital</a>
-                <a href="articles.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md font-medium">Publications</a>
-                <a href="gallery.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md font-medium">Portfolio</a>
-                <a href="contact.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md font-medium">Contact</a>
-                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white block px-3 py-3 mt-4 rounded-md font-semibold mx-4Here is the fully updated HTML with the changes applied. To implement this on your website, you'll need to save the community background image into your `images` folder and name it `hero-bg.jpg`. You can then replace your entire `index.html` file with the code below. The mobile hero section now uses this image as a full background, while the original card layout returns on tablets and desktops.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Christopher Ngumu - Veterinary Surgeon</title>
-    
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
-    
-    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
-
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            bg: '#000080',      // Deep navy background
-                            teal: '#0a9b8e',    // Primary teal accent
-                            tealhover: '#088075',
-                            card: '#ffffff',
-                            textmuted: '#94a3b8'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
+        /* Custom styles to handle specific image masking/blending if needed */
         body {
             background-color: #000080;
             color: #ffffff;
@@ -200,31 +101,26 @@
         </div>
     </nav>
 
-    <main class="pt-20 lg:pt-28 pb-16">
+    <main class="pt-28 pb-16">
         
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <!-- Mobile Background Image - only visible on mobile -->
-            <div class="absolute inset-0 bg-cover bg-center lg:hidden z-0" style="background-image: url('images/hero-bg.jpg');">
-                <div class="absolute inset-0 bg-brand-bg opacity-70"></div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-12 lg:py-0">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
                 <div class="order-1 lg:order-1 space-y-6 lg:pr-10">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white lg:text-white">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                         Dr. Christopher <br/> Ngumu Mutavi
                     </h1>
                     <h2 class="text-2xl md:text-3xl text-brand-teal font-medium">
                         Veterinary Surgeon
                     </h2>
                     
-                    <div class="space-y-4 pt-4">
-                        <p class="text-lg font-medium text-white lg:text-white">
+                    <div class="space-y-4 text-gray-300 pt-4">
+                        <p class="text-lg font-medium text-white">
                             Compassionate care.<br/>
                             Clinical excellence.<br/>
                             Stronger bonds.
                         </p>
-                        <p class="text-sm md:text-base leading-relaxed max-w-md text-gray-200 lg:text-brand-textmuted">
+                        <p class="text-sm md:text-base leading-relaxed max-w-md text-brand-textmuted">
                             Dedicated to improving animal health and advancing veterinary medicine through expertise, innovation and empathy.
                         </p>
                     </div>
@@ -233,7 +129,7 @@
                         <a href="virtconsul.html" class="text-center bg-brand-teal hover:bg-brand-tealhover text-white px-6 py-3 rounded-md font-semibold transition">
                             Book a Consultation
                         </a>
-                        <a href="gallery.html" class="text-center border border-white lg:border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-md font-semibold transition">
+                        <a href="gallery.html" class="text-center border border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-md font-semibold transition">
                             Explore My Work
                         </a>
                     </div>
