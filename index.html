@@ -103,23 +103,18 @@
     <main class="pt-20 lg:pt-28 pb-16">
         
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <!-- Mobile Background Image using doc.png - only visible on mobile -->
-            <div class="absolute inset-0 bg-cover bg-top lg:hidden z-0 rounded-2xl overflow-hidden" style="background-image: url('images/doc.png');">
-                <div class="absolute inset-0 bg-gradient-to-b from-[#000080]/75 via-[#000080]/40 to-[#000080]/80"></div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-12 lg:py-0">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 py-6 lg:py-0">
                 
                 <div class="order-1 lg:order-1 space-y-6 lg:pr-10">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white lg:text-white">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
                         Dr. Christopher <br/> Ngumu Mutavi
                     </h1>
                     <h2 class="text-2xl md:text-3xl text-brand-teal font-medium">
                         Veterinary Surgeon
                     </h2>
                     
-                    <div class="space-y-4 pt-4">
-                        <p class="text-lg font-medium text-white lg:text-white">
+                    <div class="space-y-4 pt-2 lg:pt-4">
+                        <p class="text-lg font-medium text-white">
                             Compassionate care.<br/>
                             Clinical excellence.<br/>
                             Stronger bonds.
@@ -129,19 +124,19 @@
                         </p>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4 lg:pt-6">
                         <a href="virtconsul.html" class="text-center bg-brand-teal hover:bg-brand-tealhover text-white px-6 py-3 rounded-md font-semibold transition">
                             Book a Consultation
                         </a>
-                        <a href="gallery.html" class="text-center border border-white lg:border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-md font-semibold transition">
+                        <a href="gallery.html" class="text-center border border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-md font-semibold transition">
                             Explore My Work
                         </a>
                     </div>
                 </div>
 
-                <!-- Hidden on mobile to avoid duplicating doc.png, displayed on lg screens -->
-                <div class="order-2 lg:order-2 relative hidden lg:flex justify-center lg:justify-end">
-                    <div class="relative w-full max-w-lg aspect-square lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+                <!-- Hero Image Container (Visible seamlessly on Mobile and Desktop) -->
+                <div class="order-2 lg:order-2 relative flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-md lg:max-w-lg aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                         <img src="images/doc.jpeg" 
                              alt="Dr. Christopher Ngumu with a Golden Retriever" 
                              class="w-full h-full object-cover object-top transition duration-700">
