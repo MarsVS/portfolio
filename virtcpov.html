@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Consultations | Vetcare</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        /* Updated colors matching image_fafe03.png */
+        .text-brand-teal {
+            color: #0E7969; /* Deep teal accent */
+        }
+        
+        .bg-brand-teal {
+            background-color: #0E7969;
+        }
+        
+        .bg-brand-tealhover {
+            background-color: #0B6053;
+        }
+
+        .bg-brand-mint {
+            background-color: #F0FDF8; /* Very light teal/mint for card accents */
+        }
+
+        .custom-card {
+            background: #ffffff;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        .input-field:focus {
+            border-color: #0E7969;
+            box-shadow: 0 0 0 3px rgba(14, 121, 105, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-800">
+
+    <!-- Light Navigation -->
+    <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <div class="bg-brand-teal text-white w-9 h-9 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-shield-dog text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900 tracking-wide">Vetcare</span>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brand-teal transition">Home</a>
+                <a href="about.html" class="hover:text-brand-teal transition">About</a>
+                <a href="services.html" class="hover:text-brand-teal transition">Services</a>
+                <!-- Highlighted link -->
+                <a href="virthosp.html" class="text-brand-teal font-semibold transition">Virtual Hospital</a>
+                <a href="articles.html" class="hover:text-brand-teal transition">Publications</a>
+                <a href="gallery.html" class="hover:text-brand-teal transition">Portfolio</a>
+                <a href="contact.html" class="hover:text-brand-teal transition">Contact</a>
+            </div>
+
+            <!-- Desktop CTA & Profile -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white px-5 py-2.5 rounded-lg transition font-semibold text-sm shadow-sm">Get Started</a>
+                <div class="w-9 h-9 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none hover:text-brand-teal transition">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-6 py-4 absolute w-full shadow-lg">
+            <div class="flex flex-col space-y-4 text-slate-600 text-sm font-medium">
+                <a href="index.html" class="hover:text-brand-teal transition block">Home</a>
+                <a href="about.html" class="hover:text-brand-teal transition block">About</a>
+                <a href="services.html" class="hover:text-brand-teal transition block">Services</a>
+                <a href="virthosp.html" class="text-brand-teal font-semibold transition block">Virtual Hospital</a>
+                <a href="articles.html" class="hover:text-brand-teal transition block">Publications</a>
+                <a href="gallery.html" class="hover:text-brand-teal transition block">Portfolio</a>
+                <a href="contact.html" class="hover:text-brand-teal transition block">Contact</a>
+                <hr class="border-slate-100 my-2">
+                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white text-center px-5 py-3 rounded-lg transition font-semibold block shadow-sm">Get Started</a>
+                <a href="dashboard.html" class="text-center py-2 hover:text-brand-teal transition flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-user"></i>
+                    <span>My Account</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow p-6">
+        <div class="max-w-2xl mx-auto">
+            
+            <!-- Page Header -->
+            <div class="mb-8 mt-4 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-mint flex items-center justify-center">
+                    <i class="fa-solid fa-video text-brand-teal text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-800">Virtual Consultations</h1>
+                    <p class="text-slate-500 text-sm">Connect with a veterinarian from the comfort of home</p>
+                </div>
+            </div>
+
+            <!-- Booking Form Card -->
+            <div class="custom-card p-6 md:p-8">
+                <form action="#" method="POST" class="space-y-6">
+                    
+                    <!-- Pet Selection -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Select Pet</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="cursor-pointer group">
+                                <input type="radio" name="pet" class="peer sr-only" checked>
+                                <div class="p-4 rounded-xl border border-slate-200 peer-checked:border-[#0E7969] peer-checked:bg-brand-mint hover:bg-slate-50 transition flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                                        <i class="fa-solid fa-dog text-slate-400 group-hover:text-brand-teal peer-checked:text-brand-teal transition text-lg"></i>
+                                    </div>
+                                    <div class="font-medium text-slate-800 peer-checked:text-[#0E7969]">Buddy (Dog)</div>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer group">
+                                <input type="radio" name="pet" class="peer sr-only">
+                                <div class="p-4 rounded-xl border border-slate-200 peer-checked:border-[#0E7969] peer-checked:bg-brand-mint hover:bg-slate-50 transition flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                                        <i class="fa-solid fa-cat text-slate-400 group-hover:text-brand-teal peer-checked:text-brand-teal transition text-lg"></i>
+                                    </div>
+                                    <div class="font-medium text-slate-800 peer-checked:text-[#0E7969]">Luna (Cat)</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Consultation Topic -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Consultation Topic</label>
+                        <select class="input-field bg-white text-slate-700" required>
+                            <option value="" disabled selected>What do you need help with?</option>
+                            <option value="skin">Skin & Coat Issues</option>
+                            <option value="diet">Diet & Nutrition Advice</option>
+                            <option value="behavior">Behavioral Concerns</option>
+                            <option value="post-op">Post-Operative Follow-up</option>
+                            <option value="general">General Wellness Advice</option>
+                        </select>
+                    </div>
+
+                    <!-- Date & Time Selection -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Date</label>
+                            <input type="date" class="input-field bg-white text-slate-700" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Time Slot</label>
+                            <select class="input-field bg-white text-slate-700" required>
+                                <option value="" disabled selected>Select available time...</option>
+                                <option value="1000">10:00 AM - 10:20 AM</option>
+                                <option value="1030">10:30 AM - 10:50 AM</option>
+                                <option value="1400">2:00 PM - 2:20 PM</option>
+                                <option value="1530">3:30 PM - 3:50 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Media Upload -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Upload Photos/Videos (Optional)</label>
+                        <p class="text-xs text-slate-500 mb-3">Help our vets understand the issue before the call starts.</p>
+                        <div class="border-2 border-dashed border-slate-200 rounded-xl p-6 text-center hover:bg-slate-50 hover:border-brand-teal transition cursor-pointer">
+                            <i class="fa-solid fa-cloud-arrow-up text-2xl text-slate-400 mb-2"></i>
+                            <p class="text-sm text-slate-600 font-medium">Click to upload or drag and drop</p>
+                            <p class="text-xs text-slate-400 mt-1">PNG, JPG, or MP4 (Max 20MB)</p>
+                            <input type="file" class="hidden" accept="image/*,video/*" multiple>
+                        </div>
+                    </div>
+
+                    <!-- Additional Notes -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Detailed Description</label>
+                        <textarea class="input-field bg-white text-slate-700 h-24 resize-none" placeholder="Please describe the symptoms, when they started, and any other relevant details..."></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4 border-t border-slate-100">
+                        <button type="submit" class="w-full bg-brand-teal hover:bg-brand-tealhover text-white font-semibold py-3.5 px-6 rounded-xl transition duration-200 shadow-md flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-video text-sm"></i>
+                            <span>Schedule Virtual Consult</span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            // Toggle hamburger and close icon
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+    </script>
+</body>
+</html>
