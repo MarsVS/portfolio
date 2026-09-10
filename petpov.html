@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Profile - My Pets | Vetcare</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        /* Design system color definitions */
+        .text-brand-teal {
+            color: #0E7969;
+        }
+        
+        .bg-brand-teal {
+            background-color: #0E7969;
+        }
+        
+        .bg-brand-tealhover:hover {
+            background-color: #0B6053;
+        }
+
+        .bg-brand-mint {
+            background-color: #F0FDF8;
+        }
+
+        .border-brand-teal {
+            border-color: #0E7969;
+        }
+
+        .custom-card {
+            background: #ffffff;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        .input-field:focus {
+            border-color: #0E7969;
+            box-shadow: 0 0 0 3px rgba(14, 121, 105, 0.1);
+        }
+
+        /* Modal Overlay Styling */
+        .modal-backdrop {
+            background-color: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-800">
+
+    <!-- Light Navigation Header -->
+    <nav class="bg-white sticky top-0 z-40 shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <div class="bg-brand-teal text-white w-9 h-9 rounded-lg flex items-center justify-center shadow-sm">
+                    <i class="fa-solid fa-shield-dog text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900 tracking-wide">Vetcare</span>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brand-teal transition">Home</a>
+                <a href="about.html" class="hover:text-brand-teal transition">About</a>
+                <a href="services.html" class="hover:text-brand-teal transition">Services</a>
+                <a href="virthosp.html" class="hover:text-brand-teal transition">Virtual Hospital</a>
+                <!-- Highlighted active page link for Pet Profile / Records -->
+                <a href="records.html" class="text-brand-teal font-semibold transition flex items-center space-x-1">
+                    <span class="w-2 h-2 rounded-full bg-brand-teal"></span>
+                    <span>Pet Profile</span>
+                </a>
+                <a href="prescriptions.html" class="hover:text-brand-teal transition">Prescriptions</a>
+                <a href="lab-results.html" class="hover:text-brand-teal transition">Lab Results</a>
+                <a href="vaccinations.html" class="hover:text-brand-teal transition">Vaccinations</a>
+                <a href="reminders.html" class="hover:text-brand-teal transition">Reminders</a>
+                <a href="emergency.html" class="text-rose-600 hover:text-rose-700 transition flex items-center space-x-1 font-medium">
+                    <span>Emergency Help</span>
+                </a>
+                <a href="payments.html" class="hover:text-brand-teal transition">Payments</a>
+                <a href="contact.html" class="hover:text-brand-teal transition">Contact</a>
+            </div>
+
+            <!-- Desktop CTA & Profile -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="virtconsul.html" class="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-lg transition font-semibold text-sm shadow-sm flex items-center space-x-2">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>24/7 Hotline</span>
+                </a>
+                <div class="w-9 h-9 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none hover:text-brand-teal transition">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-6 py-4 absolute w-full shadow-lg">
+            <div class="flex flex-col space-y-4 text-slate-600 text-sm font-medium">
+                <a href="index.html" class="hover:text-brand-teal transition block">Home</a>
+                <a href="about.html" class="hover:text-brand-teal transition block">About</a>
+                <a href="services.html" class="hover:text-brand-teal transition block">Services</a>
+                <a href="virthosp.html" class="hover:text-brand-teal transition block">Virtual Hospital</a>
+                <a href="records.html" class="text-brand-teal font-semibold transition block">Pet Profile</a>
+                <a href="prescriptions.html" class="hover:text-brand-teal transition block">Prescriptions</a>
+                <a href="lab-results.html" class="hover:text-brand-teal transition block">Lab Results</a>
+                <a href="vaccinations.html" class="hover:text-brand-teal transition block">Vaccinations</a>
+                <a href="reminders.html" class="hover:text-brand-teal transition block">Reminders</a>
+                <a href="emergency.html" class="text-rose-600 font-medium transition block">Emergency Help</a>
+                <a href="payments.html" class="hover:text-brand-teal transition block">Payments</a>
+                <a href="contact.html" class="hover:text-brand-teal transition block">Contact</a>
+                <hr class="border-slate-100 my-2">
+                <a href="tel:18005558389" class="bg-rose-600 hover:bg-rose-700 text-white text-center px-5 py-3 rounded-lg transition font-semibold block shadow-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>Call 24/7 Hotline</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow p-4 sm:p-6">
+        <div class="max-w-5xl mx-auto space-y-6">
+            
+            <!-- Pet Selector & Management Bar -->
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                
+                <!-- Registered Pets List / Active Pet Tabs -->
+                <div class="flex items-center space-x-2 overflow-x-auto pb-1 md:pb-0 scrollbar-none">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider whitespace-nowrap mr-1">My Pets (3):</span>
+                    
+                    <!-- Pet 1 (Active) -->
+                    <button class="bg-brand-teal text-white px-4 py-2 rounded-xl text-xs font-semibold flex items-center space-x-2 shadow-sm shrink-0 border border-brand-teal">
+                        <i class="fa-solid fa-dog text-sm"></i>
+                        <span>Luna</span>
+                        <span class="bg-emerald-400 text-slate-900 text-[10px] font-bold px-1.5 py-0.2 rounded-full">Selected</span>
+                    </button>
+                    
+                    <!-- Pet 2 -->
+                    <button class="bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 px-4 py-2 rounded-xl text-xs font-medium flex items-center space-x-2 shrink-0 transition">
+                        <i class="fa-solid fa-cat text-slate-400"></i>
+                        <span>Buddy</span>
+                    </button>
+
+                    <!-- Pet 3 -->
+                    <button class="bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 px-4 py-2 rounded-xl text-xs font-medium flex items-center space-x-2 shrink-0 transition">
+                        <i class="fa-solid fa-paw text-slate-400"></i>
+                        <span>Max</span>
+                    </button>
+                </div>
+
+                <!-- Pet Management Buttons (Add / Remove / Manage) -->
+                <div class="flex items-center space-x-2 shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-slate-100">
+                    <button onclick="openModal('add-pet-modal')" class="bg-brand-teal bg-brand-tealhover text-white font-medium text-xs px-3.5 py-2 rounded-xl transition shadow-sm flex items-center space-x-1.5">
+                        <i class="fa-solid fa-plus text-xs"></i>
+                        <span>Add New Pet</span>
+                    </button>
+                    
+                    <button onclick="openModal('manage-pets-modal')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5">
+                        <i class="fa-solid fa-sliders text-slate-500 text-xs"></i>
+                        <span>Manage & Remove</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Active Pet Overview Header Card (Luna) -->
+            <div class="custom-card p-6 md:p-8 bg-gradient-to-r from-white via-slate-50/50 to-emerald-50/30 relative overflow-hidden">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+                    
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <!-- Pet Photo -->
+                        <div class="relative">
+                            <div class="w-28 h-28 rounded-2xl bg-slate-200 overflow-hidden border-4 border-white shadow-md flex items-center justify-center text-slate-400">
+                                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=300" alt="Luna Golden Retriever" class="w-full h-full object-cover">
+                            </div>
+                            <span class="absolute -bottom-2 -right-2 bg-emerald-500 text-white w-7 h-7 rounded-full border-2 border-white flex items-center justify-center text-xs" title="Health Status: Excellent">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </div>
+
+                        <!-- Core Details -->
+                        <div>
+                            <div class="flex items-center space-x-3 flex-wrap gap-y-1">
+                                <h1 class="text-2xl sm:text-3xl font-bold text-slate-900">Luna</h1>
+                                <span class="bg-brand-mint text-brand-teal border border-teal-200 text-xs font-bold px-3 py-0.5 rounded-full">Golden Retriever</span>
+                                <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-semibold px-2.5 py-0.5 rounded-full">Healthy</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1 font-medium">3 Years 4 Months • Female (Spayed) • Canine</p>
+                            
+                            <!-- Badges -->
+                            <div class="flex flex-wrap items-center gap-2 mt-3">
+                                <span class="bg-slate-100 text-slate-700 text-[11px] font-medium px-2.5 py-1 rounded-lg flex items-center space-x-1.5">
+                                    <i class="fa-solid fa-microchip text-brand-teal"></i>
+                                    <span>Chip ID: <strong>98514109283</strong></span>
+                                </span>
+                                <span class="bg-slate-100 text-slate-700 text-[11px] font-medium px-2.5 py-1 rounded-lg flex items-center space-x-1.5">
+                                    <i class="fa-solid fa-shield-heart text-rose-500"></i>
+                                    <span>Insurance: <strong>Trupanion Active</strong></span>
+                                </span>
+                                <span class="bg-slate-100 text-slate-700 text-[11px] font-medium px-2.5 py-1 rounded-lg flex items-center space-x-1.5">
+                                    <i class="fa-solid fa-id-card text-amber-500"></i>
+                                    <span>Rabies Tag: <strong>#2026-8821</strong></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Action Column -->
+                    <div class="w-full md:w-auto flex flex-col sm:flex-row md:flex-col gap-2 shrink-0">
+                        <a href="virthosp.html" class="w-full text-center bg-brand-teal bg-brand-tealhover text-white px-5 py-2.5 rounded-xl transition text-xs font-semibold shadow-sm flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Book Consultation</span>
+                        </a>
+                        <a href="emergency.html" class="w-full text-center bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 px-5 py-2.5 rounded-xl transition text-xs font-bold flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-kit-medical"></i>
+                            <span>Emergency Triage</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Health Summary Vitals Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                
+                <!-- Weight Stat -->
+                <div class="custom-card p-4 flex items-center space-x-4 border-l-4 border-l-teal-600">
+                    <div class="w-11 h-11 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-weight-scale text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Weight Target</p>
+                        <p class="text-lg font-bold text-slate-900">64.2 lbs</p>
+                        <p class="text-[10px] text-emerald-600 font-semibold flex items-center mt-0.5">
+                            <i class="fa-solid fa-arrow-trend-flat mr-1"></i> Ideal (+0.4 lbs in 6m)
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Next Vaccine -->
+                <div class="custom-card p-4 flex items-center space-x-4 border-l-4 border-l-amber-500">
+                    <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-syringe text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Next Vaccine</p>
+                        <p class="text-lg font-bold text-slate-900">Oct 14, 2026</p>
+                        <p class="text-[10px] text-amber-700 font-semibold mt-0.5">Rabies Booster Due</p>
+                    </div>
+                </div>
+
+                <!-- Active Prescriptions -->
+                <div class="custom-card p-4 flex items-center space-x-4 border-l-4 border-l-blue-500">
+                    <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-pills text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Active Meds</p>
+                        <p class="text-lg font-bold text-slate-900">1 Active</p>
+                        <p class="text-[10px] text-slate-500 font-medium mt-0.5">Apoquel (Seasonal)</p>
+                    </div>
+                </div>
+
+                <!-- Primary Doctor -->
+                <div class="custom-card p-4 flex items-center space-x-4 border-l-4 border-l-emerald-500">
+                    <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-user-doctor text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Primary Vet</p>
+                        <p class="text-sm font-bold text-slate-900 truncate">Dr. Sarah Jenkins</p>
+                        <p class="text-[10px] text-brand-teal font-medium mt-0.5">Metro Pet Trauma Center</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Two Column Detailed Profile Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <!-- Left 2 Columns: Medical & Pet Details -->
+                <div class="lg:col-span-2 space-y-6">
+                    
+                    <!-- Basic Information Card -->
+                    <div class="custom-card p-6">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-teal-50 text-brand-teal flex items-center justify-center">
+                                    <i class="fa-solid fa-clipboard-user text-sm"></i>
+                                </div>
+                                <h2 class="font-bold text-slate-800 text-base">Basic & Identification Info</h2>
+                            </div>
+                            <span class="text-xs text-slate-400">Owner ID: #OWN-88219</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 text-xs">
+                            <div>
+                                <span class="text-slate-400 font-medium block">Full Name</span>
+                                <span class="font-semibold text-slate-800 text-sm mt-0.5 block">Luna</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-medium block">Species</span>
+                                <span class="font-semibold text-slate-800 text-sm mt-0.5 block">Canine (Dog)</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-medium block">Primary Breed</span>
+                                <span class="font-semibold text-slate-800 text-sm mt-0.5 block">Golden Retriever</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-medium block">Date of Birth</span>
+                                <span class="font-semibold text-slate-800 text-sm mt-0.5 block">May 12, 2023</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-medium block">Gender / Status</span>
+                                <span class="font-semibold text-slate-800 text-sm mt-0.5 block">Female (Spayed)</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-medium block">Coat Color</span>
+                                <span class="font-semibold text-slate-800 text-sm mt-0.5 block">Light Golden</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-medium block">Microchip Registry</span>
+                                <span class="font-semibold text-brand-teal text-sm mt-0.5 block">HomeAgain (98514109283)</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-medium block">Insurance Carrier</span>
+                                <span class="font-semibold text-slate-800 text-sm mt-0.5 block">Trupanion Pet Health</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-medium block">Policy Number</span>
+                                <span class="font-semibold text-slate-800 text-sm mt-0.5 block">TRU-9021882</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medical Conditions & Allergies Card -->
+                    <div class="custom-card p-6">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center">
+                                    <i class="fa-solid fa-triangle-exclamation text-sm"></i>
+                                </div>
+                                <h2 class="font-bold text-slate-800 text-base">Alerts, Allergies & Diet</h2>
+                            </div>
+                            <span class="text-[11px] bg-rose-50 text-rose-700 px-2.5 py-0.5 rounded-full font-bold">1 Known Allergy</span>
+                        </div>
+
+                        <div class="space-y-4 pt-4">
+                            <!-- Allergy Alert Box -->
+                            <div class="bg-rose-50/70 border border-rose-200 rounded-xl p-3.5 flex items-start space-x-3">
+                                <i class="fa-solid fa-circle-exclamation text-rose-600 text-base mt-0.5"></i>
+                                <div>
+                                    <h4 class="font-bold text-rose-900 text-xs">Sensitivity / Allergy Alert: Chicken Protein</h4>
+                                    <p class="text-xs text-rose-700 mt-0.5">Causes mild dermatological itching and gastrointestinal upset. Avoid chicken-based kibble or treats.</p>
+                                </div>
+                            </div>
+
+                            <!-- Chronic Conditions & Diet -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                                <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                    <span class="text-slate-400 font-semibold uppercase text-[10px] tracking-wider block">Seasonal Conditions</span>
+                                    <p class="font-semibold text-slate-800 text-xs mt-1">Environmental Atopic Dermatitis</p>
+                                    <p class="text-slate-500 text-[11px] mt-0.5">Flares during late summer pollen peaks. Managed with Apoquel 16mg.</p>
+                                </div>
+                                <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100">
+                                    <span class="text-slate-400 font-semibold uppercase text-[10px] tracking-wider block">Dietary Plan</span>
+                                    <p class="font-semibold text-slate-800 text-xs mt-1">Purina Pro Plan Sensitive Salmon</p>
+                                    <p class="text-slate-500 text-[11px] mt-0.5">2 Cups Twice Daily (8:00 AM / 6:00 PM) • Fresh Water Always</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medical Activity Timeline -->
+                    <div class="custom-card p-6">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-teal-50 text-brand-teal flex items-center justify-center">
+                                    <i class="fa-solid fa-clock-rotate-left text-sm"></i>
+                                </div>
+                                <h2 class="font-bold text-slate-800 text-base">Recent Medical Activity</h2>
+                            </div>
+                            <a href="records.html" class="text-xs font-semibold text-brand-teal hover:underline">View All Records</a>
+                        </div>
+
+                        <div class="divide-y divide-slate-100 pt-2">
+                            
+                            <!-- Timeline Event 1 -->
+                            <div class="py-3.5 flex items-start justify-between gap-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-notes-medical text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-xs">Annual Wellness Exam & Blood Panel</h4>
+                                        <p class="text-[11px] text-slate-500 mt-0.5">Dr. Sarah Jenkins • Metro Pet Trauma Center</p>
+                                        <span class="inline-block mt-1 bg-emerald-50 text-emerald-700 text-[10px] font-semibold px-2 py-0.5 rounded">All Vitals Normal</span>
+                                    </div>
+                                </div>
+                                <div class="text-right shrink-0">
+                                    <span class="text-xs font-medium text-slate-400">June 14, 2026</span>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Event 2 -->
+                            <div class="py-3.5 flex items-start justify-between gap-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-9 h-9 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-syringe text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-800 text-xs">DHPP & Bordetella Vaccination</h4>
+                                        <p class="text-[11px] text-slate-500 mt-0.5">Administered 3-year booster batch #V-88219</p>
+                                        <span class="inline-block mt-1 bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Valid thru 2029</span>
+                                    </div>
+                                </div>
+                                <div class="text-right shrink-0">
+                                    <span class="text-xs font-medium text-slate-400">June 14, 2026</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right 1 Column: Care Team, Documents & Emergency Info -->
+                <div class="space-y-6">
+                    
+                    <!-- Linked Clinic & Veterinary Team -->
+                    <div class="custom-card p-5">
+                        <h3 class="font-bold text-slate-800 text-sm pb-3 border-b border-slate-100 flex items-center justify-between">
+                            <span>Assigned Care Clinic</span>
+                            <i class="fa-solid fa-building-user text-slate-400 text-xs"></i>
+                        </h3>
+                        
+                        <div class="mt-4 flex items-start space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-mint text-brand-teal flex items-center justify-center shrink-0 font-bold text-sm">
+                                MP
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 text-xs">Metro Pet Emergency & Trauma Center</h4>
+                                <p class="text-[11px] text-slate-500 mt-0.5">1420 Parkway Ave, Suite 100</p>
+                                <p class="text-[11px] text-slate-500">Phone: (555) 928-1100</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-t border-slate-100 space-y-2">
+                            <a href="tel:5559281100" class="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 py-2 rounded-xl text-xs font-semibold transition flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-phone text-slate-400"></i>
+                                <span>Call Primary Clinic</span>
+                            </a>
+                            <a href="virthosp.html" class="w-full bg-brand-teal bg-brand-tealhover text-white py-2 rounded-xl text-xs font-semibold transition flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-video text-xs"></i>
+                                <span>Virtual Consult</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pet Document Attachments -->
+                    <div class="custom-card p-5">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                            <h3 class="font-bold text-slate-800 text-sm">Official Documents</h3>
+                            <button class="text-[11px] text-brand-teal font-semibold hover:underline">+ Upload</button>
+                        </div>
+
+                        <div class="space-y-2.5 pt-3">
+                            <!-- Document 1 -->
+                            <div class="p-2.5 rounded-xl border border-slate-100 hover:bg-slate-50 transition flex items-center justify-between text-xs">
+                                <div class="flex items-center space-x-2.5 truncate">
+                                    <i class="fa-solid fa-file-pdf text-rose-500 text-base shrink-0"></i>
+                                    <div class="truncate">
+                                        <p class="font-semibold text-slate-800 truncate">Rabies_Vaccine_Cert.pdf</p>
+                                        <p class="text-[10px] text-slate-400">2.4 MB • Updated Jun 2026</p>
+                                    </div>
+                                </div>
+                                <button class="text-slate-400 hover:text-slate-600 p-1">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+
+                            <!-- Document 2 -->
+                            <div class="p-2.5 rounded-xl border border-slate-100 hover:bg-slate-50 transition flex items-center justify-between text-xs">
+                                <div class="flex items-center space-x-2.5 truncate">
+                                    <i class="fa-solid fa-file-pdf text-rose-500 text-base shrink-0"></i>
+                                    <div class="truncate">
+                                        <p class="font-semibold text-slate-800 truncate">Microchip_Registration.pdf</p>
+                                        <p class="text-[10px] text-slate-400">1.1 MB • HomeAgain Registry</p>
+                                    </div>
+                                </div>
+                                <button class="text-slate-400 hover:text-slate-600 p-1">
+                                    <i class="fa-solid fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Contact Quick Access Card -->
+                    <div class="custom-card p-5 border-l-4 border-l-rose-500 bg-rose-50/30">
+                        <h3 class="font-bold text-slate-900 text-sm flex items-center justify-between">
+                            <span>Emergency Contacts</span>
+                            <i class="fa-solid fa-truck-medical text-rose-500"></i>
+                        </h3>
+                        <p class="text-xs text-slate-600 mt-1">If your pet experiences sudden severe illness or trauma:</p>
+
+                        <div class="mt-3 space-y-2 text-xs">
+                            <a href="tel:18005558389" class="p-2 rounded-lg bg-white border border-rose-200 block text-rose-700 font-bold hover:bg-rose-50 transition flex items-center justify-between">
+                                <span>Vetcare ER Helpline</span>
+                                <span>1-800-555-8389</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- MODAL 1: ADD NEW PET MODAL                 -->
+    <!-- ========================================== -->
+    <div id="add-pet-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 max-w-lg w-full overflow-hidden animate-fade-in">
+            <!-- Modal Header -->
+            <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 flex items-center justify-between">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-teal-50 text-brand-teal flex items-center justify-center">
+                        <i class="fa-solid fa-paw text-sm"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base">Add a New Pet</h3>
+                </div>
+                <button onclick="closeModal('add-pet-modal')" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Form -->
+            <form onsubmit="event.preventDefault(); alert('New Pet Registered Successfully!'); closeModal('add-pet-modal');" class="p-6 space-y-4">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Pet Name *</label>
+                        <input type="text" placeholder="e.g. Bella" class="input-field text-xs" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Species *</label>
+                        <select class="input-field text-xs bg-white" required>
+                            <option value="canine">Canine (Dog)</option>
+                            <option value="feline">Feline (Cat)</option>
+                            <option value="bird">Bird</option>
+                            <option value="rabbit">Rabbit / Small Mammal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Breed *</label>
+                        <input type="text" placeholder="e.g. French Bulldog" class="input-field text-xs" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Gender & Status *</label>
+                        <select class="input-field text-xs bg-white" required>
+                            <option value="female-spayed">Female (Spayed)</option>
+                            <option value="female-intact">Female (Intact)</option>
+                            <option value="male-neutered">Male (Neutered)</option>
+                            <option value="male-intact">Male (Intact)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Date of Birth / Age</label>
+                        <input type="date" class="input-field text-xs">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1">Microchip ID (Optional)</label>
+                        <input type="text" placeholder="15-digit code" class="input-field text-xs">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Pet Profile Picture</label>
+                    <div class="border-2 border-dashed border-slate-200 rounded-xl p-4 text-center hover:bg-slate-50 cursor-pointer transition">
+                        <i class="fa-solid fa-cloud-arrow-up text-slate-400 text-xl mb-1"></i>
+                        <p class="text-xs text-slate-500">Click to upload pet photo (JPG, PNG)</p>
+                    </div>
+                </div>
+
+                <!-- Modal Actions -->
+                <div class="flex items-center justify-end space-x-3 pt-4 border-t border-slate-100">
+                    <button type="button" onclick="closeModal('add-pet-modal')" class="px-4 py-2 rounded-xl text-xs font-medium text-slate-600 hover:bg-slate-100 transition">
+                        Cancel
+                    </button>
+                    <button type="submit" class="bg-brand-teal bg-brand-tealhover text-white px-5 py-2.5 rounded-xl text-xs font-semibold shadow-sm transition flex items-center space-x-1.5">
+                        <i class="fa-solid fa-paw"></i>
+                        <span>Register Pet</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL 2: MANAGE & REMOVE PETS MODAL        -->
+    <!-- ========================================== -->
+    <div id="manage-pets-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 max-w-xl w-full overflow-hidden animate-fade-in">
+            <!-- Modal Header -->
+            <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 flex items-center justify-between">
+                <div>
+                    <h3 class="font-bold text-slate-900 text-base">Manage Registered Pets</h3>
+                    <p class="text-xs text-slate-500">View, edit, or remove pets linked to your account</p>
+                </div>
+                <button onclick="closeModal('manage-pets-modal')" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Pet List Table / Cards -->
+            <div class="p-6 space-y-3 max-h-[60vh] overflow-y-auto">
+                
+                <!-- Registered Pet Item 1 -->
+                <div id="pet-item-luna" class="p-3.5 border border-slate-200 rounded-xl flex items-center justify-between bg-white hover:border-brand-teal transition">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=150" alt="Luna" class="w-12 h-12 rounded-lg object-cover">
+                        <div>
+                            <div class="flex items-center space-x-2">
+                                <h4 class="font-bold text-slate-900 text-xs">Luna</h4>
+                                <span class="bg-brand-mint text-brand-teal text-[10px] font-bold px-2 py-0.2 rounded-full">Active View</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500">Golden Retriever • 3 yrs • Chip: 98514109283</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="alert('Viewing Luna')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
+                            Select
+                        </button>
+                        <button onclick="removePet('pet-item-luna', 'Luna')" class="text-rose-500 hover:text-rose-700 hover:bg-rose-50 p-2 rounded-lg transition" title="Remove Pet">
+                            <i class="fa-solid fa-trash-can text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Registered Pet Item 2 -->
+                <div id="pet-item-buddy" class="p-3.5 border border-slate-200 rounded-xl flex items-center justify-between bg-white hover:border-brand-teal transition">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-cat text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-xs">Buddy</h4>
+                            <p class="text-[11px] text-slate-500">Domestic Tabby Cat • 2 yrs • Indoor</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="alert('Switching view to Buddy')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
+                            Select
+                        </button>
+                        <button onclick="removePet('pet-item-buddy', 'Buddy')" class="text-rose-500 hover:text-rose-700 hover:bg-rose-50 p-2 rounded-lg transition" title="Remove Pet">
+                            <i class="fa-solid fa-trash-can text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Registered Pet Item 3 -->
+                <div id="pet-item-max" class="p-3.5 border border-slate-200 rounded-xl flex items-center justify-between bg-white hover:border-brand-teal transition">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-dog text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-xs">Max</h4>
+                            <p class="text-[11px] text-slate-500">Beagle • 5 yrs • Chip: 98514109999</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="alert('Switching view to Max')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg font-medium transition">
+                            Select
+                        </button>
+                        <button onclick="removePet('pet-item-max', 'Max')" class="text-rose-500 hover:text-rose-700 hover:bg-rose-50 p-2 rounded-lg transition" title="Remove Pet">
+                            <i class="fa-solid fa-trash-can text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="bg-slate-50 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+                <button onclick="closeModal('manage-pets-modal'); openModal('add-pet-modal');" class="text-brand-teal font-semibold text-xs hover:underline flex items-center space-x-1">
+                    <i class="fa-solid fa-plus text-xs"></i>
+                    <span>Add Another Pet</span>
+                </button>
+                <button onclick="closeModal('manage-pets-modal')" class="bg-slate-800 text-white px-4 py-2 rounded-xl text-xs font-semibold hover:bg-slate-900 transition">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts for UI Functionality -->
+    <script>
+        // Mobile menu toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Modal Open / Close Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        // Remove Pet Action handler
+        function removePet(elementId, petName) {
+            if (confirm(`Are you sure you want to remove ${petName} from your account? This will archive their medical records.`)) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.remove();
+                    alert(`${petName} has been removed from your active pets list.`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
