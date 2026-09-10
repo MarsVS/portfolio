@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing & Payments | Vetcare</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        /* Design system color definitions */
+        .text-brand-teal {
+            color: #0E7969; /* Deep teal accent */
+        }
+        
+        .bg-brand-teal {
+            background-color: #0E7969;
+        }
+        
+        .bg-brand-tealhover {
+            background-color: #0B6053;
+        }
+
+        .bg-brand-mint {
+            background-color: #F0FDF8; /* Light teal/mint card accent */
+        }
+
+        .border-brand-teal {
+            border-color: #0E7969;
+        }
+
+        .custom-card {
+            background: #ffffff;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        .input-field:focus {
+            border-color: #0E7969;
+            box-shadow: 0 0 0 3px rgba(14, 121, 105, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-800">
+
+    <!-- Light Navigation Header -->
+    <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <div class="bg-brand-teal text-white w-9 h-9 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-shield-dog text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900 tracking-wide">Vetcare</span>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-brand-teal transition">Home</a>
+                <a href="about.html" class="hover:text-brand-teal transition">About</a>
+                <a href="services.html" class="hover:text-brand-teal transition">Services</a>
+                <a href="virthosp.html" class="hover:text-brand-teal transition">Virtual Hospital</a>
+                <a href="records.html" class="hover:text-brand-teal transition">Medical Records</a>
+                <a href="prescriptions.html" class="hover:text-brand-teal transition">Prescriptions</a>
+                <a href="lab-results.html" class="hover:text-brand-teal transition">Lab Results</a>
+                <a href="vaccinations.html" class="hover:text-brand-teal transition">Vaccinations</a>
+                <!-- Highlighted active page link -->
+                <a href="payments.html" class="text-brand-teal font-semibold transition">Payments</a>
+                <a href="contact.html" class="hover:text-brand-teal transition">Contact</a>
+            </div>
+
+            <!-- Desktop CTA & Profile -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white px-5 py-2.5 rounded-lg transition font-semibold text-sm shadow-sm">Get Started</a>
+                <div class="w-9 h-9 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none hover:text-brand-teal transition">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-6 py-4 absolute w-full shadow-lg">
+            <div class="flex flex-col space-y-4 text-slate-600 text-sm font-medium">
+                <a href="index.html" class="hover:text-brand-teal transition block">Home</a>
+                <a href="about.html" class="hover:text-brand-teal transition block">About</a>
+                <a href="services.html" class="hover:text-brand-teal transition block">Services</a>
+                <a href="virthosp.html" class="hover:text-brand-teal transition block">Virtual Hospital</a>
+                <a href="records.html" class="hover:text-brand-teal transition block">Medical Records</a>
+                <a href="prescriptions.html" class="hover:text-brand-teal transition block">Prescriptions</a>
+                <a href="lab-results.html" class="hover:text-brand-teal transition block">Lab Results</a>
+                <a href="vaccinations.html" class="hover:text-brand-teal transition block">Vaccinations</a>
+                <a href="payments.html" class="text-brand-teal font-semibold transition block">Payments</a>
+                <a href="contact.html" class="hover:text-brand-teal transition block">Contact</a>
+                <hr class="border-slate-100 my-2">
+                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white text-center px-5 py-3 rounded-lg transition font-semibold block shadow-sm">Get Started</a>
+                <a href="dashboard.html" class="text-center py-2 hover:text-brand-teal transition flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-user"></i>
+                    <span>My Account</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow p-6">
+        <div class="max-w-5xl mx-auto space-y-6">
+            
+            <!-- Page Header -->
+            <div class="mt-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand-mint flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-receipt text-brand-teal text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-slate-800">Billing & Payment History</h1>
+                        <p class="text-slate-500 text-sm">Manage payment methods, view invoices, and download itemized receipts</p>
+                    </div>
+                </div>
+
+                <!-- Page Actions -->
+                <div class="flex items-center space-x-3">
+                    <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 font-medium text-sm px-4 py-2.5 rounded-xl transition shadow-sm flex items-center space-x-2">
+                        <i class="fa-solid fa-credit-card text-slate-500"></i>
+                        <span>Manage Payment Methods</span>
+                    </button>
+                    <button class="bg-brand-teal hover:bg-brand-tealhover text-white font-medium text-sm px-4 py-2.5 rounded-xl transition shadow-sm flex items-center space-x-2">
+                        <i class="fa-solid fa-money-bill-wave text-xs"></i>
+                        <span>Pay Balance ($125.00)</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Overview Stat Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Outstanding Balance Card -->
+                <div class="custom-card p-5 flex flex-col justify-between border-l-4 border-l-amber-500">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">Payment Due</span>
+                            <i class="fa-solid fa-triangle-exclamation text-amber-500 text-lg"></i>
+                        </div>
+                        <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Outstanding Balance</p>
+                        <h3 class="font-bold text-slate-900 text-3xl mt-1">$125.00</h3>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500 flex justify-between items-center">
+                        <span>Due Date: <strong>Sep 25, 2026</strong></span>
+                        <a href="#" class="text-brand-teal font-semibold hover:underline">Pay Now</a>
+                    </div>
+                </div>
+
+                <!-- Primary Payment Method Card -->
+                <div class="custom-card p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">Default Card</span>
+                            <i class="fa-brands fa-cc-visa text-indigo-600 text-xl"></i>
+                        </div>
+                        <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Payment Method</p>
+                        <h3 class="font-semibold text-slate-800 text-lg mt-1">Visa ending in 4242</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Expires 09/28 • Auto-Pay Active</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500 flex justify-between items-center">
+                        <span>Auto-Pay: <strong class="text-emerald-600">Enabled</strong></span>
+                        <a href="#" class="text-brand-teal font-semibold hover:underline">Edit Method</a>
+                    </div>
+                </div>
+
+                <!-- Total Spent Card -->
+                <div class="custom-card p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-semibold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">2026 YTD</span>
+                            <i class="fa-solid fa-chart-line text-brand-teal text-lg"></i>
+                        </div>
+                        <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Year-to-Date Spending</p>
+                        <h3 class="font-bold text-slate-900 text-3xl mt-1">$1,000.00</h3>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500 flex justify-between items-center">
+                        <span>Total Invoices: <strong>5 Processed</strong></span>
+                        <a href="#" class="text-brand-teal font-semibold hover:underline">Download Summary</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Main Payments & Invoices Section -->
+            <div class="custom-card p-6">
+                
+                <!-- Filter Tabs & Search -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100">
+                    <!-- Filter Tabs -->
+                    <div class="flex items-center space-x-2 overflow-x-auto pb-2 md:pb-0">
+                        <button class="bg-brand-teal text-white px-4 py-2 rounded-xl text-xs font-semibold transition shadow-sm whitespace-nowrap">All Billing (4)</button>
+                        <button class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-xl text-xs font-medium transition whitespace-nowrap">Unpaid (1)</button>
+                        <button class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-xl text-xs font-medium transition whitespace-nowrap">Paid (3)</button>
+                        <button class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-xl text-xs font-medium transition whitespace-nowrap">Refunds & Credits</button>
+                    </div>
+
+                    <!-- Search Input -->
+                    <div class="relative min-w-[220px]">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-xs"></i>
+                        <input type="text" placeholder="Search invoices or items..." class="input-field pl-9 py-2 text-xs bg-slate-50">
+                    </div>
+                </div>
+
+                <!-- Invoice & Payment History List -->
+                <div class="divide-y divide-slate-100">
+                    
+                    <!-- Item 1: Unpaid Invoice -->
+                    <div class="py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-slate-50/60 transition -mx-6 px-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 mt-0.5 border border-amber-100">
+                                <i class="fa-solid fa-clock text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+                                    <h4 class="font-semibold text-slate-900 text-base">Invoice #INV-2026-0892</h4>
+                                    <span class="text-[10px] bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full font-semibold border border-amber-200">Pending / Unpaid</span>
+                                    <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">Buddy</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1"><strong>Service:</strong> Bordetella Booster & Preventive Care Exam</p>
+                                <p class="text-xs text-slate-400 mt-1">Billed: Sep 08, 2026 • Due: Sep 25, 2026 • Provider: Dr. Mark Rivera</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between md:justify-end space-x-4 shrink-0">
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-slate-900">$125.00</p>
+                                <p class="text-[11px] text-amber-600 font-medium">Due in 15 days</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-3 py-2 rounded-xl transition text-xs font-medium shadow-sm">
+                                    <i class="fa-solid fa-file-pdf text-slate-400 mr-1"></i> Invoice
+                                </button>
+                                <button class="bg-brand-teal hover:bg-brand-tealhover text-white px-4 py-2 rounded-xl transition text-xs font-semibold shadow-sm">
+                                    Pay Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Paid Invoice -->
+                    <div class="py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-slate-50/60 transition -mx-6 px-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-11 h-11 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
+                                <i class="fa-solid fa-circle-check text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+                                    <h4 class="font-semibold text-slate-900 text-base">Invoice #INV-2026-0714</h4>
+                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-semibold border border-emerald-200">Paid</span>
+                                    <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">Buddy</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1"><strong>Service:</strong> Routine Wellness Exam & Rabies 3-Year Vaccine</p>
+                                <p class="text-xs text-slate-400 mt-1">Paid: Aug 14, 2026 via Visa ****4242 • Vet: Dr. Sarah Jenkins</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between md:justify-end space-x-4 shrink-0">
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-slate-900">$240.00</p>
+                                <p class="text-[11px] text-emerald-600 font-medium">Completed</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-3.5 py-2 rounded-xl transition text-xs font-medium flex items-center space-x-1.5 shadow-sm">
+                                    <i class="fa-solid fa-file-pdf text-slate-400"></i>
+                                    <span>Receipt PDF</span>
+                                </button>
+                                <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl transition text-xs font-semibold flex items-center space-x-1">
+                                    <i class="fa-solid fa-circle-info text-slate-500"></i>
+                                    <span>Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Paid Invoice -->
+                    <div class="py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-slate-50/60 transition -mx-6 px-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-11 h-11 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
+                                <i class="fa-solid fa-pills text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+                                    <h4 class="font-semibold text-slate-900 text-base">Invoice #INV-2026-0502</h4>
+                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-semibold border border-emerald-200">Paid</span>
+                                    <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">Luna</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1"><strong>Service:</strong> Pharmacy Fill - Apoquel 16mg (30 Tablets)</p>
+                                <p class="text-xs text-slate-400 mt-1">Paid: May 02, 2026 via Apple Pay • Prescribed by Dr. Sarah Jenkins</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between md:justify-end space-x-4 shrink-0">
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-slate-900">$85.00</p>
+                                <p class="text-[11px] text-emerald-600 font-medium">Completed</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-3.5 py-2 rounded-xl transition text-xs font-medium flex items-center space-x-1.5 shadow-sm">
+                                    <i class="fa-solid fa-file-pdf text-slate-400"></i>
+                                    <span>Receipt PDF</span>
+                                </button>
+                                <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl transition text-xs font-semibold flex items-center space-x-1">
+                                    <i class="fa-solid fa-circle-info text-slate-500"></i>
+                                    <span>Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Paid Invoice -->
+                    <div class="py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-slate-50/60 transition -mx-6 px-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-11 h-11 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
+                                <i class="fa-solid fa-tooth text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-2 flex-wrap gap-y-1">
+                                    <h4 class="font-semibold text-slate-900 text-base">Invoice #INV-2026-0311</h4>
+                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-semibold border border-emerald-200">Paid</span>
+                                    <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">Buddy</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1"><strong>Service:</strong> Dental Prophylaxis Cleaning & Anesthesia</p>
+                                <p class="text-xs text-slate-400 mt-1">Paid: Mar 11, 2026 via Visa ****4242 • Vet: Dr. Mark Rivera</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between md:justify-end space-x-4 shrink-0">
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-slate-900">$550.00</p>
+                                <p class="text-[11px] text-emerald-600 font-medium">Completed</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-3.5 py-2 rounded-xl transition text-xs font-medium flex items-center space-x-1.5 shadow-sm">
+                                    <i class="fa-solid fa-file-pdf text-slate-400"></i>
+                                    <span>Receipt PDF</span>
+                                </button>
+                                <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl transition text-xs font-semibold flex items-center space-x-1">
+                                    <i class="fa-solid fa-circle-info text-slate-500"></i>
+                                    <span>Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer Pagination -->
+                <div class="pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <span>Showing 4 of 4 billing records</span>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1.5 rounded-lg border border-slate-200 text-slate-400 cursor-not-allowed">Previous</button>
+                        <button class="px-3 py-1.5 rounded-lg border border-slate-200 text-slate-400 cursor-not-allowed">Next</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            // Toggle hamburger and close icon
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+    </script>
+</body>
+</html>
