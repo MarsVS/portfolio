@@ -22,23 +22,23 @@
 
         /* Design system color definitions */
         .text-brand-teal {
-            color: #0E7969; /* Deep teal accent */
+            color: #8f1eae; /* Deep purple accent */
         }
         
         .bg-brand-teal {
-            background-color: #0E7969;
+            background-color: #8f1eae;
         }
         
         .bg-brand-tealhover {
-            background-color: #0B6053;
+            background-color: #791993;
         }
 
         .bg-brand-mint {
-            background-color: #F0FDF8; /* Light teal/mint card accent */
+            background-color: #F8EFFC; /* Light purple card accent */
         }
 
         .border-brand-teal {
-            border-color: #0E7969;
+            border-color: #8f1eae;
         }
 
         .custom-card {
@@ -57,8 +57,8 @@
             transition: all 0.2s ease;
         }
         .input-field:focus {
-            border-color: #0E7969;
-            box-shadow: 0 0 0 3px rgba(14, 121, 105, 0.1);
+            border-color: #8f1eae;
+            box-shadow: 0 0 0 3px rgba(143, 30, 174, 0.1);
         }
     </style>
 </head>
@@ -69,12 +69,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
             <!-- Logo -->
-            <div class="flex items-center space-x-3 cursor-pointer">
-                <div class="bg-brand-teal text-white w-9 h-9 rounded-lg flex items-center justify-center">
-                    <i class="fa-solid fa-shield-dog text-lg"></i>
-                </div>
-                <span class="text-xl font-bold text-slate-900 tracking-wide">Pearlvets</span>
-            </div>
+            <a href="index.html" class="flex items-center"> <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain"> </a>
 
             <!-- Desktop Links -->
             <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
@@ -212,7 +207,7 @@
                     <div class="custom-card p-5 flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-start mb-2">
-                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">Results Normal</span>
+                                <span class="text-xs font-semibold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-full border border-purple-200">Results Normal</span>
                                 <i class="fa-solid fa-heart-pulse text-brand-teal text-lg"></i>
                             </div>
                             <h3 class="font-semibold text-slate-800 text-base">Comprehensive Blood Count</h3>
@@ -270,14 +265,14 @@
                     <!-- Lab Result Item 1 (Completed Normal) -->
                     <div class="py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-slate-50/60 transition -mx-6 px-6 rounded-lg">
                         <div class="flex items-start space-x-4">
-                            <div class="w-11 h-11 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
+                            <div class="w-11 h-11 rounded-xl bg-purple-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5 border border-purple-100">
                                 <i class="fa-solid fa-notes-medical text-lg"></i>
                             </div>
                             <div>
                                 <div class="flex items-center space-x-2 flex-wrap gap-y-1">
                                     <h4 class="font-semibold text-slate-900 text-base">CBC & Comprehensive Chemistry Panel</h4>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-semibold border border-emerald-200">Completed</span>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-semibold border border-emerald-200">All Normal</span>
+                                    <span class="text-[10px] bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full font-semibold border border-purple-200">Completed</span>
+                                    <span class="text-[10px] bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full font-semibold border border-purple-200">All Normal</span>
                                 </div>
                                 <p class="text-xs text-slate-600 mt-1"><strong>Doctor Notes:</strong> Excellent organ function indicators. Kidney (BUN/Creatinine) and Liver (ALT/ALKP) within ideal reference ranges.</p>
                                 <p class="text-xs text-slate-400 mt-1">Tested by IDEXX Reference Lab • Date: Aug 14, 2026 • Specimen #LAB-90421</p>
@@ -304,7 +299,7 @@
                             <div>
                                 <div class="flex items-center space-x-2 flex-wrap gap-y-1">
                                     <h4 class="font-semibold text-slate-900 text-base">Thyroid Screening (Total T4)</h4>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-semibold border border-emerald-200">Completed</span>
+                                    <span class="text-[10px] bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full font-semibold border border-purple-200">Completed</span>
                                     <span class="text-[10px] bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full font-semibold border border-amber-200">Slight Elevation</span>
                                 </div>
                                 <p class="text-xs text-slate-600 mt-1"><strong>Doctor Notes:</strong> Total T4 is slightly above normal baseline (4.2 µg/dL). Recommend recheck in 60 days or follow up if symptoms arise.</p>
@@ -332,7 +327,7 @@
                             <div>
                                 <div class="flex items-center space-x-2 flex-wrap gap-y-1">
                                     <h4 class="font-semibold text-slate-900 text-base">Right Hips & Hind Limb Digital X-Ray</h4>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-semibold border border-emerald-200">Completed</span>
+                                    <span class="text-[10px] bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full font-semibold border border-purple-200">Completed</span>
                                     <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium">Radiology Review clear</span>
                                 </div>
                                 <p class="text-xs text-slate-600 mt-1"><strong>Doctor Notes:</strong> No signs of joint dysplasia, fractures, or soft tissue swelling. Hip alignment normal.</p>
