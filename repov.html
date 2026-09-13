@@ -22,23 +22,23 @@
 
         /* Design system color definitions */
         .text-brand-teal {
-            color: #0E7969; /* Deep teal accent */
+            color: #8f1eae; /* Primary purple accent */
         }
         
         .bg-brand-teal {
-            background-color: #0E7969;
+            background-color: #8f1eae;
         }
         
         .bg-brand-tealhover {
-            background-color: #0B6053;
+            background-color: #73188b;
         }
 
         .bg-brand-mint {
-            background-color: #F0FDF8; /* Light teal/mint card accent */
+            background-color: #f8effc; /* Light purple card accent */
         }
 
         .border-brand-teal {
-            border-color: #0E7969;
+            border-color: #8f1eae;
         }
 
         .custom-card {
@@ -57,8 +57,8 @@
             transition: all 0.2s ease;
         }
         .input-field:focus {
-            border-color: #0E7969;
-            box-shadow: 0 0 0 3px rgba(14, 121, 105, 0.1);
+            border-color: #8f1eae;
+            box-shadow: 0 0 0 3px rgba(143, 30, 174, 0.1);
         }
     </style>
 </head>
@@ -69,12 +69,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
             <!-- Logo -->
-            <div class="flex items-center space-x-3 cursor-pointer">
-                <div class="bg-brand-teal text-white w-9 h-9 rounded-lg flex items-center justify-center">
-                    <i class="fa-solid fa-shield-dog text-lg"></i>
-                </div>
-                <span class="text-xl font-bold text-slate-900 tracking-wide">Pearlvets</span>
-            </div>
+            <a href="index.html" class="flex items-center"> <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain"> </a>
 
             <!-- Desktop Links -->
             <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
@@ -198,7 +193,7 @@
                 <div class="custom-card p-5 flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">Active</span>
+                            <span class="text-xs font-semibold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-full border border-purple-200">Active</span>
                             <i class="fa-solid fa-envelope-circle-check text-brand-teal text-lg"></i>
                         </div>
                         <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Alert Channels</p>
@@ -206,7 +201,7 @@
                         <p class="text-xs text-slate-500 mt-0.5">Alerts sent 3 days before due date</p>
                     </div>
                     <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500 flex justify-between items-center">
-                        <span>Status: <strong class="text-emerald-600">Syncing</strong></span>
+                        <span>Status: <strong class="text-purple-600">Syncing</strong></span>
                         <a href="#" class="text-brand-teal font-semibold hover:underline">Configure</a>
                     </div>
                 </div>
@@ -304,13 +299,13 @@
                     <!-- Item 3: Upcoming Vaccine Booster -->
                     <div class="py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-slate-50/60 transition -mx-6 px-6 rounded-lg">
                         <div class="flex items-start space-x-4">
-                            <div class="w-11 h-11 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
+                            <div class="w-11 h-11 rounded-xl bg-purple-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5 border border-purple-100">
                                 <i class="fa-solid fa-syringe text-lg"></i>
                             </div>
                             <div>
                                 <div class="flex items-center space-x-2 flex-wrap gap-y-1">
                                     <h4 class="font-semibold text-slate-900 text-base">Rabies Vaccine Booster (3-Year)</h4>
-                                    <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full font-semibold border border-emerald-200">Scheduled</span>
+                                    <span class="text-[10px] bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full font-semibold border border-purple-200">Scheduled</span>
                                     <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-semibold">Buddy</span>
                                 </div>
                                 <p class="text-xs text-slate-600 mt-1"><strong>Category:</strong> Core Vaccination Booster</p>
@@ -320,7 +315,7 @@
                         <div class="flex items-center justify-between md:justify-end space-x-4 shrink-0">
                             <div class="text-right hidden sm:block">
                                 <p class="text-sm font-bold text-slate-800">Sep 28, 2026</p>
-                                <p class="text-[11px] text-emerald-600 font-medium">18 Days Remaining</p>
+                                <p class="text-[11px] text-purple-600 font-medium">18 Days Remaining</p>
                             </div>
                             <div class="flex items-center space-x-2">
                                 <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-3.5 py-2 rounded-xl transition text-xs font-medium flex items-center space-x-1.5 shadow-sm">
@@ -338,7 +333,7 @@
                     <!-- Item 4: Upcoming Topical Treatment -->
                     <div class="py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-slate-50/60 transition -mx-6 px-6 rounded-lg">
                         <div class="flex items-start space-x-4">
-                            <div class="w-11 h-11 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5 border border-teal-100">
+                            <div class="w-11 h-11 rounded-xl bg-purple-50 text-brand-teal flex items-center justify-center shrink-0 mt-0.5 border border-purple-100">
                                 <i class="fa-solid fa-shield-halved text-lg"></i>
                             </div>
                             <div>
@@ -358,7 +353,7 @@
                             </div>
                             <div class="flex items-center space-x-2">
                                 <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-3.5 py-2 rounded-xl transition text-xs font-medium flex items-center space-x-1.5 shadow-sm">
-                                    <i class="fa-solid fa-check text-emerald-600"></i>
+                                    <i class="fa-solid fa-check text-purple-600"></i>
                                     <span>Mark Done</span>
                                 </button>
                                 <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3.5 py-2 rounded-xl transition text-xs font-semibold flex items-center space-x-1">
