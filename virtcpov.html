@@ -20,21 +20,21 @@
             background-color: #f8fafc;
         }
 
-        /* Updated colors matching image_fafe03.png */
+        /* Updated brand colors to #8f1eae */
         .text-brand-teal {
-            color: #0E7969; /* Deep teal accent */
+            color: #8f1eae; /* Deep purple accent */
         }
         
         .bg-brand-teal {
-            background-color: #0E7969;
+            background-color: #8f1eae;
         }
         
         .bg-brand-tealhover {
-            background-color: #0B6053;
+            background-color: #791794; /* Darker purple for hover state */
         }
 
         .bg-brand-mint {
-            background-color: #F0FDF8; /* Very light teal/mint for card accents */
+            background-color: #fbf2fc; /* Very light purple for card accents */
         }
 
         .custom-card {
@@ -53,8 +53,8 @@
             transition: all 0.2s ease;
         }
         .input-field:focus {
-            border-color: #0E7969;
-            box-shadow: 0 0 0 3px rgba(14, 121, 105, 0.1);
+            border-color: #8f1eae;
+            box-shadow: 0 0 0 3px rgba(143, 30, 174, 0.1);
         }
     </style>
 </head>
@@ -65,12 +65,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
             <!-- Logo -->
-            <div class="flex items-center space-x-3 cursor-pointer">
-                <div class="bg-brand-teal text-white w-9 h-9 rounded-lg flex items-center justify-center">
-                    <i class="fa-solid fa-shield-dog text-lg"></i>
-                </div>
-                <span class="text-xl font-bold text-slate-900 tracking-wide">Pearlvets</span>
-            </div>
+            <a href="index.html" class="flex items-center"> <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain"> </a>
 
             <!-- Desktop Links -->
             <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
@@ -143,20 +138,20 @@
                         <div class="grid grid-cols-2 gap-4">
                             <label class="cursor-pointer group">
                                 <input type="radio" name="pet" class="peer sr-only" checked>
-                                <div class="p-4 rounded-xl border border-slate-200 peer-checked:border-[#0E7969] peer-checked:bg-brand-mint hover:bg-slate-50 transition flex items-center space-x-3">
+                                <div class="p-4 rounded-xl border border-slate-200 peer-checked:border-[#8f1eae] peer-checked:bg-brand-mint hover:bg-slate-50 transition flex items-center space-x-3">
                                     <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
                                         <i class="fa-solid fa-dog text-slate-400 group-hover:text-brand-teal peer-checked:text-brand-teal transition text-lg"></i>
                                     </div>
-                                    <div class="font-medium text-slate-800 peer-checked:text-[#0E7969]">Buddy (Dog)</div>
+                                    <div class="font-medium text-slate-800 peer-checked:text-[#8f1eae]">Buddy (Dog)</div>
                                 </div>
                             </label>
                             <label class="cursor-pointer group">
                                 <input type="radio" name="pet" class="peer sr-only">
-                                <div class="p-4 rounded-xl border border-slate-200 peer-checked:border-[#0E7969] peer-checked:bg-brand-mint hover:bg-slate-50 transition flex items-center space-x-3">
+                                <div class="p-4 rounded-xl border border-slate-200 peer-checked:border-[#8f1eae] peer-checked:bg-brand-mint hover:bg-slate-50 transition flex items-center space-x-3">
                                     <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
                                         <i class="fa-solid fa-cat text-slate-400 group-hover:text-brand-teal peer-checked:text-brand-teal transition text-lg"></i>
                                     </div>
-                                    <div class="font-medium text-slate-800 peer-checked:text-[#0E7969]">Luna (Cat)</div>
+                                    <div class="font-medium text-slate-800 peer-checked:text-[#8f1eae]">Luna (Cat)</div>
                                 </div>
                             </label>
                         </div>
@@ -197,7 +192,7 @@
                     <div>
                         <label class="block text-sm font-semibold text-slate-700 mb-2">Upload Photos/Videos (Optional)</label>
                         <p class="text-xs text-slate-500 mb-3">Help our vets understand the issue before the call starts.</p>
-                        <div class="border-2 border-dashed border-slate-200 rounded-xl p-6 text-center hover:bg-slate-50 hover:border-brand-teal transition cursor-pointer">
+                        <div class="border-2 border-dashed border-slate-200 rounded-xl p-6 text-center hover:bg-slate-50 hover:border-[#8f1eae] transition cursor-pointer">
                             <i class="fa-solid fa-cloud-arrow-up text-2xl text-slate-400 mb-2"></i>
                             <p class="text-sm text-slate-600 font-medium">Click to upload or drag and drop</p>
                             <p class="text-xs text-slate-400 mt-1">PNG, JPG, or MP4 (Max 20MB)</p>
