@@ -64,65 +64,50 @@
 </head>
 <body class="min-h-screen flex flex-col text-slate-800">
 
-    <!-- Light Navigation Header -->
-    <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Header styled precisely to match logo, circular account icon, and rounded menu icon -->
+    <nav class="bg-white sticky top-0 z-50 border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
 
-            <!-- Logo -->
+            <!-- PearlVets Logo -->
             <a href="index.html" class="flex items-center">
-                <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain">
+                <img src="images/logo.png" alt="PearlVets Logo" class="h-14 sm:h-16 w-auto object-contain">
             </a>
 
-            <!-- Desktop Links -->
-            <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-brand-teal transition">Home</a>
-                <a href="about.html" class="hover:text-brand-teal transition">About</a>
-                <a href="services.html" class="hover:text-brand-teal transition">Services</a>
-                <a href="virthosp.html" class="hover:text-brand-teal transition">Virtual Hospital</a>
-                <a href="bipov.html" class="text-brand-teal font-semibold transition">Payments</a>
-                <a href="medrpov.html" class="hover:text-brand-teal transition">Medical Records</a>
-                <a href="prepov.html" class="hover:text-brand-teal transition">Prescriptions</a>
-                <a href="lapov.html" class="hover:text-brand-teal transition">Lab Results</a>
-                <a href="vapov.html" class="hover:text-brand-teal transition">Vaccinations</a>
-               
-                
-                <a href="contact.html" class="hover:text-brand-teal transition">Contact</a>
-            </div>
-
-            <!-- Desktop CTA & Profile -->
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white px-5 py-2.5 rounded-lg transition font-semibold text-sm shadow-sm">Get Started</a>
-                <a href="#" class="w-9 h-9 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition" title="My Account">
-                    <i class="fa-solid fa-user"></i>
+            <!-- Right Controls: Profile & Menu Buttons -->
+            <div class="flex items-center space-x-3">
+                <!-- User Account Profile Button (Circular) -->
+                <a href="dashboard.html" title="My Account" class="w-11 h-11 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition flex items-center justify-center">
+                    <i class="fa-solid fa-user text-base"></i>
                 </a>
-            </div>
 
-            <!-- Mobile Hamburger Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none hover:text-brand-teal transition">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
+                <!-- Hamburger Menu Button (Rounded Square Box) -->
+                <button id="menu-toggle-btn" aria-label="Toggle Menu" class="w-11 h-11 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition flex items-center justify-center focus:outline-none">
+                    <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
         </div>
 
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-6 py-4 absolute w-full shadow-lg">
-            <div class="flex flex-col space-y-4 text-slate-600 text-sm font-medium">
-                <a href="index.html" class="hover:text-brand-teal transition block">Home</a>
-                <a href="about.html" class="hover:text-brand-teal transition block">About</a>
-                <a href="services.html" class="hover:text-brand-teal transition block">Services</a>
-                <a href="virthosp.html" class="hover:text-brand-teal transition block">Virtual Hospital</a>
-                <a href="bipov.html" class="text-brand-teal font-semibold transition block">Payments</a>
-                <a href="medrpov.html" class="hover:text-brand-teal transition block">Medical Records</a>
-                <a href="prepov.html" class="hover:text-brand-teal transition block">Prescriptions</a>
-                <a href="lapov.html" class="hover:text-brand-teal transition block">Lab Results</a>
-                <a href="vapov.html" class="hover:text-brand-teal transition block">Vaccinations</a>
-                <a href="petpov.html" class="hover:text-brand-teal transition block">Pet Profile</a>
-                <a href="contact.html" class="hover:text-brand-teal transition block">Contact</a>
-                <hr class="border-slate-100 my-2">
-                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white text-center px-5 py-3 rounded-lg transition font-semibold block shadow-sm">Get Started</a>
-                <a href="#" class="text-center py-2 hover:text-brand-teal transition flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-user"></i>
-                    <span>My Account</span>
-                </a>
+        <!-- Collapsible Drawer Navigation Menu -->
+        <div id="nav-drawer" class="hidden bg-white border-t border-slate-100 px-6 py-5 shadow-lg">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-600 font-medium text-sm">
+                <div class="space-y-3">
+                    <a href="index.html" class="block hover:text-brand-teal transition py-1">Home</a>
+                    <a href="about.html" class="block hover:text-brand-teal transition py-1">About</a>
+                    <a href="services.html" class="block hover:text-brand-teal transition py-1">Services</a>
+                    <a href="virthosp.html" class="block hover:text-brand-teal transition py-1">Virtual Hospital</a>
+                    <a href="records.html" class="block hover:text-brand-teal transition py-1">Medical Records</a>
+                </div>
+                <div class="space-y-3">
+                    <a href="prescriptions.html" class="block hover:text-brand-teal transition py-1">Prescriptions</a>
+                    <a href="lab-results.html" class="block hover:text-brand-teal transition py-1">Lab Results</a>
+                    <a href="vaccinations.html" class="block hover:text-brand-teal transition py-1">Vaccinations</a>
+                    <a href="payments.html" class="block text-brand-teal font-semibold py-1">Payments</a>
+                    <a href="contact.html" class="block hover:text-brand-teal transition py-1">Contact</a>
+                </div>
+                <div class="md:col-span-2 pt-3 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
+                    <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white text-center px-5 py-2.5 rounded-xl font-semibold shadow-sm transition">Get Started</a>
+                    <a href="dashboard.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-center px-5 py-2.5 rounded-xl font-medium transition">My Account</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -382,15 +367,15 @@
         </div>
     </main>
 
-    <!-- Mobile Menu Toggle Script -->
+    <!-- Navigation Drawer Toggle Script -->
     <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const icon = btn.querySelector('i');
+        const btn = document.getElementById('menu-toggle-btn');
+        const drawer = document.getElementById('nav-drawer');
+        const icon = document.getElementById('menu-icon');
 
         btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            if (menu.classList.contains('hidden')) {
+            drawer.classList.toggle('hidden');
+            if (drawer.classList.contains('hidden')) {
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
             } else {
