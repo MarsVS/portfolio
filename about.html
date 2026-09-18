@@ -41,7 +41,7 @@
             overflow: hidden;
         }
         #mobile-menu.open {
-            max-height: 400px;
+            max-height: 600px;
             opacity: 1;
         }
     </style>
@@ -56,21 +56,24 @@
                     <div class="w-10 h-10 rounded-md border-2 border-brand-teal flex items-center justify-center bg-white/10 overflow-hidden">
                         <img src="images/plogo.jpeg" alt="Logo" class="w-full h-full object-cover">
                     </div>
-                    <span class="font-bold text-lg text-brand-dark tracking-tight">Dr. Christopher Ngumu</span>
+                    <span class="font-bold text-base sm:text-lg text-brand-dark tracking-tight">Dr. Christopher Ngumu</span>
                 </div>
 
+                <!-- Desktop Menu (Untouched) -->
                 <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
                     <a href="index.html" class="hover:text-brand-teal transition">Home</a>
                     <a href="about.html" class="text-brand-teal transition">About</a>
                     <a href="services.html" class="hover:text-brand-teal transition">Services</a>
                     <a href="virthosp.html" class="hover:text-brand-teal transition">Virtual Hospital</a>
                     <a href="articles.html" class="text-gray-700 hover:text-brand-teal py-2">Publications</a>
-                <a href="gallery.html" class="text-gray-700 hover:text-brand-teal py-2">Portfolio</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-brand-teal py-2">Portfolio</a>
                     <a href="contact.html" class="hover:text-brand-teal transition">Contact</a>
                     <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white px-5 py-2.5 rounded-md transition">Book Consultation</a>
                 </div>
 
-                <div class="md:hidden flex items-center">
+                <!-- Mobile Navigation Controls -->
+                <div class="md:hidden flex items-center gap-2 sm:gap-3">
+                    <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white text-xs sm:text-sm font-semibold px-3 py-2 rounded-md transition shadow-sm whitespace-nowrap">Book Consultation</a>
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-teal focus:outline-none p-2">
                         <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
                     </button>
@@ -78,6 +81,7 @@
             </div>
         </div>
 
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="md:hidden bg-white border-b border-gray-200">
             <div class="px-4 pt-2 pb-6 space-y-3 flex flex-col text-center font-medium">
                 <a href="index.html" class="text-gray-700 hover:text-brand-teal py-2">Home</a>
@@ -87,7 +91,7 @@
                 <a href="articles.html" class="text-gray-700 hover:text-brand-teal py-2">Publications</a>
                 <a href="gallery.html" class="text-gray-700 hover:text-brand-teal py-2">Portfolio</a>
                 <a href="contact.html" class="text-gray-700 hover:text-brand-teal py-2">Contact</a>
-                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white py-3 rounded-md font-semibold mx-4">Book Consultation</a>
+                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white py-3 rounded-md font-semibold mx-4 shadow-md">Book Consultation</a>
             </div>
         </div>
     </nav>
