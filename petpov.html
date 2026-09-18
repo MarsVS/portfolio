@@ -71,7 +71,7 @@
 <body class="min-h-screen flex flex-col text-slate-800">
 
     <!-- Light Navigation Header -->
-    <nav class="bg-white sticky top-0 z-40 shadow-sm border-b border-slate-100">
+    <nav class="bg-white sticky top-0 z-40 shadow-sm border-b border-slate-100 relative">
         <div class="max-w-[90rem] mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-4">
             
             <!-- Logo -->
@@ -79,71 +79,55 @@
                 <img src="images/logo.png" alt="Pearlvets Logo" class="h-12 sm:h-14 lg:h-16 w-auto object-contain"> 
             </a>
 
-            <!-- Desktop Links -->
-            <div class="hidden lg:flex items-center space-x-2.5 xl:space-x-5 text-xs xl:text-sm font-medium text-slate-600 shrink min-w-0">
-                <a href="index.html" class="hover:text-brand-teal transition shrink-0">Home</a>
-                <a href="about.html" class="hover:text-brand-teal transition shrink-0">About</a>
-                <a href="services.html" class="hover:text-brand-teal transition shrink-0">Services</a>
-                <a href="virthosp.html" class="hover:text-brand-teal transition shrink-0">Virtual Hospital</a>
-                <a href="medrpov.html" class="hover:text-brand-teal transition shrink-0">Medical Records</a>
-                <a href="virtconsul.html" class="hover:text-brand-teal transition shrink-0">Virtual Consultations</a>
-                <a href="bookpov.html" class="hover:text-brand-teal transition shrink-0">Book Appointments</a>
-                <!-- Highlighted active page link for Pet Profile / Records -->
-                <a href="petpov.html" class="text-brand-teal font-semibold transition flex items-center space-x-1 shrink-0">
-                    <span class="w-2 h-2 rounded-full bg-brand-teal"></span>
-                    <span>Pet Profile</span>
-                </a>
-                <a href="prepov.html" class="hover:text-brand-teal transition shrink-0">Prescriptions</a>
-                <a href="lapov.html" class="hover:text-brand-teal transition shrink-0">Lab Results</a>
-                <a href="vapov.html" class="hover:text-brand-teal transition shrink-0">Vaccinations</a>
-                <a href="repov.html" class="hover:text-brand-teal transition shrink-0">Reminders</a>
-                <a href="empov.html" class="text-rose-600 hover:text-rose-700 transition flex items-center space-x-1 font-medium shrink-0">
-                    <span>Emergency Help</span>
-                </a>
-                <a href="bipov.html" class="hover:text-brand-teal transition shrink-0">Payments</a>
-                <a href="contact.html" class="hover:text-brand-teal transition shrink-0">Contact</a>
-            </div>
-
-            <!-- Desktop CTA & Profile -->
-            <div class="hidden lg:flex items-center space-x-3 shrink-0">
-                <a href="virtconsul.html" class="bg-rose-600 hover:bg-rose-700 text-white px-3.5 xl:px-5 py-2.5 rounded-lg transition font-semibold text-xs xl:text-sm shadow-sm flex items-center space-x-2 shrink-0">
+            <!-- Header Action Items & Universal Hamburger Toggle -->
+            <div class="flex items-center space-x-3 sm:space-x-4 shrink-0">
+                <!-- 24/7 Hotline CTA -->
+                <a href="virtconsul.html" class="bg-rose-600 hover:bg-rose-700 text-white px-3.5 sm:px-5 py-2.5 rounded-lg transition font-semibold text-xs sm:text-sm shadow-sm flex items-center space-x-2 shrink-0">
                     <i class="fa-solid fa-phone-volume"></i>
                     <span class="whitespace-nowrap">24/7 Hotline</span>
                 </a>
+
+                <!-- User Profile Avatar -->
                 <div class="w-9 h-9 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition shrink-0">
                     <i class="fa-solid fa-user"></i>
                 </div>
-            </div>
 
-            <!-- Mobile Hamburger Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none hover:text-brand-teal transition shrink-0">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
+                <!-- Universal Hamburger Button (All Displays) -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="p-2 rounded-lg text-slate-600 focus:outline-none hover:text-brand-teal hover:bg-slate-50 transition shrink-0">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
 
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-6 py-4 absolute w-full shadow-lg">
-            <div class="flex flex-col space-y-4 text-slate-600 text-sm font-medium">
-                <a href="index.html" class="hover:text-brand-teal transition block">Home</a>
-                <a href="about.html" class="hover:text-brand-teal transition block">About</a>
-                <a href="services.html" class="hover:text-brand-teal transition block">Services</a>
-                <a href="virthosp.html" class="hover:text-brand-teal transition block">Virtual Hospital</a>
-                <a href="medrpov.html" class="hover:text-brand-teal transition block">Medical Records</a>
-                <a href="virtconsul.html" class="hover:text-brand-teal transition block">Virtual Consultations</a>
-                <a href="bookpov.html" class="hover:text-brand-teal transition block">Book Appointments</a>
-                <a href="petpov.html" class="text-brand-teal font-semibold transition block">Pet Profile</a>
-                <a href="prepov.html" class="hover:text-brand-teal transition block">Prescriptions</a>
-                <a href="lapov.html" class="hover:text-brand-teal transition block">Lab Results</a>
-                <a href="vapov.html" class="hover:text-brand-teal transition block">Vaccinations</a>
-                <a href="repov.html" class="hover:text-brand-teal transition block">Reminders</a>
-                <a href="empov.html" class="text-rose-600 font-medium transition block">Emergency Help</a>
-                <a href="bipov.html" class="hover:text-brand-teal transition block">Payments</a>
-                <a href="contact.html" class="hover:text-brand-teal transition block">Contact</a>
-                <hr class="border-slate-100 my-2">
-                <a href="tel:18005558389" class="bg-rose-600 hover:bg-rose-700 text-white text-center px-5 py-3 rounded-lg transition font-semibold block shadow-sm flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <span>Call 24/7 Hotline</span>
-                </a>
+        <!-- Universal Collapsible Navigation Menu (Displays on All Screens) -->
+        <div id="mobile-menu" class="hidden bg-white border-t border-slate-100 px-4 sm:px-8 py-6 absolute top-full left-0 w-full shadow-xl z-50">
+            <div class="max-w-[90rem] mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-2 gap-x-4 text-slate-600 text-sm font-medium">
+                    <a href="index.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Home</a>
+                    <a href="about.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">About</a>
+                    <a href="services.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Services</a>
+                    <a href="virthosp.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Virtual Hospital</a>
+                    <a href="medrpov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Medical Records</a>
+                    <a href="virtconsul.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Virtual Consultations</a>
+                    <a href="bookpov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Book Appointments</a>
+                    
+                    <!-- Highlighted active page link for Pet Profile -->
+                    <a href="petpov.html" class="text-brand-teal font-semibold transition p-2 rounded-lg bg-brand-mint flex items-center space-x-2">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal"></span>
+                        <span>Pet Profile</span>
+                    </a>
+                    
+                    <a href="prepov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Prescriptions</a>
+                    <a href="lapov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Lab Results</a>
+                    <a href="vapov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Vaccinations</a>
+                    <a href="repov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Reminders</a>
+                    <a href="empov.html" class="text-rose-600 hover:text-rose-700 transition p-2 rounded-lg hover:bg-rose-50 flex items-center space-x-1.5 font-medium">
+                        <i class="fa-solid fa-triangle-exclamation text-xs"></i>
+                        <span>Emergency Help</span>
+                    </a>
+                    <a href="bipov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Payments</a>
+                    <a href="contact.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -739,7 +723,7 @@
 
     <!-- Scripts for UI Functionality -->
     <script>
-        // Mobile menu toggle logic
+        // Menu toggle logic across all screen sizes
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const icon = btn.querySelector('i');
