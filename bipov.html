@@ -29,12 +29,12 @@
             background-color: #8f1eae;
         }
 
-        .bg-brand-tealhover {
+        .bg-brand-tealhover:hover {
             background-color: #781893;
         }
 
         .bg-brand-mint {
-            background-color: #fbf4fc; /* Light purple card accent */
+            background-color: #f8f0fc; /* Light purple card accent */
         }
 
         .border-brand-teal {
@@ -45,7 +45,7 @@
             background: #ffffff;
             border-radius: 1.25rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.03);
         }
 
         .input-field {
@@ -64,49 +64,68 @@
 </head>
 <body class="min-h-screen flex flex-col text-slate-800">
 
-    <!-- Header styled precisely to match logo, circular account icon, and rounded menu icon -->
-    <nav class="bg-white sticky top-0 z-50 border-b border-slate-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-
-            <!-- PearlVets Logo -->
-            <a href="index.html" class="flex items-center">
-                <img src="images/logo.png" alt="PearlVets Logo" class="h-14 sm:h-16 w-auto object-contain">
+    <!-- Light Navigation Header -->
+    <nav class="bg-white sticky top-0 z-40 shadow-sm border-b border-slate-100 relative">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 py-2 flex justify-between items-center gap-4">
+            
+            <!-- Logo (Fixed height 72px) -->
+            <a href="index.html" class="flex items-center shrink-0"> 
+                <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain"> 
             </a>
 
-            <!-- Right Controls: Profile & Menu Buttons -->
-            <div class="flex items-center space-x-3">
-                <!-- User Account Profile Button (Circular) -->
-                <a href="dashboard.html" title="My Account" class="w-11 h-11 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition flex items-center justify-center">
+            <!-- Header Action Items: User Avatar & Universal Hamburger Button -->
+            <div class="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
+                <!-- User Profile Avatar -->
+                <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition shrink-0" title="My Account">
                     <i class="fa-solid fa-user text-base"></i>
-                </a>
+                </div>
 
-                <!-- Hamburger Menu Button (Rounded Square Box) -->
-                <button id="menu-toggle-btn" aria-label="Toggle Menu" class="w-11 h-11 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition flex items-center justify-center focus:outline-none">
-                    <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                <!-- Hamburger Menu Button (Visible across ALL screen sizes) -->
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-xl text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-brand-teal focus:outline-none transition flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-bars text-xl sm:text-2xl"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Collapsible Drawer Navigation Menu -->
-        <div id="nav-drawer" class="hidden bg-white border-t border-slate-100 px-6 py-5 shadow-lg">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-600 font-medium text-sm">
-                <div class="space-y-3">
-                    <a href="index.html" class="block hover:text-brand-teal transition py-1">Home</a>
-                    <a href="about.html" class="block hover:text-brand-teal transition py-1">About</a>
-                    <a href="services.html" class="block hover:text-brand-teal transition py-1">Services</a>
-                    <a href="virthosp.html" class="block hover:text-brand-teal transition py-1">Virtual Hospital</a>
-                    <a href="records.html" class="block hover:text-brand-teal transition py-1">Medical Records</a>
+        <!-- Universal Collapsible Centered & Scrollable Menu Dropdown -->
+        <div id="mobile-menu" class="hidden bg-white border-t border-slate-100 px-4 sm:px-8 py-6 absolute top-full left-0 w-full shadow-2xl z-50 max-h-[calc(100vh-90px)] overflow-y-auto">
+            <div class="max-w-3xl mx-auto space-y-6 text-center flex flex-col items-center pb-12">
+                
+                <!-- 24/7 Hotline Call CTA inside menu dropdown -->
+                <div class="pb-4 border-b border-slate-100 w-full flex flex-col items-center justify-center gap-2 text-center">
+                    <a href="virtconsul.html" class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-xl transition font-semibold text-sm shadow-sm flex items-center justify-center space-x-2 w-full sm:w-auto">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>24/7 Hotline Consultation</span>
+                    </a>
+                    <span class="text-xs text-slate-400">Pearlvets Quick Navigation</span>
                 </div>
-                <div class="space-y-3">
-                    <a href="prescriptions.html" class="block hover:text-brand-teal transition py-1">Prescriptions</a>
-                    <a href="lab-results.html" class="block hover:text-brand-teal transition py-1">Lab Results</a>
-                    <a href="vaccinations.html" class="block hover:text-brand-teal transition py-1">Vaccinations</a>
-                    <a href="payments.html" class="block text-brand-teal font-semibold py-1">Payments</a>
-                    <a href="contact.html" class="block hover:text-brand-teal transition py-1">Contact</a>
-                </div>
-                <div class="md:col-span-2 pt-3 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
-                    <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white text-center px-5 py-2.5 rounded-xl font-semibold shadow-sm transition">Get Started</a>
-                    <a href="dashboard.html" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-center px-5 py-2.5 rounded-xl font-medium transition">My Account</a>
+
+                <!-- Navigation Links Grid (Centered Content) -->
+                <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-slate-600 text-sm font-medium text-center">
+                    <a href="index.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Home</a>
+                    <a href="about.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">About</a>
+                    <a href="services.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Services</a>
+                    <a href="virthosp.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Virtual Hospital</a>
+                    <a href="medrpov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Medical Records</a>
+                    <a href="virtconsul.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Virtual Consultations</a>
+                    <a href="bookpov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Book Appointments</a>
+                    <a href="petpov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Pet Profile</a>
+                    <a href="prepov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Prescriptions</a>
+                    <a href="lapov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Lab Results</a>
+                    <a href="vapov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Vaccinations</a>
+                    <a href="repov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Reminders</a>
+                    <a href="empov.html" class="text-rose-600 hover:text-rose-700 transition p-3 rounded-xl hover:bg-rose-50 flex items-center justify-center space-x-2 font-semibold text-center">
+                        <i class="fa-solid fa-triangle-exclamation text-xs"></i>
+                        <span>Emergency Help</span>
+                    </a>
+                    
+                    <!-- Highlighted active page link for Payments -->
+                    <a href="bipov.html" class="text-brand-teal font-semibold transition p-3 rounded-xl bg-brand-mint flex items-center justify-center space-x-2 text-center">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal"></span>
+                        <span>Payments</span>
+                    </a>
+                    
+                    <a href="contact.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Contact</a>
                 </div>
             </div>
         </div>
@@ -134,7 +153,7 @@
                         <i class="fa-solid fa-credit-card text-slate-500"></i>
                         <span>Manage Payment Methods</span>
                     </button>
-                    <button class="bg-brand-teal hover:bg-brand-tealhover text-white font-medium text-sm px-4 py-2.5 rounded-xl transition shadow-sm flex items-center space-x-2">
+                    <button class="bg-brand-teal bg-brand-tealhover text-white font-medium text-sm px-4 py-2.5 rounded-xl transition shadow-sm flex items-center space-x-2">
                         <i class="fa-solid fa-money-bill-wave text-xs"></i>
                         <span>Pay Balance ($125.00)</span>
                     </button>
@@ -243,7 +262,7 @@
                                 <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-3 py-2 rounded-xl transition text-xs font-medium shadow-sm">
                                     <i class="fa-solid fa-file-pdf text-slate-400 mr-1"></i> Invoice
                                 </button>
-                                <button class="bg-brand-teal hover:bg-brand-tealhover text-white px-4 py-2 rounded-xl transition text-xs font-semibold shadow-sm">
+                                <button class="bg-brand-teal bg-brand-tealhover text-white px-4 py-2 rounded-xl transition text-xs font-semibold shadow-sm">
                                     Pay Now
                                 </button>
                             </div>
@@ -367,15 +386,15 @@
         </div>
     </main>
 
-    <!-- Navigation Drawer Toggle Script -->
+    <!-- Mobile Menu Toggle Script -->
     <script>
-        const btn = document.getElementById('menu-toggle-btn');
-        const drawer = document.getElementById('nav-drawer');
-        const icon = document.getElementById('menu-icon');
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
 
         btn.addEventListener('click', () => {
-            drawer.classList.toggle('hidden');
-            if (drawer.classList.contains('hidden')) {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
             } else {
