@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billing & Payments | Pearlvets</title>
-    
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -24,11 +24,11 @@
         .text-brand-teal {
             color: #8f1eae; /* Accent color */
         }
-        
+
         .bg-brand-teal {
             background-color: #8f1eae;
         }
-        
+
         .bg-brand-tealhover {
             background-color: #781893;
         }
@@ -67,9 +67,11 @@
     <!-- Light Navigation Header -->
     <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            
+
             <!-- Logo -->
-            <a href="index.html" class="flex items-center"> <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain"> </a>
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain">
+            </a>
 
             <!-- Desktop Links -->
             <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
@@ -77,21 +79,22 @@
                 <a href="about.html" class="hover:text-brand-teal transition">About</a>
                 <a href="services.html" class="hover:text-brand-teal transition">Services</a>
                 <a href="virthosp.html" class="hover:text-brand-teal transition">Virtual Hospital</a>
-                <a href="records.html" class="hover:text-brand-teal transition">Medical Records</a>
-                <a href="prescriptions.html" class="hover:text-brand-teal transition">Prescriptions</a>
-                <a href="lab-results.html" class="hover:text-brand-teal transition">Lab Results</a>
-                <a href="vaccinations.html" class="hover:text-brand-teal transition">Vaccinations</a>
-                <!-- Highlighted active page link -->
-                <a href="payments.html" class="text-brand-teal font-semibold transition">Payments</a>
+                <a href="bipov.html" class="text-brand-teal font-semibold transition">Payments</a>
+                <a href="medrpov.html" class="hover:text-brand-teal transition">Medical Records</a>
+                <a href="prepov.html" class="hover:text-brand-teal transition">Prescriptions</a>
+                <a href="lapov.html" class="hover:text-brand-teal transition">Lab Results</a>
+                <a href="vapov.html" class="hover:text-brand-teal transition">Vaccinations</a>
+               
+                
                 <a href="contact.html" class="hover:text-brand-teal transition">Contact</a>
             </div>
 
             <!-- Desktop CTA & Profile -->
             <div class="hidden lg:flex items-center space-x-4">
                 <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white px-5 py-2.5 rounded-lg transition font-semibold text-sm shadow-sm">Get Started</a>
-                <div class="w-9 h-9 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition">
+                <a href="#" class="w-9 h-9 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition" title="My Account">
                     <i class="fa-solid fa-user"></i>
-                </div>
+                </a>
             </div>
 
             <!-- Mobile Hamburger Button -->
@@ -107,15 +110,16 @@
                 <a href="about.html" class="hover:text-brand-teal transition block">About</a>
                 <a href="services.html" class="hover:text-brand-teal transition block">Services</a>
                 <a href="virthosp.html" class="hover:text-brand-teal transition block">Virtual Hospital</a>
-                <a href="records.html" class="hover:text-brand-teal transition block">Medical Records</a>
-                <a href="prescriptions.html" class="hover:text-brand-teal transition block">Prescriptions</a>
-                <a href="lab-results.html" class="hover:text-brand-teal transition block">Lab Results</a>
-                <a href="vaccinations.html" class="hover:text-brand-teal transition block">Vaccinations</a>
-                <a href="payments.html" class="text-brand-teal font-semibold transition block">Payments</a>
+                <a href="bipov.html" class="text-brand-teal font-semibold transition block">Payments</a>
+                <a href="medrpov.html" class="hover:text-brand-teal transition block">Medical Records</a>
+                <a href="prepov.html" class="hover:text-brand-teal transition block">Prescriptions</a>
+                <a href="lapov.html" class="hover:text-brand-teal transition block">Lab Results</a>
+                <a href="vapov.html" class="hover:text-brand-teal transition block">Vaccinations</a>
+                <a href="petpov.html" class="hover:text-brand-teal transition block">Pet Profile</a>
                 <a href="contact.html" class="hover:text-brand-teal transition block">Contact</a>
                 <hr class="border-slate-100 my-2">
                 <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white text-center px-5 py-3 rounded-lg transition font-semibold block shadow-sm">Get Started</a>
-                <a href="dashboard.html" class="text-center py-2 hover:text-brand-teal transition flex items-center justify-center space-x-2">
+                <a href="#" class="text-center py-2 hover:text-brand-teal transition flex items-center justify-center space-x-2">
                     <i class="fa-solid fa-user"></i>
                     <span>My Account</span>
                 </a>
@@ -126,7 +130,7 @@
     <!-- Main Content Container -->
     <main class="flex-grow p-6">
         <div class="max-w-5xl mx-auto space-y-6">
-            
+
             <!-- Page Header -->
             <div class="mt-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div class="flex items-center space-x-4">
@@ -154,7 +158,7 @@
 
             <!-- Overview Stat Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
+
                 <!-- Outstanding Balance Card -->
                 <div class="custom-card p-5 flex flex-col justify-between border-l-4 border-l-amber-500">
                     <div>
@@ -208,7 +212,7 @@
 
             <!-- Main Payments & Invoices Section -->
             <div class="custom-card p-6">
-                
+
                 <!-- Filter Tabs & Search -->
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100">
                     <!-- Filter Tabs -->
@@ -228,7 +232,7 @@
 
                 <!-- Invoice & Payment History List -->
                 <div class="divide-y divide-slate-100">
-                    
+
                     <!-- Item 1: Unpaid Invoice -->
                     <div class="py-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-slate-50/60 transition -mx-6 px-6 rounded-lg">
                         <div class="flex items-start space-x-4">
@@ -386,7 +390,6 @@
 
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
-            // Toggle hamburger and close icon
             if (menu.classList.contains('hidden')) {
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
