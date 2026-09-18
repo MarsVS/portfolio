@@ -76,57 +76,62 @@
             
             <!-- Logo -->
             <a href="index.html" class="flex items-center shrink-0"> 
-                <img src="images/logo.png" alt="Pearlvets Logo" class="h-12 sm:h-14 lg:h-16 w-auto object-contain"> 
+                <img src="images/logo.png" alt="Pearlvets Logo" class="h-10 sm:h-12 lg:h-14 w-auto object-contain"> 
             </a>
 
-            <!-- Header Action Items & Universal Hamburger Toggle -->
-            <div class="flex items-center space-x-3 sm:space-x-4 shrink-0">
-                <!-- 24/7 Hotline CTA -->
-                <a href="virtconsul.html" class="bg-rose-600 hover:bg-rose-700 text-white px-3.5 sm:px-5 py-2.5 rounded-lg transition font-semibold text-xs sm:text-sm shadow-sm flex items-center space-x-2 shrink-0">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <span class="whitespace-nowrap">24/7 Hotline</span>
-                </a>
-
+            <!-- Header Action Items: User Avatar & Universal Hamburger Button -->
+            <div class="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
                 <!-- User Profile Avatar -->
-                <div class="w-9 h-9 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition shrink-0">
-                    <i class="fa-solid fa-user"></i>
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition shrink-0">
+                    <i class="fa-solid fa-user text-sm sm:text-base"></i>
                 </div>
 
-                <!-- Universal Hamburger Button (All Displays) -->
-                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="p-2 rounded-lg text-slate-600 focus:outline-none hover:text-brand-teal hover:bg-slate-50 transition shrink-0">
-                    <i class="fa-solid fa-bars text-2xl"></i>
+                <!-- Hamburger Menu Button (Visible across ALL screen sizes & displays) -->
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="p-2 sm:p-2.5 rounded-xl text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-brand-teal focus:outline-none transition flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-bars text-xl sm:text-2xl"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Universal Collapsible Navigation Menu (Displays on All Screens) -->
-        <div id="mobile-menu" class="hidden bg-white border-t border-slate-100 px-4 sm:px-8 py-6 absolute top-full left-0 w-full shadow-xl z-50">
-            <div class="max-w-[90rem] mx-auto">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-2 gap-x-4 text-slate-600 text-sm font-medium">
-                    <a href="index.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Home</a>
-                    <a href="about.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">About</a>
-                    <a href="services.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Services</a>
-                    <a href="virthosp.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Virtual Hospital</a>
-                    <a href="medrpov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Medical Records</a>
-                    <a href="virtconsul.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Virtual Consultations</a>
-                    <a href="bookpov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Book Appointments</a>
+        <!-- Universal Collapsible Navigation Menu (All Screens) -->
+        <div id="mobile-menu" class="hidden bg-white border-t border-slate-100 px-4 sm:px-8 py-5 absolute top-full left-0 w-full shadow-xl z-50">
+            <div class="max-w-[90rem] mx-auto space-y-4">
+                
+                <!-- 24/7 Hotline Call CTA inside menu dropdown -->
+                <div class="pb-2 border-b border-slate-100 flex items-center justify-between flex-wrap gap-2">
+                    <a href="virtconsul.html" class="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-xl transition font-semibold text-xs sm:text-sm shadow-sm flex items-center justify-center space-x-2 w-full sm:w-auto">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>24/7 Hotline Consultation</span>
+                    </a>
+                    <span class="text-xs text-slate-400 hidden sm:inline-block">Pearlvets Quick Navigation</span>
+                </div>
+
+                <!-- Navigation Links Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1.5 sm:gap-2 text-slate-600 text-sm font-medium">
+                    <a href="index.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Home</a>
+                    <a href="about.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">About</a>
+                    <a href="services.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Services</a>
+                    <a href="virthosp.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Virtual Hospital</a>
+                    <a href="medrpov.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Medical Records</a>
+                    <a href="virtconsul.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Virtual Consultations</a>
+                    <a href="bookpov.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Book Appointments</a>
                     
                     <!-- Highlighted active page link for Pet Profile -->
-                    <a href="petpov.html" class="text-brand-teal font-semibold transition p-2 rounded-lg bg-brand-mint flex items-center space-x-2">
+                    <a href="petpov.html" class="text-brand-teal font-semibold transition p-2.5 rounded-xl bg-brand-mint flex items-center space-x-2">
                         <span class="w-2 h-2 rounded-full bg-brand-teal"></span>
                         <span>Pet Profile</span>
                     </a>
                     
-                    <a href="prepov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Prescriptions</a>
-                    <a href="lapov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Lab Results</a>
-                    <a href="vapov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Vaccinations</a>
-                    <a href="repov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Reminders</a>
-                    <a href="empov.html" class="text-rose-600 hover:text-rose-700 transition p-2 rounded-lg hover:bg-rose-50 flex items-center space-x-1.5 font-medium">
+                    <a href="prepov.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Prescriptions</a>
+                    <a href="lapov.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Lab Results</a>
+                    <a href="vapov.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Vaccinations</a>
+                    <a href="repov.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Reminders</a>
+                    <a href="empov.html" class="text-rose-600 hover:text-rose-700 transition p-2.5 rounded-xl hover:bg-rose-50 flex items-center space-x-2 font-semibold">
                         <i class="fa-solid fa-triangle-exclamation text-xs"></i>
                         <span>Emergency Help</span>
                     </a>
-                    <a href="bipov.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Payments</a>
-                    <a href="contact.html" class="hover:text-brand-teal transition p-2 rounded-lg hover:bg-slate-50 block">Contact</a>
+                    <a href="bipov.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Payments</a>
+                    <a href="contact.html" class="hover:text-brand-teal transition p-2.5 rounded-xl hover:bg-slate-50 block">Contact</a>
                 </div>
             </div>
         </div>
@@ -723,21 +728,23 @@
 
     <!-- Scripts for UI Functionality -->
     <script>
-        // Menu toggle logic across all screen sizes
+        // Universal Menu toggle logic across all displays
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        const icon = btn.querySelector('i');
+        const icon = btn ? btn.querySelector('i') : null;
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            if (menu.classList.contains('hidden')) {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            }
-        });
+        if (btn && menu && icon) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
 
         // Modal Open / Close Functions
         function openModal(modalId) {
