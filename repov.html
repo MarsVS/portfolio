@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reminders & Care Schedule | Pearlvets</title>
-    
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -22,19 +22,19 @@
 
         /* Design system color definitions */
         .text-brand-teal {
-            color: #8f1eae; /* Primary purple accent */
+            color: #8f1eae; /* Accent purple color */
         }
-        
+
         .bg-brand-teal {
             background-color: #8f1eae;
         }
-        
-        .bg-brand-tealhover {
-            background-color: #73188b;
+
+        .bg-brand-tealhover:hover {
+            background-color: #781893;
         }
 
         .bg-brand-mint {
-            background-color: #f8effc; /* Light purple card accent */
+            background-color: #f8f0fc; /* Light purple card accent */
         }
 
         .border-brand-teal {
@@ -45,7 +45,7 @@
             background: #ffffff;
             border-radius: 1.25rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.03);
         }
 
         .input-field {
@@ -65,62 +65,68 @@
 <body class="min-h-screen flex flex-col text-slate-800">
 
     <!-- Light Navigation Header -->
-    <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="bg-white sticky top-0 z-40 shadow-sm border-b border-slate-100 relative">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 py-2 flex justify-between items-center gap-4">
             
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center"> <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain"> </a>
+            <!-- Logo (Fixed height 72px) -->
+            <a href="index.html" class="flex items-center shrink-0"> 
+                <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain"> 
+            </a>
 
-            <!-- Desktop Links -->
-            <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600">
-                <a href="index.html" class="hover:text-brand-teal transition">Home</a>
-                <a href="about.html" class="hover:text-brand-teal transition">About</a>
-                <a href="services.html" class="hover:text-brand-teal transition">Services</a>
-                <a href="virthosp.html" class="hover:text-brand-teal transition">Virtual Hospital</a>
-                <a href="records.html" class="hover:text-brand-teal transition">Medical Records</a>
-                <a href="prescriptions.html" class="hover:text-brand-teal transition">Prescriptions</a>
-                <a href="lab-results.html" class="hover:text-brand-teal transition">Lab Results</a>
-                <a href="vaccinations.html" class="hover:text-brand-teal transition">Vaccinations</a>
-                <!-- Highlighted active page link -->
-                <a href="reminders.html" class="text-brand-teal font-semibold transition">Reminders</a>
-                <a href="payments.html" class="hover:text-brand-teal transition">Payments</a>
-                <a href="contact.html" class="hover:text-brand-teal transition">Contact</a>
-            </div>
-
-            <!-- Desktop CTA & Profile -->
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white px-5 py-2.5 rounded-lg transition font-semibold text-sm shadow-sm">Get Started</a>
-                <div class="w-9 h-9 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition">
-                    <i class="fa-solid fa-user"></i>
+            <!-- Header Action Items: User Avatar & Universal Hamburger Button -->
+            <div class="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
+                <!-- User Profile Avatar -->
+                <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center cursor-pointer hover:bg-slate-200 transition shrink-0" title="My Account">
+                    <i class="fa-solid fa-user text-base"></i>
                 </div>
-            </div>
 
-            <!-- Mobile Hamburger Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-slate-600 focus:outline-none hover:text-brand-teal transition">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
+                <!-- Hamburger Menu Button (Visible across ALL screen sizes) -->
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-xl text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-brand-teal focus:outline-none transition flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-bars text-xl sm:text-2xl"></i>
+                </button>
+            </div>
         </div>
 
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-6 py-4 absolute w-full shadow-lg">
-            <div class="flex flex-col space-y-4 text-slate-600 text-sm font-medium">
-                <a href="index.html" class="hover:text-brand-teal transition block">Home</a>
-                <a href="about.html" class="hover:text-brand-teal transition block">About</a>
-                <a href="services.html" class="hover:text-brand-teal transition block">Services</a>
-                <a href="virthosp.html" class="hover:text-brand-teal transition block">Virtual Hospital</a>
-                <a href="records.html" class="hover:text-brand-teal transition block">Medical Records</a>
-                <a href="prescriptions.html" class="hover:text-brand-teal transition block">Prescriptions</a>
-                <a href="lab-results.html" class="hover:text-brand-teal transition block">Lab Results</a>
-                <a href="vaccinations.html" class="hover:text-brand-teal transition block">Vaccinations</a>
-                <a href="reminders.html" class="text-brand-teal font-semibold transition block">Reminders</a>
-                <a href="payments.html" class="hover:text-brand-teal transition block">Payments</a>
-                <a href="contact.html" class="hover:text-brand-teal transition block">Contact</a>
-                <hr class="border-slate-100 my-2">
-                <a href="virtconsul.html" class="bg-brand-teal hover:bg-brand-tealhover text-white text-center px-5 py-3 rounded-lg transition font-semibold block shadow-sm">Get Started</a>
-                <a href="dashboard.html" class="text-center py-2 hover:text-brand-teal transition flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-user"></i>
-                    <span>My Account</span>
-                </a>
+        <!-- Universal Collapsible Centered & Scrollable Menu Dropdown -->
+        <div id="mobile-menu" class="hidden bg-white border-t border-slate-100 px-4 sm:px-8 py-6 absolute top-full left-0 w-full shadow-2xl z-50 max-h-[calc(100vh-90px)] overflow-y-auto">
+            <div class="max-w-3xl mx-auto space-y-6 text-center flex flex-col items-center pb-12">
+                
+                <!-- 24/7 Hotline Call CTA inside menu dropdown -->
+                <div class="pb-4 border-b border-slate-100 w-full flex flex-col items-center justify-center gap-2 text-center">
+                    <a href="virtconsul.html" class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-xl transition font-semibold text-sm shadow-sm flex items-center justify-center space-x-2 w-full sm:w-auto">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>24/7 Hotline Consultation</span>
+                    </a>
+                    <span class="text-xs text-slate-400">Pearlvets Quick Navigation</span>
+                </div>
+
+                <!-- Navigation Links Grid (Centered Content) -->
+                <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-slate-600 text-sm font-medium text-center">
+                    <a href="index.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Home</a>
+                    <a href="about.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">About</a>
+                    <a href="services.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Services</a>
+                    <a href="virthosp.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Virtual Hospital</a>
+                    
+                    <!-- Highlighted active page link for Reminders -->
+                    <a href="repov.html" class="text-brand-teal font-semibold transition p-3 rounded-xl bg-brand-mint flex items-center justify-center space-x-2 text-center">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal"></span>
+                        <span>Reminders</span>
+                    </a>
+
+                    <a href="medrpov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Medical Records</a>
+                    <a href="virtcpov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Virtual Consultations</a>
+                    <a href="bookpov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Book Appointments</a>
+                    <a href="petpov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Pet Profile</a>
+                    <a href="prepov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Prescriptions</a>
+                    <a href="lapov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Lab Results</a>
+                    <a href="vapov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Vaccinations</a>
+                    <a href="empov.html" class="text-rose-600 hover:text-rose-700 transition p-3 rounded-xl hover:bg-rose-50 flex items-center justify-center space-x-2 font-semibold text-center">
+                        <i class="fa-solid fa-triangle-exclamation text-xs"></i>
+                        <span>Emergency Help</span>
+                    </a>
+                    <a href="bipov.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Payments</a>
+                    <a href="contact.html" class="hover:text-brand-teal transition p-3 rounded-xl hover:bg-slate-50 block text-center">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -147,7 +153,7 @@
                         <i class="fa-solid fa-sliders text-slate-500"></i>
                         <span>Alert Preferences</span>
                     </button>
-                    <button class="bg-brand-teal hover:bg-brand-tealhover text-white font-medium text-sm px-4 py-2.5 rounded-xl transition shadow-sm flex items-center space-x-2">
+                    <button class="bg-brand-teal bg-brand-tealhover text-white font-medium text-sm px-4 py-2.5 rounded-xl transition shadow-sm flex items-center space-x-2">
                         <i class="fa-solid fa-plus text-xs"></i>
                         <span>Add Custom Reminder</span>
                     </button>
@@ -256,7 +262,7 @@
                                 <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-3 py-2 rounded-xl transition text-xs font-medium shadow-sm">
                                     <i class="fa-solid fa-bell-slash text-slate-400 mr-1"></i> Snooze
                                 </button>
-                                <button class="bg-brand-teal hover:bg-brand-tealhover text-white px-4 py-2 rounded-xl transition text-xs font-semibold shadow-sm">
+                                <button class="bg-brand-teal bg-brand-tealhover text-white px-4 py-2 rounded-xl transition text-xs font-semibold shadow-sm">
                                     Book Exam Now
                                 </button>
                             </div>
@@ -288,7 +294,7 @@
                                 <button class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-3 py-2 rounded-xl transition text-xs font-medium shadow-sm">
                                     <i class="fa-solid fa-rotate-right text-slate-400 mr-1"></i> Refill
                                 </button>
-                                <button class="bg-brand-teal hover:bg-brand-tealhover text-white px-4 py-2 rounded-xl transition text-xs font-semibold shadow-sm flex items-center space-x-1">
+                                <button class="bg-brand-teal bg-brand-tealhover text-white px-4 py-2 rounded-xl transition text-xs font-semibold shadow-sm flex items-center space-x-1">
                                     <i class="fa-solid fa-check text-xs"></i>
                                     <span>Mark Taken</span>
                                 </button>
@@ -386,7 +392,6 @@
 
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
-            // Toggle hamburger and close icon
             if (menu.classList.contains('hidden')) {
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
