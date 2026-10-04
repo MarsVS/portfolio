@@ -46,17 +46,11 @@
                 <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain">
             </a>
 
-            <!-- Action Controls / Menu Trigger -->
-            <div class="flex items-center gap-3">
-                <a href="#book" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
-                    Book Consultation
-                </a>
-
-                <button id="menu-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" class="p-2.5 rounded-xl text-slate-700 hover:text-mint-600 hover:bg-slate-100 transition-colors flex items-center justify-center border border-slate-200">
-                    <i id="menu-icon-open" class="fa-solid fa-bars text-xl"></i>
-                    <i id="menu-icon-close" class="fa-solid fa-xmark text-xl hidden"></i>
-                </button>
-            </div>
+            <!-- Menu Trigger (All Viewports) -->
+            <button id="menu-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" class="p-2.5 rounded-xl text-slate-700 hover:text-mint-600 hover:bg-slate-100 transition-colors flex items-center justify-center border border-slate-200">
+                <i id="menu-icon-open" class="fa-solid fa-bars text-xl"></i>
+                <i id="menu-icon-close" class="fa-solid fa-xmark text-xl hidden"></i>
+            </button>
         </div>
     </header>
 
@@ -77,7 +71,7 @@
 
             <!-- Drawer Body -->
             <div class="flex-1 overflow-y-auto p-6 space-y-8">
-                <!-- Top Action -->
+                <!-- Top Action CTA -->
                 <div>
                     <a href="#book" class="drawer-link w-full py-3 px-4 rounded-xl bg-mint-600 text-white font-semibold flex items-center justify-center gap-2 shadow-md hover:bg-mint-700 transition-colors">
                         <i class="fa-solid fa-calendar-check"></i> Book Consultation
@@ -128,7 +122,7 @@
                 </div>
             </div>
 
-            <!-- Drawer Footer -->
+            <!-- Drawer Footer CTA -->
             <div class="p-5 border-t border-slate-100 bg-slate-50/50">
                 <a href="#book" class="drawer-link w-full py-3 px-4 rounded-xl bg-mint-600 text-white font-semibold flex items-center justify-center gap-2 shadow-md hover:bg-mint-700 transition-colors text-center">
                     Book Appointment
@@ -143,7 +137,6 @@
         <!-- Hero Section -->
         <section class="py-16 md:py-24 bg-gradient-to-b from-mint-50/60 to-slate-50 border-b border-slate-100">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <!-- Service Icon matching screenshot badge -->
                 <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-mint-100 border border-mint-200/50 flex items-center justify-center text-mint-600 text-3xl shadow-sm">
                     <i class="fa-solid fa-scissors"></i>
                 </div>
