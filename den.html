@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dental Care | Teeth Cleaning & Oral Health | Pearlvets</title>
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -22,13 +26,13 @@
                     },
                     colors: {
                         brand: {
-                            50: '#fcf5ff',
-                            100: '#f3e8ff',
-                            200: '#e9d5ff',
-                            500: '#8f1eae',
-                            600: '#7a18cb',
-                            700: '#6411aa',
-                            900: '#3c0669',
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            200: '#f5d0fe',
+                            500: '#a824cb',
+                            600: '#8f1eae',
+                            700: '#76168e',
+                            900: '#4f115e',
                         }
                     }
                 }
@@ -56,12 +60,12 @@
 
             <!-- Actions & Menu Toggle -->
             <div class="flex items-center gap-3">
-                <a href="#book" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-500 text-white shadow-md hover:bg-brand-600 transition-all hover:shadow-lg hover:-translate-y-0.5">
-                    Book Dental Exam
+                <a href="#book" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-600 text-white shadow-md hover:bg-brand-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                    Book Consultation
                 </a>
 
                 <!-- Hamburger Trigger Button -->
-                <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu" class="p-2.5 rounded-xl text-slate-700 hover:text-brand-600 hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors md:hidden">
+                <button id="menu-toggle-btn" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Toggle navigation menu" class="p-2.5 rounded-xl text-slate-700 hover:text-brand-600 hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors md:hidden">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
@@ -87,7 +91,7 @@
         <div class="flex-1 overflow-y-auto px-6 py-6 space-y-8">
             <!-- CTA Button -->
             <div>
-                <a href="#book" class="drawer-link flex items-center justify-center w-full px-5 py-3 rounded-xl text-sm font-bold bg-brand-500 text-white shadow-md hover:bg-brand-600 transition-all text-center">
+                <a href="#book" class="drawer-link flex items-center justify-center w-full px-5 py-3 rounded-xl text-sm font-bold bg-brand-600 text-white shadow-md hover:bg-brand-700 transition-all text-center">
                     <i class="fa-solid fa-calendar-check mr-2"></i> Book Consultation
                 </a>
             </div>
@@ -120,62 +124,71 @@
                 <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Main Navigation</h4>
                 <nav class="flex flex-col space-y-2 text-sm font-semibold text-slate-700">
                     <a href="index.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
-                        <i class="fa-solid fa-house text-brand-500 w-4"></i> Home
+                        <i class="fa-solid fa-house text-brand-600 w-4"></i> Home
                     </a>
                     <a href="about.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
-                        <i class="fa-solid fa-circle-info text-brand-500 w-4"></i> About Us
+                        <i class="fa-solid fa-circle-info text-brand-600 w-4"></i> About Us
                     </a>
                     <a href="services.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
-                        <i class="fa-solid fa-stethoscope text-brand-500 w-4"></i> All Services
+                        <i class="fa-solid fa-stethoscope text-brand-600 w-4"></i> Services
+                    </a>
+                    <a href="virtual-hospital.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-hospital text-brand-600 w-4"></i> Virtual Hospital
+                    </a>
+                    <a href="publications.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-book-open text-brand-600 w-4"></i> Publications
+                    </a>
+                    <a href="portfolio.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-folder-open text-brand-600 w-4"></i> Portfolio
                     </a>
                     <a href="contact.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
-                        <i class="fa-solid fa-envelope text-brand-500 w-4"></i> Contact
+                        <i class="fa-solid fa-envelope text-brand-600 w-4"></i> Contact
                     </a>
                 </nav>
             </div>
 
             <!-- Veterinary Services List -->
             <div>
-                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Veterinary Care Services</h4>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Veterinary Care & Services</h4>
                 <div class="grid grid-cols-1 gap-1 text-sm text-slate-600 font-medium">
-                    <a href="wellness-preventive.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
-                        <span>Wellness & Preventive Care</span>
+                    <a href="general-consultations.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>General Consultations</span>
                         <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
                     </a>
-                    <a href="dental-care.html" class="drawer-link px-3 py-2 rounded-lg bg-brand-50 text-brand-600 font-semibold transition-colors flex items-center justify-between">
-                        <span>Dental Care & Oral Health</span>
-                        <i class="fa-solid fa-angle-right text-xs text-brand-500"></i>
-                    </a>
-                    <a href="surgery.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
-                        <span>Surgical Services</span>
-                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
-                    </a>
-                    <a href="emergency.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
-                        <span>Emergency & Urgent Care</span>
+                    <a href="preventive-care.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Preventive Care</span>
                         <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
                     </a>
                     <a href="diagnostics.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
-                        <span>Digital Diagnostics & X-Ray</span>
+                        <span>Diagnostics</span>
                         <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
                     </a>
-                    <a href="vaccinations.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
-                        <span>Vaccinations & Parasite Control</span>
+                    <a href="surgery.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Surgery</span>
                         <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
                     </a>
-                    <a href="grooming.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
-                        <span>Pet Grooming & Hygiene</span>
+                    <a href="dental-care.html" class="drawer-link px-3 py-2 rounded-lg bg-brand-50 text-brand-600 font-semibold transition-colors flex items-center justify-between">
+                        <span>Dental Care</span>
+                        <i class="fa-solid fa-angle-right text-xs text-brand-600"></i>
+                    </a>
+                    <a href="internal-medicine.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Internal Medicine</span>
                         <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
                     </a>
-                    <a href="microchipping.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
-                        <span>Microchipping & ID</span>
+                    <a href="reproductive-care.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Reproductive Care</span>
                         <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
                     </a>
-                    <a href="senior-care.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
-                        <span>Senior Pet Care</span>
+                    <a href="nutrition-wellness.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Nutrition & Wellness</span>
                         <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
                     </a>
-                    <a href="pharmacy.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
-                        <span>In-House Pharmacy</span>
+                    <a href="emergency.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Emergency Care</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                    <a href="home-mobile-visits.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Home & Mobile Visits</span>
                         <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
                     </a>
                 </div>
@@ -185,11 +198,11 @@
         <!-- Drawer Footer -->
         <div class="p-5 border-t border-slate-100 bg-slate-50/80 text-xs text-slate-500 space-y-2">
             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-phone text-brand-500"></i>
+                <i class="fa-solid fa-phone text-brand-600"></i>
                 <a href="tel:+1234567890" class="hover:text-brand-600 font-semibold">+1 (234) 567-890</a>
             </div>
             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-envelope text-brand-500"></i>
+                <i class="fa-solid fa-envelope text-brand-600"></i>
                 <a href="mailto:info@pearlvets.com" class="hover:text-brand-600 font-semibold">info@pearlvets.com</a>
             </div>
             <p class="pt-2 text-slate-400">&copy; 2026 Pearlvets. All rights reserved.</p>
@@ -202,8 +215,8 @@
         <!-- Hero Section -->
         <section class="py-16 md:py-24 bg-gradient-to-b from-brand-50/60 to-slate-50 border-b border-slate-100">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <!-- Service Icon matching primary brand color -->
-                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-brand-100 border border-brand-200/50 flex items-center justify-center text-brand-500 text-3xl shadow-sm">
+                <!-- Service Icon -->
+                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-brand-100 border border-brand-200/50 flex items-center justify-center text-brand-600 text-3xl shadow-sm">
                     <i class="fa-solid fa-tooth"></i>
                 </div>
                 
@@ -216,7 +229,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-500 text-white font-semibold shadow-md hover:bg-brand-600 transition-all hover:shadow-lg">
+                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-600 text-white font-semibold shadow-md hover:bg-brand-700 transition-all hover:shadow-lg">
                         Schedule Dental Checkup
                     </a>
                     <a href="#overview" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all">
@@ -242,15 +255,15 @@
                     
                     <ul class="space-y-3 font-medium text-slate-700">
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-500 text-lg"></i>
+                            <i class="fa-solid fa-circle-check text-brand-600 text-lg"></i>
                             Ultrasonic scaling above and below the gumline to remove calculus
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-500 text-lg"></i>
+                            <i class="fa-solid fa-circle-check text-brand-600 text-lg"></i>
                             Digital dental X-rays to detect hidden tooth root disease and bone loss
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-500 text-lg"></i>
+                            <i class="fa-solid fa-circle-check text-brand-600 text-lg"></i>
                             Polishing, fluoride treatments, and custom home oral care plans
                         </li>
                     </ul>
@@ -266,23 +279,23 @@
                     </p>
                     <div class="space-y-3">
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-600 mt-1"></i>
                             <span class="text-sm text-slate-700">Persistent bad breath (halitosis)</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-600 mt-1"></i>
                             <span class="text-sm text-slate-700">Yellow or brown tartar build-up on teeth</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-600 mt-1"></i>
                             <span class="text-sm text-slate-700">Red, swollen, or bleeding gums</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-600 mt-1"></i>
                             <span class="text-sm text-slate-700">Difficulty chewing, dropping food, or loss of appetite</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-600 mt-1"></i>
                             <span class="text-sm text-slate-700">Loose, broken, or missing teeth</span>
                         </div>
                     </div>
@@ -301,7 +314,7 @@
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Feature 1 -->
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-500 flex items-center justify-center text-xl mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
                             <i class="fa-solid fa-sparkles"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 mb-2">Ultrasonic Cleaning</h3>
@@ -310,7 +323,7 @@
 
                     <!-- Feature 2 -->
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-500 flex items-center justify-center text-xl mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
                             <i class="fa-solid fa-x-ray"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 mb-2">Digital Intraoral X-Rays</h3>
@@ -319,7 +332,7 @@
 
                     <!-- Feature 3 -->
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-500 flex items-center justify-center text-xl mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
                             <i class="fa-solid fa-kit-medical"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 mb-2">Surgical Extractions</h3>
@@ -328,7 +341,7 @@
 
                     <!-- Feature 4 -->
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-500 flex items-center justify-center text-xl mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 mb-2">Polishing & Barrier Sealants</h3>
@@ -350,7 +363,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold mb-6">1</div>
+                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold mb-6">1</div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Pre-Dental Assessment</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         Pre-anesthetic blood testing ensures internal organs can safely clear medications. We place an IV catheter for fluids and precise drug delivery.
@@ -358,7 +371,7 @@
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold mb-6">2</div>
+                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold mb-6">2</div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Cleaning & Treatment</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         Under general anesthesia with an endotracheal tube protecting the airway, we take full dental X-rays, scale, probe, polish, and extract diseased teeth if necessary.
@@ -366,7 +379,7 @@
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold mb-6">3</div>
+                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold mb-6">3</div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Home Care Strategy</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         After smooth recovery, we review dental photos/X-rays with you and send you home with personalized toothbrushing guidance or VOHC-approved dental diets.
@@ -377,7 +390,7 @@
 
         <!-- Booking CTA Section -->
         <section id="book" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-brand-500 to-brand-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
+            <div class="bg-gradient-to-br from-brand-600 to-brand-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
                 <h2 class="text-3xl font-bold">Give Your Pet a Fresher, Pain-Free Smile</h2>
                 <p class="text-brand-100 max-w-xl mx-auto text-lg">
                     Schedule a pre-dental oral examination today to evaluate your pet's teeth and receive a custom estimate.
@@ -386,7 +399,7 @@
                     <a href="tel:+1234567890" class="bg-white text-brand-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-brand-50 transition-colors inline-flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call Dental Desk
                     </a>
-                    <a href="mailto:dental@vetclinic.com" class="bg-brand-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-brand-900/50 transition-colors inline-flex items-center justify-center gap-2">
+                    <a href="mailto:dental@pearlvets.com" class="bg-brand-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-brand-900/50 transition-colors inline-flex items-center justify-center gap-2">
                         <i class="fa-solid fa-envelope"></i> Request Oral Exam
                     </a>
                 </div>
@@ -402,7 +415,7 @@
                     <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
                         <span>Why does my pet need general anesthesia for a dental cleaning?</span>
                         <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-brand-500"></i>
+                            <i class="fa-solid fa-chevron-down text-brand-600"></i>
                         </span>
                     </summary>
                     <p class="mt-4 text-slate-600 leading-relaxed text-sm">
@@ -414,7 +427,7 @@
                     <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
                         <span>How often should my pet get professional dental cleanings?</span>
                         <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-brand-500"></i>
+                            <i class="fa-solid fa-chevron-down text-brand-600"></i>
                         </span>
                     </summary>
                     <p class="mt-4 text-slate-600 leading-relaxed text-sm">
@@ -426,7 +439,7 @@
                     <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
                         <span>How can I maintain my pet's teeth at home?</span>
                         <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-brand-500"></i>
+                            <i class="fa-solid fa-chevron-down text-brand-600"></i>
                         </span>
                     </summary>
                     <p class="mt-4 text-slate-600 leading-relaxed text-sm">
@@ -442,7 +455,7 @@
     <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-paw text-brand-500"></i>
+                <i class="fa-solid fa-paw text-brand-600"></i>
                 <p class="text-slate-500 text-sm">
                     &copy; 2026 Pearlvets. All rights reserved.
                 </p>
@@ -450,7 +463,7 @@
             <div class="flex items-center gap-6 text-slate-400 text-sm">
                 <a href="#" class="hover:text-brand-600 transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-brand-600 transition-colors">Terms of Service</a>
-                <a href="#" class="hover:text-brand-600 transition-colors">Contact</a>
+                <a href="contact.html" class="hover:text-brand-600 transition-colors">Contact</a>
             </div>
         </div>
     </footer>
@@ -458,11 +471,12 @@
     <!-- Interactive Navigation Drawer Controller -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.getElementById('mobile-menu-btn');
+            const menuBtn = document.getElementById('menu-toggle-btn');
             const closeBtn = document.getElementById('close-drawer-btn');
             const drawer = document.getElementById('mobile-drawer');
             const overlay = document.getElementById('drawer-overlay');
             const drawerLinks = document.querySelectorAll('.drawer-link');
+            const menuIcon = menuBtn ? menuBtn.querySelector('i') : null;
 
             function openDrawer() {
                 drawer.classList.remove('translate-x-full');
@@ -471,6 +485,10 @@
                 overlay.classList.add('opacity-100', 'pointer-events-auto');
                 document.body.classList.add('overflow-hidden');
                 if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+                if (menuIcon) {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                }
             }
 
             function closeDrawer() {
@@ -480,9 +498,23 @@
                 overlay.classList.add('opacity-0', 'pointer-events-none');
                 document.body.classList.remove('overflow-hidden');
                 if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+                if (menuIcon) {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                }
             }
 
-            if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    const isOpen = drawer.classList.contains('translate-x-0');
+                    if (isOpen) {
+                        closeDrawer();
+                    } else {
+                        openDrawer();
+                    }
+                });
+            }
+
             if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
             if (overlay) overlay.addEventListener('click', closeDrawer);
 
@@ -491,7 +523,7 @@
             });
 
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && drawer && !drawer.classList.contains('translate-x-full')) {
+                if (e.key === 'Escape' && drawer && drawer.classList.contains('translate-x-0')) {
                     closeDrawer();
                 }
             });
