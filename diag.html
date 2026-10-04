@@ -39,27 +39,122 @@
 <body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
 
     <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
             <!-- Brand Logo -->
-            <a href="index.html" class="flex items-center">
+            <a href="index.html" class="flex items-center flex-shrink-0">
                 <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain">
             </a>
 
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+            <!-- Existing Header Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-semibold text-slate-600 text-sm">
                 <a href="#overview" class="hover:text-brand-600 transition-colors">Overview</a>
                 <a href="#capabilities" class="hover:text-brand-600 transition-colors">Lab & Imaging</a>
                 <a href="#process" class="hover:text-brand-600 transition-colors">Process</a>
                 <a href="#faq" class="hover:text-brand-600 transition-colors">FAQs</a>
             </nav>
 
-            <!-- Book Action -->
-            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-600 text-white shadow-md hover:bg-brand-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
-                Book Diagnostic Workup
-            </a>
+            <!-- Book Action & Hamburger Button -->
+            <div class="flex items-center gap-3">
+                <a href="#book" class="inline-flex items-center justify-center px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-brand-600 text-white shadow-md hover:bg-brand-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                    Book Diagnostic Workup
+                </a>
+
+                <!-- Hamburger Button (Visible Across ALL Displays) -->
+                <button id="hamburger-btn" type="button" aria-label="Open Navigation Menu" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-brand-600 transition-colors border border-slate-200 flex items-center justify-center gap-2 font-medium text-sm">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                    <span class="hidden sm:inline text-xs font-semibold uppercase tracking-wider">Menu</span>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Hamburger Navigation Drawer Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+
+    <!-- Hamburger Navigation Drawer -->
+    <aside id="menu-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col">
+        <!-- Drawer Header -->
+        <div class="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Pearlvets Logo" class="h-10 w-auto object-contain">
+            </a>
+            <button id="close-menu-btn" type="button" aria-label="Close Menu" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Scrollable Links Menu -->
+        <div class="flex-grow overflow-y-auto p-5 space-y-6">
+            <!-- Main Navigation Pages -->
+            <div>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 px-2">Main Pages</h3>
+                <div class="space-y-1">
+                    <a href="index.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-house text-brand-500 w-5 text-center"></i> Home
+                    </a>
+                    <a href="about.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-circle-info text-brand-500 w-5 text-center"></i> About
+                    </a>
+                    <a href="services.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-hand-holding-medical text-brand-500 w-5 text-center"></i> Services
+                    </a>
+                    <a href="virthosp.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-hospital text-brand-500 w-5 text-center"></i> Virtual Hospital
+                    </a>
+                    <a href="articles.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-newspaper text-brand-500 w-5 text-center"></i> Publications
+                    </a>
+                    <a href="gallery.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-images text-brand-500 w-5 text-center"></i> Portfolio
+                    </a>
+                    <a href="contact.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-envelope text-brand-500 w-5 text-center"></i> Contact
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services & Care Pages -->
+            <div class="pt-4 border-t border-slate-100">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 px-2">Services & Consultations</h3>
+                <div class="space-y-1">
+                    <a href="virtconsul.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-calendar-check text-brand-500 w-5 text-center"></i> Book a Consultation
+                    </a>
+                    <a href="gencons.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-stethoscope text-brand-500 w-5 text-center"></i> General Consultations
+                    </a>
+                    <a href="prevca.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-shield-heart text-brand-500 w-5 text-center"></i> Preventive Care
+                    </a>
+                    <a href="diag.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-brand-700 bg-brand-50 font-semibold">
+                        <i class="fa-solid fa-magnifying-glass-chart text-brand-600 w-5 text-center"></i> Diagnostics
+                    </a>
+                    <a href="sur.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-user-nurse text-brand-500 w-5 text-center"></i> Surgery
+                    </a>
+                    <a href="den.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-tooth text-brand-500 w-5 text-center"></i> Dental Care
+                    </a>
+                    <a href="int.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-heart-pulse text-brand-500 w-5 text-center"></i> Internal Medicine
+                    </a>
+                    <a href="rep.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-dna text-brand-500 w-5 text-center"></i> Reproductive Care
+                    </a>
+                    <a href="nut.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-apple-whole text-brand-500 w-5 text-center"></i> Nutrition and Wellness
+                    </a>
+                    <a href="emer.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-truck-medical text-brand-500 w-5 text-center"></i> Emergency Care
+                    </a>
+                    <a href="hom.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-house-medical text-brand-500 w-5 text-center"></i> Home and Mobile Visits
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
 
     <!-- Main Content -->
     <main class="flex-grow">
@@ -304,10 +399,42 @@
             <div class="flex items-center gap-6 text-slate-400 text-sm">
                 <a href="#" class="hover:text-brand-600 transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-brand-600 transition-colors">Terms of Service</a>
-                <a href="#" class="hover:text-brand-600 transition-colors">Contact</a>
+                <a href="contact.html" class="hover:text-brand-600 transition-colors">Contact</a>
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu Drawer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('hamburger-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const menuDrawer = document.getElementById('menu-drawer');
+            const menuOverlay = document.getElementById('menu-overlay');
+
+            function openMenu() {
+                menuDrawer.classList.remove('translate-x-full');
+                menuOverlay.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+
+            function closeMenu() {
+                menuDrawer.classList.add('translate-x-full');
+                menuOverlay.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !menuDrawer.classList.contains('translate-x-full')) {
+                    closeMenu();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
