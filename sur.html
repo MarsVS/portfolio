@@ -38,26 +38,93 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <!-- Global Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <!-- Top Utility Bar -->
+        <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+                <div class="flex items-center gap-4">
+                    <a href="tel:+254741088855" class="flex items-center gap-1.5 hover:text-white transition-colors">
+                        <i class="fa-solid fa-phone text-mint-500"></i>
+                        <span>+254 741 088 855</span>
+                    </a>
+                    <span class="hidden sm:inline text-slate-700">|</span>
+                    <a href="mailto:chrismutavi152@gmail.com" class="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope text-mint-500"></i>
+                        <span>chrismutavi152@gmail.com</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="inline-flex items-center gap-1.5 bg-red-500/10 text-red-400 px-2.5 py-0.5 rounded-full text-[11px] font-medium border border-red-500/20">
+                        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                        24/7 Emergency Care Available
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation Bar -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
-            <a href="index.html" class="flex items-center">
-                <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="images/logo.png" alt="Pearlvets Logo" class="h-[60px] md:h-[72px] w-auto object-contain transition-transform group-hover:scale-105">
             </a>
 
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
-                <a href="#overview" class="hover:text-mint-600 transition-colors">Overview</a>
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="index.html" class="hover:text-mint-600 transition-colors">Home</a>
+                
+                <!-- Services Dropdown Menu -->
+                <div class="relative group py-2">
+                    <button type="button" class="text-mint-600 font-bold flex items-center gap-1.5 focus:outline-none">
+                        Services <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="absolute top-full left-0 w-64 pt-2 hidden group-hover:block transition-all">
+                        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-2 space-y-1">
+                            <a href="#overview" class="block px-4 py-2.5 rounded-xl text-mint-700 bg-mint-50 font-bold text-sm">Surgical Services</a>
+                            <a href="wellness.html" class="block px-4 py-2.5 rounded-xl text-slate-700 hover:bg-mint-50 hover:text-mint-600 text-sm font-medium transition-colors">Preventive & Wellness</a>
+                            <a href="diagnostics.html" class="block px-4 py-2.5 rounded-xl text-slate-700 hover:bg-mint-50 hover:text-mint-600 text-sm font-medium transition-colors">Diagnostics & Lab</a>
+                            <a href="dental.html" class="block px-4 py-2.5 rounded-xl text-slate-700 hover:bg-mint-50 hover:text-mint-600 text-sm font-medium transition-colors">Dental Care</a>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="#procedures" class="hover:text-mint-600 transition-colors">Procedures</a>
-                <a href="#safety" class="hover:text-mint-600 transition-colors">Safety & Protocols</a>
+                <a href="#safety" class="hover:text-mint-600 transition-colors">Safety Protocols</a>
                 <a href="#faq" class="hover:text-mint-600 transition-colors">FAQs</a>
             </nav>
 
-            <!-- Book Action -->
-            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
-                Book Consultation
-            </a>
+            <!-- Book Action & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="#book" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                    Book Consultation
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl text-slate-600 hover:text-mint-600 hover:bg-slate-100 transition-colors focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-3">
+            <a href="index.html" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Home</a>
+            <div class="space-y-1 pl-3 border-l-2 border-mint-200 my-2">
+                <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-mint-600">Services</span>
+                <a href="#overview" class="block px-3 py-2 rounded-lg text-mint-700 font-bold bg-mint-50">Surgical Services</a>
+                <a href="wellness.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">Preventive & Wellness</a>
+                <a href="diagnostics.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">Diagnostics & Lab</a>
+                <a href="dental.html" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50">Dental Care</a>
+            </div>
+            <a href="#procedures" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Procedures</a>
+            <a href="#safety" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Safety Protocols</a>
+            <a href="#faq" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">FAQs</a>
+            <div class="pt-2">
+                <a href="#book" class="w-full flex items-center justify-center px-5 py-3 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all">
+                    Book Consultation
+                </a>
+            </div>
         </div>
     </header>
 
@@ -309,5 +376,23 @@
         </div>
     </footer>
 
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    if (menuIcon) {
+                        menuIcon.classList.toggle('fa-bars');
+                        menuIcon.classList.toggle('fa-xmark');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
