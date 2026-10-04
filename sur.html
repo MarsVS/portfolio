@@ -39,27 +39,103 @@
 <body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
 
     <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="index.html" class="flex items-center">
                 <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain">
             </a>
 
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
-                <a href="#overview" class="hover:text-mint-600 transition-colors">Overview</a>
-                <a href="#procedures" class="hover:text-mint-600 transition-colors">Procedures</a>
-                <a href="#safety" class="hover:text-mint-600 transition-colors">Safety & Protocols</a>
-                <a href="#faq" class="hover:text-mint-600 transition-colors">FAQs</a>
-            </nav>
+            <!-- Action Controls / Menu Trigger -->
+            <div class="flex items-center gap-3">
+                <a href="#book" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                    Book Consultation
+                </a>
 
-            <!-- Book Action -->
-            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
-                Book Consultation
-            </a>
+                <button id="menu-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" class="p-2.5 rounded-xl text-slate-700 hover:text-mint-600 hover:bg-slate-100 transition-colors flex items-center justify-center border border-slate-200">
+                    <i id="menu-icon-open" class="fa-solid fa-bars text-xl"></i>
+                    <i id="menu-icon-close" class="fa-solid fa-xmark text-xl hidden"></i>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Off-Canvas Navigation Drawer -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="drawer-panel" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col h-full overflow-hidden">
+            
+            <!-- Drawer Header -->
+            <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-paw text-mint-600 text-lg"></i>
+                    <span class="font-bold text-slate-900 text-lg">Navigation</span>
+                </div>
+                <button id="drawer-close-btn" aria-label="Close Menu" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-100 transition-colors">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Body -->
+            <div class="flex-1 overflow-y-auto p-6 space-y-8">
+                <!-- Top Action -->
+                <div>
+                    <a href="#book" class="drawer-link w-full py-3 px-4 rounded-xl bg-mint-600 text-white font-semibold flex items-center justify-center gap-2 shadow-md hover:bg-mint-700 transition-colors">
+                        <i class="fa-solid fa-calendar-check"></i> Book Consultation
+                    </a>
+                </div>
+
+                <!-- Section 1: On This Page -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 px-2">On This Page</h3>
+                    <div class="space-y-1">
+                        <a href="#overview" class="drawer-link block px-3 py-2 rounded-lg text-slate-700 hover:bg-mint-50 hover:text-mint-600 font-medium transition-colors">Overview</a>
+                        <a href="#procedures" class="drawer-link block px-3 py-2 rounded-lg text-slate-700 hover:bg-mint-50 hover:text-mint-600 font-medium transition-colors">Surgical Procedures</a>
+                        <a href="#safety" class="drawer-link block px-3 py-2 rounded-lg text-slate-700 hover:bg-mint-50 hover:text-mint-600 font-medium transition-colors">Safety & Protocols</a>
+                        <a href="#faq" class="drawer-link block px-3 py-2 rounded-lg text-slate-700 hover:bg-mint-50 hover:text-mint-600 font-medium transition-colors">FAQs</a>
+                    </div>
+                </div>
+
+                <!-- Section 2: Main Pages -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 px-2">Main Pages</h3>
+                    <div class="grid grid-cols-2 gap-1 text-sm font-medium">
+                        <a href="index.html" class="drawer-link px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Home</a>
+                        <a href="about.html" class="drawer-link px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">About Us</a>
+                        <a href="services.html" class="drawer-link px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Services</a>
+                        <a href="team.html" class="drawer-link px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Our Team</a>
+                        <a href="testimonials.html" class="drawer-link px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Testimonials</a>
+                        <a href="faq.html" class="drawer-link px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">FAQ</a>
+                        <a href="blog.html" class="drawer-link px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Blog</a>
+                        <a href="contact.html" class="drawer-link px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Section 3: Veterinary Care & Services -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 px-2">Veterinary Care & Services</h3>
+                    <div class="space-y-1 text-sm font-medium">
+                        <a href="wellness-preventative-care.html" class="drawer-link block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Wellness & Preventative Care</a>
+                        <a href="vaccinations.html" class="drawer-link block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Vaccinations</a>
+                        <a href="surgical-services.html" class="drawer-link block px-3 py-2 rounded-lg text-mint-600 font-semibold bg-mint-50/60 transition-colors">Surgical Services</a>
+                        <a href="dental-care.html" class="drawer-link block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Dental Care</a>
+                        <a href="diagnostics-lab.html" class="drawer-link block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Diagnostics & In-House Lab</a>
+                        <a href="emergency-critical-care.html" class="drawer-link block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Emergency & Critical Care</a>
+                        <a href="puppy-kitten-care.html" class="drawer-link block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Puppy & Kitten Care</a>
+                        <a href="senior-pet-care.html" class="drawer-link block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Senior Pet Care</a>
+                        <a href="parasite-control.html" class="drawer-link block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Parasite Control & Prevention</a>
+                        <a href="microchipping.html" class="drawer-link block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors">Microchipping</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drawer Footer -->
+            <div class="p-5 border-t border-slate-100 bg-slate-50/50">
+                <a href="#book" class="drawer-link w-full py-3 px-4 rounded-xl bg-mint-600 text-white font-semibold flex items-center justify-center gap-2 shadow-md hover:bg-mint-700 transition-colors text-center">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main class="flex-grow">
@@ -309,5 +385,62 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Navigation Drawer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggleBtn = document.getElementById('menu-toggle-btn');
+            const drawerCloseBtn = document.getElementById('drawer-close-btn');
+            const drawerOverlay = document.getElementById('drawer-overlay');
+            const drawerPanel = document.getElementById('drawer-panel');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+            const drawerLinks = document.querySelectorAll('.drawer-link');
+
+            function openDrawer() {
+                drawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                drawerPanel.classList.remove('translate-x-full');
+                menuIconOpen.classList.add('hidden');
+                menuIconClose.classList.remove('hidden');
+                menuToggleBtn.setAttribute('aria-expanded', 'true');
+                document.body.classList.add('overflow-hidden');
+            }
+
+            function closeDrawer() {
+                drawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+                drawerPanel.classList.add('translate-x-full');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+                menuToggleBtn.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            menuToggleBtn.addEventListener('click', () => {
+                const isOpen = menuToggleBtn.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    closeDrawer();
+                } else {
+                    openDrawer();
+                }
+            });
+
+            drawerCloseBtn.addEventListener('click', closeDrawer);
+            
+            drawerOverlay.addEventListener('click', (e) => {
+                if (e.target === drawerOverlay) {
+                    closeDrawer();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && menuToggleBtn.getAttribute('aria-expanded') === 'true') {
+                    closeDrawer();
+                }
+            });
+
+            drawerLinks.forEach(link => {
+                link.addEventListener('click', closeDrawer);
+            });
+        });
+    </script>
 </body>
 </html>
