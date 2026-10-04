@@ -22,13 +22,13 @@
                     },
                     colors: {
                         brand: {
-                            50: '#faf5fc',
-                            100: '#f3e8f8',
-                            200: '#e1caf0',
-                            500: '#a33bcc',
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            200: '#f5d0fe',
+                            500: '#a824cb',
                             600: '#8f1eae',
-                            700: '#751790',
-                            900: '#4a0f5c',
+                            700: '#76168e',
+                            900: '#4f115e',
                         }
                     }
                 }
@@ -39,15 +39,18 @@
 <body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
 
     <!-- Header / Navigation -->
-    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-            <!-- Brand Logo (Only element on the left) -->
-            <a href="index.html" class="flex items-center flex-shrink-0">
-                <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain">
+            <!-- Brand Logo (Left Side) -->
+            <a href="index.html" class="flex items-center flex-shrink-0 group">
+                <img src="images/logo.png" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/220x72/8f1eae/ffffff?text=Pearlvets';" 
+                     alt="Pearlvets Logo" 
+                     class="h-[72px] w-auto object-contain transition-transform group-hover:scale-105">
             </a>
 
-            <!-- Hamburger Button (Only element on the right) -->
-            <button id="hamburger-btn" type="button" aria-label="Open Navigation Menu" class="p-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-brand-600 transition-colors border border-slate-200 flex items-center justify-center gap-2 font-medium text-sm">
+            <!-- Hamburger Menu Button (Right Side) -->
+            <button id="hamburger-btn" type="button" aria-label="Open Navigation Menu" class="p-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-brand-600 transition-colors border border-slate-200/80 flex items-center justify-center gap-2 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
                 <i class="fa-solid fa-bars text-lg"></i>
                 <span class="text-xs font-semibold uppercase tracking-wider">Menu</span>
             </button>
@@ -55,26 +58,29 @@
     </header>
 
     <!-- Hamburger Navigation Drawer Overlay -->
-    <div id="menu-overlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+    <div id="menu-overlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden transition-opacity duration-300"></div>
 
     <!-- Hamburger Navigation Drawer -->
     <aside id="menu-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col">
         <!-- Drawer Header -->
         <div class="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
             <a href="index.html" class="flex items-center">
-                <img src="images/logo.png" alt="Pearlvets Logo" class="h-10 w-auto object-contain">
+                <img src="images/logo.png" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/180x50/8f1eae/ffffff?text=Pearlvets';" 
+                     alt="Pearlvets Logo" 
+                     class="h-10 w-auto object-contain">
             </a>
-            <button id="close-menu-btn" type="button" aria-label="Close Menu" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors">
+            <button id="close-menu-btn" type="button" aria-label="Close Menu" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
         </div>
 
-        <!-- Scrollable Links Menu -->
+        <!-- Scrollable Drawer Links Menu -->
         <div class="flex-grow overflow-y-auto p-5 space-y-6">
-            
+
             <!-- Booking CTA Button -->
             <div>
-                <a href="#book" class="drawer-link flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold text-sm bg-brand-600 text-white shadow-md hover:bg-brand-700 transition-all">
+                <a href="#book" class="drawer-link flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold text-sm bg-brand-600 text-white shadow-md hover:bg-brand-700 transition-all hover:shadow-lg">
                     <i class="fa-solid fa-calendar-check"></i> Book Diagnostic Workup
                 </a>
             </div>
@@ -106,7 +112,7 @@
                         <i class="fa-solid fa-house text-brand-500 w-5 text-center"></i> Home
                     </a>
                     <a href="about.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
-                        <i class="fa-solid fa-circle-info text-brand-500 w-5 text-center"></i> About
+                        <i class="fa-solid fa-address-card text-brand-500 w-5 text-center"></i> About
                     </a>
                     <a href="services.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
                         <i class="fa-solid fa-hand-holding-medical text-brand-500 w-5 text-center"></i> Services
@@ -123,6 +129,9 @@
                     <a href="contact.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
                         <i class="fa-solid fa-envelope text-brand-500 w-5 text-center"></i> Contact
                     </a>
+                    <a href="virtconsul.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-video text-brand-500 w-5 text-center"></i> Book Consultation
+                    </a>
                 </div>
             </div>
 
@@ -130,16 +139,13 @@
             <div class="pt-4 border-t border-slate-100">
                 <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 px-2">Services & Consultations</h3>
                 <div class="space-y-1">
-                    <a href="virtconsul.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
-                        <i class="fa-solid fa-calendar-check text-brand-500 w-5 text-center"></i> Book a Consultation
-                    </a>
                     <a href="gencons.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
                         <i class="fa-solid fa-stethoscope text-brand-500 w-5 text-center"></i> General Consultations
                     </a>
                     <a href="prevca.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
                         <i class="fa-solid fa-shield-heart text-brand-500 w-5 text-center"></i> Preventive Care
                     </a>
-                    <a href="diag.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-brand-700 bg-brand-50 font-semibold">
+                    <a href="diag.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-semibold text-brand-700 bg-brand-50 shadow-sm border border-brand-100">
                         <i class="fa-solid fa-magnifying-glass-chart text-brand-600 w-5 text-center"></i> Diagnostics
                     </a>
                     <a href="sur.html" class="flex items-center gap-3 px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-colors">
@@ -168,31 +174,31 @@
         </div>
     </aside>
 
-    <!-- Main Content -->
+    <!-- Main Content Body -->
     <main class="flex-grow">
-        
+
         <!-- Hero Section -->
-        <section class="py-16 md:py-24 bg-gradient-to-b from-brand-50/60 to-slate-50 border-b border-slate-100">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <!-- Service Icon matching screenshot badge -->
-                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-brand-100 border border-brand-200/50 flex items-center justify-center text-brand-600 text-3xl shadow-sm">
+        <section class="py-16 md:py-24 bg-gradient-to-b from-brand-50/70 via-brand-50/30 to-slate-50 border-b border-slate-100 relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <!-- Diagnostic Badge Icon -->
+                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-brand-100 border border-brand-200/60 flex items-center justify-center text-brand-600 text-3xl shadow-sm">
                     <i class="fa-solid fa-magnifying-glass-chart"></i>
                 </div>
-                
+
                 <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
-                    Diagnostics
+                    Diagnostics & Medical Imaging
                 </h1>
-                
-                <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto mb-8">
-                    Lab, imaging & advanced tests to provide rapid, accurate medical answers for your pet.
+
+                <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto mb-8 leading-relaxed">
+                    Lab, imaging & advanced testing to provide rapid, pinpoint medical answers for your pet's health.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-600 text-white font-semibold shadow-md hover:bg-brand-700 transition-all hover:shadow-lg">
-                        Schedule Evaluation
+                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-600 text-white font-semibold shadow-md hover:bg-brand-700 transition-all hover:shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i> Schedule Evaluation
                     </a>
-                    <a href="#capabilities" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all">
-                        Explore Diagnostic Tests
+                    <a href="#capabilities" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-microscope text-brand-600"></i> Explore Diagnostic Tests
                     </a>
                 </div>
             </div>
@@ -202,196 +208,224 @@
         <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <span class="text-brand-600 font-bold uppercase tracking-wider text-xs bg-brand-100 px-3 py-1 rounded-full">
-                        Precision Medicine
+                    <span class="text-brand-600 font-bold uppercase tracking-wider text-xs bg-brand-100 border border-brand-200/50 px-3 py-1 rounded-full inline-block">
+                        Precision Veterinary Medicine
                     </span>
-                    <h2 class="text-3xl font-bold text-slate-900">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
                         Fast & Accurate Answers When Time Matters Most
                     </h2>
-                    <p class="text-slate-600 leading-relaxed">
-                        Because our patients cannot tell us where it hurts, advanced veterinary diagnostics are critical. Equipped with state-of-the-art in-house laboratory analyzers, digital X-rays, and ultrasound technology, we can evaluate internal organs, bones, and bloodwork within minutes.
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Because our pets cannot tell us where it hurts, advanced veterinary diagnostics are critical to early diagnosis and lifesaving treatment. Equipped with state-of-the-art in-house laboratory analyzers, digital radiology, and ultrasound technology, our clinical team delivers immediate diagnostic evaluations.
                     </p>
-                    
-                    <ul class="space-y-3 font-medium text-slate-700">
+
+                    <ul class="space-y-3 font-medium text-slate-700 pt-2">
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-600 text-lg"></i>
-                            In-house laboratory for rapid same-day blood & urine results
+                            <i class="fa-solid fa-circle-check text-brand-600 text-xl"></i>
+                            <span>In-house laboratory for rapid same-day bloodwork & urinalysis</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-600 text-lg"></i>
-                            High-definition digital radiology (X-rays) with instant imaging
+                            <i class="fa-solid fa-circle-check text-brand-600 text-xl"></i>
+                            <span>High-definition digital radiography (X-rays) with instant imaging</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-600 text-lg"></i>
-                            Non-invasive veterinary ultrasound & advanced pathology panels
+                            <i class="fa-solid fa-circle-check text-brand-600 text-xl"></i>
+                            <span>Non-invasive veterinary ultrasonography & specialized pathology panels</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Highlight Box -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/80 space-y-6">
-                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-3">
-                        <i class="fa-solid fa-microscope text-brand-600"></i> In-House Lab Advantages
+                <!-- Highlight Box: In-House Lab Advantages -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-200/40 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-3 border-b border-slate-100 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        In-House Lab Advantages
                     </h3>
                     <div class="space-y-4 divide-y divide-slate-100">
-                        <div class="pt-2">
-                            <h4 class="font-semibold text-slate-800">Rapid Results</h4>
-                            <p class="text-slate-500 text-sm">Most critical blood and urine panel results are ready in under 20 minutes.</p>
+                        <div class="pt-1">
+                            <h4 class="font-semibold text-slate-800 text-base">Rapid Results</h4>
+                            <p class="text-slate-500 text-sm mt-1">Most critical blood and urine panel results are ready within 15–20 minutes.</p>
                         </div>
                         <div class="pt-4">
-                            <h4 class="font-semibold text-slate-800">Immediate Treatment</h4>
-                            <p class="text-slate-500 text-sm">Eliminates days of waiting so we can begin target therapy right away during sick visits.</p>
+                            <h4 class="font-semibold text-slate-800 text-base">Immediate Treatment</h4>
+                            <p class="text-slate-500 text-sm mt-1">Eliminates days of waiting so we can begin targeted therapy right away during sick visits.</p>
                         </div>
                         <div class="pt-4">
-                            <h4 class="font-semibold text-slate-800">Pre-Surgical Safety</h4>
-                            <p class="text-slate-500 text-sm">Screen organ function before anesthesia to minimize surgical risk factors.</p>
+                            <h4 class="font-semibold text-slate-800 text-base">Pre-Surgical Safety</h4>
+                            <p class="text-slate-500 text-sm mt-1">Screens liver, kidney, and blood clotting parameters prior to anesthesia to minimize surgical risk.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- What's Included / Diagnostic Capabilities Section -->
+        <!-- Diagnostic Capabilities Section -->
         <section id="capabilities" class="py-16 bg-white border-y border-slate-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Diagnostic Services & Technology</h2>
-                    <p class="text-slate-600">Comprehensive diagnostic tools under one roof to diagnose illness, injury, or monitor chronic disease.</p>
+                    <span class="text-brand-600 font-bold uppercase tracking-wider text-xs bg-brand-50 px-3 py-1 rounded-full border border-brand-100 inline-block mb-3">
+                        Full-Spectrum Diagnostics
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-3">Diagnostic Technology & Services</h2>
+                    <p class="text-slate-600">Comprehensive diagnostic tools under one roof to diagnose illness, evaluate injuries, or monitor chronic conditions.</p>
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Feature 1 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
+                    <!-- Capability Card 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:border-brand-300 hover:shadow-md transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-vial"></i>
                         </div>
-                        <h3 class="font-bold text-slate-900 mb-2">In-House Bloodwork</h3>
-                        <p class="text-slate-600 text-sm">Complete Blood Count (CBC), biochemistry panels, electrolytes, and thyroid testing.</p>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">In-House Bloodwork</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Complete Blood Count (CBC), biochemistry panels, electrolyte balance, blood glucose, and thyroid hormone levels.
+                        </p>
                     </div>
 
-                    <!-- Feature 2 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
+                    <!-- Capability Card 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:border-brand-300 hover:shadow-md transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-x-ray"></i>
                         </div>
-                        <h3 class="font-bold text-slate-900 mb-2">Digital Radiology</h3>
-                        <p class="text-slate-600 text-sm">Clear X-ray images for bone fractures, joint health, foreign body ingestion, and chest exams.</p>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Digital Radiology</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            High-contrast X-rays for bone fractures, joint health, foreign body detection, cardiac evaluation, and chest exams.
+                        </p>
                     </div>
 
-                    <!-- Feature 3 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
+                    <!-- Capability Card 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:border-brand-300 hover:shadow-md transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-wave-square"></i>
                         </div>
-                        <h3 class="font-bold text-slate-900 mb-2">Ultrasonography</h3>
-                        <p class="text-slate-600 text-sm">Real-time soft-tissue visualization of internal organs, pregnancy, fluid, and abdominal masses.</p>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Ultrasonography</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Real-time soft-tissue visualization of abdominal organs, cardiac chambers, fluid accumulation, and pregnancy monitoring.
+                        </p>
                     </div>
 
-                    <!-- Feature 4 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4">
+                    <!-- Capability Card 4 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:border-brand-300 hover:shadow-md transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-dna"></i>
                         </div>
-                        <h3 class="font-bold text-slate-900 mb-2">Cytology & Specialized Tests</h3>
-                        <p class="text-slate-600 text-sm">Microscopic examination of skin swabs, fine needle aspirates, biopsies, and infectious panels.</p>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Cytology & Biopsy</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Microscopic exams of skin swabs, ear cytology, fine needle mass aspirates, and histopathology panels.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Diagnostic Process Section -->
+        <!-- Process Section -->
         <section id="process" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-brand-600 font-bold uppercase tracking-wider text-xs bg-brand-100 px-3 py-1 rounded-full">
-                    Streamlined Care
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-xs bg-brand-100 px-3 py-1 rounded-full border border-brand-200/50">
+                    Streamlined Patient Care
                 </span>
-                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-2">How Diagnostics Work</h2>
-                <p class="text-slate-600">From symptoms to targeted treatment in three straightforward steps.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-3 mb-2">How Diagnostics Work</h2>
+                <p class="text-slate-600">From initial symptoms to targeted treatment in three clear, stress-free steps.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold mb-6">1</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Clinical Examination</h3>
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative hover:border-brand-200 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center font-extrabold text-lg mb-6 shadow-md shadow-brand-600/30">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Clinical Consultation</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Our veterinarian examines your pet, reviews symptoms and medical history, and determines which diagnostic tests are necessary.
+                        Our veterinarian examines your pet, reviews medical history and symptoms, and determines the exact diagnostic tests required.
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold mb-6">2</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Testing & Imaging</h3>
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative hover:border-brand-200 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center font-extrabold text-lg mb-6 shadow-md shadow-brand-600/30">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Sample Collection & Imaging</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Gentle blood draws, urinalysis, digital X-rays, or ultrasound scans are performed safely by our veterinary care team.
+                        Gentle blood draws, urinalysis, digital X-rays, or ultrasound scans are performed safely and comfortably by our trained medical staff.
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                    <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold mb-6">3</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Results & Care Plan</h3>
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative hover:border-brand-200 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center font-extrabold text-lg mb-6 shadow-md shadow-brand-600/30">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Results & Treatment Plan</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        We walk you through test results and diagnostic images directly, establishing an immediate, personalized treatment plan.
+                        We review test findings and diagnostic scans together, answering your questions and customizing an immediate treatment strategy.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Booking CTA Section -->
-        <section id="book" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-brand-600 to-brand-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
-                <h2 class="text-3xl font-bold">Need Diagnostic Testing for Your Pet?</h2>
-                <p class="text-brand-100 max-w-xl mx-auto text-lg">
-                    Contact us to schedule diagnostic imaging, routine lab screenings, or pre-surgical bloodwork.
-                </p>
-                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="tel:+1234567890" class="bg-white text-brand-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-brand-50 transition-colors inline-flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-phone"></i> Call Clinic
-                    </a>
-                    <a href="mailto:appointments@vetclinic.com" class="bg-brand-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-brand-900/50 transition-colors inline-flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-envelope"></i> Request Appointment
-                    </a>
+        <section id="book" class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-brand-600 via-brand-700 to-brand-900 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6 relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Need Diagnostic Testing for Your Pet?</h2>
+                    <p class="text-brand-100 max-w-2xl mx-auto text-lg mt-3">
+                        Contact Pearlvets to schedule diagnostic imaging, routine lab screenings, pre-surgical bloodwork, or emergency evaluations.
+                    </p>
+                    <div class="pt-6 flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="tel:+1234567890" class="bg-white text-brand-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-brand-50 transition-colors inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone"></i> Call Clinic Direct
+                        </a>
+                        <a href="virtconsul.html" class="bg-brand-900/40 text-white border border-white/30 font-bold px-8 py-3.5 rounded-xl hover:bg-brand-900/60 transition-colors inline-flex items-center justify-center gap-2 backdrop-blur-sm">
+                            <i class="fa-solid fa-calendar-check"></i> Book Consultation
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
         <section id="faq" class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200">
-            <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">Frequently Asked Questions</h2>
-            
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                <p class="text-slate-600 mt-2 text-sm">Common questions regarding pet diagnostic procedures.</p>
+            </div>
+
             <div class="space-y-4">
-                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer text-base">
                         <span>Does my pet need to fast before diagnostic tests?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-brand-600"></i>
+                        <span class="ml-4 transition-transform group-open:rotate-180 text-brand-600">
+                            <i class="fa-solid fa-chevron-down"></i>
                         </span>
                     </summary>
-                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
-                        For routine blood work or abdominal ultrasound imaging, a 8–12 hour fast is often recommended to ensure accurate blood parameters and clear imaging, unless otherwise advised by the vet.
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm border-t border-slate-100 pt-3">
+                        For routine blood work or abdominal ultrasound imaging, an 8–12 hour fast is often recommended to ensure clear blood samples and unobstructed internal imaging, unless otherwise directed during urgent care.
                     </p>
                 </details>
 
-                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer text-base">
                         <span>Will my pet require sedation for X-rays or ultrasound?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-brand-600"></i>
+                        <span class="ml-4 transition-transform group-open:rotate-180 text-brand-600">
+                            <i class="fa-solid fa-chevron-down"></i>
                         </span>
                     </summary>
-                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
-                        Most pets tolerate digital X-rays and ultrasound without sedation. However, if a pet is in pain, anxious, or precise positioning is required (such as orthopedic X-rays), mild sedation may be recommended for safety and comfort.
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm border-t border-slate-100 pt-3">
+                        Most calm pets tolerate digital X-rays and ultrasound scans comfortably without sedation. However, if a pet is experiencing pain, severe anxiety, or requires specialized orthopedic positioning, mild sedation may be recommended for their safety and comfort.
                     </p>
                 </details>
 
-                <details class="group bg-white p-6 rounded-2xl border border-slate-200 [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
-                        <span>How quickly will I receive the results?</span>
-                        <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-brand-600"></i>
+                <details class="group bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm [&_summary::-webkit-details-marker]:hidden transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer text-base">
+                        <span>How quickly will I receive test results?</span>
+                        <span class="ml-4 transition-transform group-open:rotate-180 text-brand-600">
+                            <i class="fa-solid fa-chevron-down"></i>
                         </span>
                     </summary>
-                    <p class="mt-4 text-slate-600 leading-relaxed text-sm">
-                        In-house blood panels and digital X-rays are completed while you wait during your appointment. Special biopsy histology or specialized reference lab tests typically take 3 to 5 business days.
+                    <p class="mt-4 text-slate-600 leading-relaxed text-sm border-t border-slate-100 pt-3">
+                        In-house blood panels, urinalysis, and digital X-rays are completed during your appointment, with results available within minutes. Biopsy histology or specialized reference laboratory tests usually take 3 to 5 business days.
                     </p>
                 </details>
             </div>
@@ -403,20 +437,20 @@
     <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-paw text-brand-600"></i>
+                <i class="fa-solid fa-paw text-brand-600 text-lg"></i>
                 <p class="text-slate-500 text-sm">
-                    &copy; 2026 Pearlvets. All rights reserved.
+                    &copy; 2026 Pearlvets Veterinary Hospital. All rights reserved.
                 </p>
             </div>
-            <div class="flex items-center gap-6 text-slate-400 text-sm">
+            <div class="flex items-center gap-6 text-slate-500 text-sm font-medium">
                 <a href="#" class="hover:text-brand-600 transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-brand-600 transition-colors">Terms of Service</a>
-                <a href="contact.html" class="hover:text-brand-600 transition-colors">Contact</a>
+                <a href="contact.html" class="hover:text-brand-600 transition-colors">Contact Us</a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Hamburger Menu Drawer -->
+    <!-- JavaScript for Hamburger Navigation Drawer & Interactivity -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.getElementById('hamburger-btn');
@@ -426,28 +460,33 @@
             const drawerLinks = document.querySelectorAll('.drawer-link');
 
             function openMenu() {
-                menuDrawer.classList.remove('translate-x-full');
-                menuOverlay.classList.remove('hidden');
-                document.body.classList.add('overflow-hidden');
+                if (menuDrawer && menuOverlay) {
+                    menuDrawer.classList.remove('translate-x-full');
+                    menuOverlay.classList.remove('hidden');
+                    document.body.classList.add('overflow-hidden');
+                }
             }
 
             function closeMenu() {
-                menuDrawer.classList.add('translate-x-full');
-                menuOverlay.classList.add('hidden');
-                document.body.classList.remove('overflow-hidden');
+                if (menuDrawer && menuOverlay) {
+                    menuDrawer.classList.add('translate-x-full');
+                    menuOverlay.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                }
             }
 
             if (menuBtn) menuBtn.addEventListener('click', openMenu);
             if (closeBtn) closeBtn.addEventListener('click', closeMenu);
             if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
 
-            // Close menu when on-page section links are clicked
+            // Auto-close menu drawer when section anchor links are clicked
             drawerLinks.forEach(link => {
                 link.addEventListener('click', closeMenu);
             });
 
+            // Close menu on Escape key press
             document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && !menuDrawer.classList.contains('translate-x-full')) {
+                if (e.key === 'Escape' && menuDrawer && !menuDrawer.classList.contains('translate-x-full')) {
                     closeMenu();
                 }
             });
