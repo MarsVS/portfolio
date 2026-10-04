@@ -38,15 +38,15 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <!-- Global Header / Navigation -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="index.html" class="flex items-center">
                 <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain">
             </a>
 
-            <!-- Navigation Links -->
+            <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
                 <a href="#overview" class="hover:text-brand-600 transition-colors">Overview</a>
                 <a href="#services" class="hover:text-brand-600 transition-colors">Dental Services</a>
@@ -54,12 +54,147 @@
                 <a href="#faq" class="hover:text-brand-600 transition-colors">FAQs</a>
             </nav>
 
-            <!-- Book Action -->
-            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-500 text-white shadow-md hover:bg-brand-600 transition-all hover:shadow-lg hover:-translate-y-0.5">
-                Book Dental Exam
-            </a>
+            <!-- Actions & Menu Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="#book" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-500 text-white shadow-md hover:bg-brand-600 transition-all hover:shadow-lg hover:-translate-y-0.5">
+                    Book Dental Exam
+                </a>
+
+                <!-- Hamburger Trigger Button -->
+                <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu" class="p-2.5 rounded-xl text-slate-700 hover:text-brand-600 hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-colors md:hidden">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Global Off-Canvas Drawer Overlay -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out" aria-hidden="true"></div>
+
+    <!-- Global Off-Canvas Navigation Drawer -->
+    <aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col h-full overflow-hidden" aria-label="Global Site Navigation">
+        <!-- Drawer Header -->
+        <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Pearlvets Logo" class="h-12 w-auto object-contain">
+            </a>
+            <button id="close-drawer-btn" type="button" aria-label="Close navigation menu" class="p-2 rounded-xl text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Drawer Content -->
+        <div class="flex-1 overflow-y-auto px-6 py-6 space-y-8">
+            <!-- CTA Button -->
+            <div>
+                <a href="#book" class="drawer-link flex items-center justify-center w-full px-5 py-3 rounded-xl text-sm font-bold bg-brand-500 text-white shadow-md hover:bg-brand-600 transition-all text-center">
+                    <i class="fa-solid fa-calendar-check mr-2"></i> Book Consultation
+                </a>
+            </div>
+
+            <!-- On-Page Links -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">On This Page</h4>
+                <nav class="flex flex-col space-y-2 text-sm font-semibold text-slate-700">
+                    <a href="#overview" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Overview</span>
+                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+                    </a>
+                    <a href="#services" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Dental Services</span>
+                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+                    </a>
+                    <a href="#process" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>The Process</span>
+                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+                    </a>
+                    <a href="#faq" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>FAQs</span>
+                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Main Website Navigation -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Main Navigation</h4>
+                <nav class="flex flex-col space-y-2 text-sm font-semibold text-slate-700">
+                    <a href="index.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-house text-brand-500 w-4"></i> Home
+                    </a>
+                    <a href="about.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-circle-info text-brand-500 w-4"></i> About Us
+                    </a>
+                    <a href="services.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-stethoscope text-brand-500 w-4"></i> All Services
+                    </a>
+                    <a href="contact.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brand-500 w-4"></i> Contact
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Veterinary Services List -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Veterinary Care Services</h4>
+                <div class="grid grid-cols-1 gap-1 text-sm text-slate-600 font-medium">
+                    <a href="wellness-preventive.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Wellness & Preventive Care</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                    <a href="dental-care.html" class="drawer-link px-3 py-2 rounded-lg bg-brand-50 text-brand-600 font-semibold transition-colors flex items-center justify-between">
+                        <span>Dental Care & Oral Health</span>
+                        <i class="fa-solid fa-angle-right text-xs text-brand-500"></i>
+                    </a>
+                    <a href="surgery.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Surgical Services</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                    <a href="emergency.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Emergency & Urgent Care</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                    <a href="diagnostics.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Digital Diagnostics & X-Ray</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                    <a href="vaccinations.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Vaccinations & Parasite Control</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                    <a href="grooming.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Pet Grooming & Hygiene</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                    <a href="microchipping.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Microchipping & ID</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                    <a href="senior-care.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>Senior Pet Care</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                    <a href="pharmacy.html" class="drawer-link px-3 py-2 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors flex items-center justify-between">
+                        <span>In-House Pharmacy</span>
+                        <i class="fa-solid fa-angle-right text-xs text-slate-300"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="p-5 border-t border-slate-100 bg-slate-50/80 text-xs text-slate-500 space-y-2">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-phone text-brand-500"></i>
+                <a href="tel:+1234567890" class="hover:text-brand-600 font-semibold">+1 (234) 567-890</a>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-brand-500"></i>
+                <a href="mailto:info@pearlvets.com" class="hover:text-brand-600 font-semibold">info@pearlvets.com</a>
+            </div>
+            <p class="pt-2 text-slate-400">&copy; 2026 Pearlvets. All rights reserved.</p>
+        </div>
+    </aside>
 
     <!-- Main Content -->
     <main class="flex-grow">
@@ -320,5 +455,47 @@
         </div>
     </footer>
 
+    <!-- Interactive Navigation Drawer Controller -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.getElementById('close-drawer-btn');
+            const drawer = document.getElementById('mobile-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const drawerLinks = document.querySelectorAll('.drawer-link');
+
+            function openDrawer() {
+                drawer.classList.remove('translate-x-full');
+                drawer.classList.add('translate-x-0');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100', 'pointer-events-auto');
+                document.body.classList.add('overflow-hidden');
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeDrawer() {
+                drawer.classList.remove('translate-x-0');
+                drawer.classList.add('translate-x-full');
+                overlay.classList.remove('opacity-100', 'pointer-events-auto');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                document.body.classList.remove('overflow-hidden');
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+            if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+            if (overlay) overlay.addEventListener('click', closeDrawer);
+
+            drawerLinks.forEach(link => {
+                link.addEventListener('click', closeDrawer);
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && drawer && !drawer.classList.contains('translate-x-full')) {
+                    closeDrawer();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
