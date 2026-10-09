@@ -21,14 +21,14 @@
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
                     },
                     colors: {
-                        mint: {
-                            50: '#faf3fc',
-                            100: '#f3e2fa',
-                            200: '#e5c2f5',
-                            500: '#a52cc9',
-                            600: '#8f1eae',
-                            700: '#74158e',
-                            900: '#420952',
+                        brand: {
+                            50: '#fcf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d5ff',
+                            500: '#8f1eae',
+                            600: '#7a18cb',
+                            700: '#6411aa',
+                            900: '#3c0669',
                         }
                     }
                 }
@@ -36,37 +36,205 @@
         }
     </script>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen">
+<body class="bg-slate-50 font-sans text-slate-800 antialiased flex flex-col min-h-screen relative">
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Header / Navigation (Hamburger on ALL Displays) -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
             <!-- Brand Logo -->
-            <a href="index.html" class="flex items-center"> <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain"> </a>
-
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
-                <a href="#overview" class="hover:text-mint-600 transition-colors">Overview</a>
-                <a href="#services" class="hover:text-mint-600 transition-colors">Mobile Services</a>
-                <a href="#process" class="hover:text-mint-600 transition-colors">How It Works</a>
-                <a href="#faq" class="hover:text-mint-600 transition-colors">FAQs</a>
-            </nav>
-
-            <!-- Book Action -->
-            <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-mint-600 text-white shadow-md hover:bg-mint-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
-                Request Mobile Visit
+            <a href="index.html" class="flex items-center">
+                <img src="images/logo.png" alt="Pearlvets Logo" class="h-[72px] w-auto object-contain">
             </a>
+
+            <!-- Hamburger Button Trigger (Visible on ALL Displays) -->
+            <button id="menu-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" class="p-2.5 rounded-xl text-slate-700 hover:text-brand-500 hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all flex items-center justify-center border border-slate-200 cursor-pointer">
+                <i id="menu-icon-open" class="fa-solid fa-bars text-xl"></i>
+                <i id="menu-icon-close" class="fa-solid fa-xmark text-xl hidden"></i>
+            </button>
         </div>
     </header>
+
+    <!-- Global Off-Canvas Hamburger Menu Drawer (ALL Displays) -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300">
+        <div id="drawer-panel" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out">
+            
+            <!-- Drawer Header -->
+            <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-bars-staggered text-brand-500 text-lg"></i>
+                    <span class="font-bold text-slate-800 text-lg"> Navigation Menu</span>
+                </div>
+                <button id="drawer-close-btn" type="button" aria-label="Close navigation menu" class="w-9 h-9 rounded-xl bg-white text-slate-500 hover:text-slate-800 border border-slate-200 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Content Container -->
+            <div class="flex-grow overflow-y-auto p-6 space-y-6">
+                
+                <!-- Call To Action Button -->
+                <div>
+                    <a href="virtconsul.html" class="drawer-link w-full py-3 px-4 rounded-xl bg-brand-500 text-white font-semibold shadow-md hover:bg-brand-600 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i> Book Consultation
+                    </a>
+                </div>
+
+                <!-- On-Page Navigation Links -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 px-3">On This Page</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#overview" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-align-left w-5 text-center text-brand-500"></i> Overview
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-van-shuttle w-5 text-center text-brand-500"></i> Mobile Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#process" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-diagram-project w-5 text-center text-brand-500"></i> How It Works
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-circle-question w-5 text-center text-brand-500"></i> FAQs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="border-slate-100">
+
+                <!-- Main Pages Group -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 px-3">Main Pages</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="index.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-house w-5 text-center text-brand-500"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-circle-info w-5 text-center text-brand-500"></i> About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-concierge-bell w-5 text-center text-brand-500"></i> Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="virthosp.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-hospital w-5 text-center text-brand-500"></i> Virtual Hospital
+                            </a>
+                        </li>
+                        <li>
+                            <a href="articles.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-newspaper w-5 text-center text-brand-500"></i> Publications
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gallery.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-images w-5 text-center text-brand-500"></i> Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-envelope w-5 text-center text-brand-500"></i> Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="virtconsul.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-calendar-check w-5 text-center text-brand-500"></i> Book a Consultation
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="border-slate-100">
+
+                <!-- Veterinary Care & Services Group -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 px-3">Veterinary Care & Services</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="gencons.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-notes-medical w-5 text-center text-brand-500"></i> General Consultations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="prevca.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-shield-dog w-5 text-center text-brand-500"></i> Preventive Care
+                            </a>
+                        </li>
+                        <li>
+                            <a href="diag.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-microscope w-5 text-center text-brand-500"></i> Diagnostics
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sur.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-user-nurse w-5 text-center text-brand-500"></i> Surgery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="den.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-tooth w-5 text-center text-brand-500"></i> Dental Care
+                            </a>
+                        </li>
+                        <li>
+                            <a href="int.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-stethoscope w-5 text-center text-brand-500"></i> Internal Medicine
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rep.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-paw w-5 text-center text-brand-500"></i> Reproductive Care
+                            </a>
+                        </li>
+                        <li>
+                            <a href="nut.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-apple-whole w-5 text-center text-brand-500"></i> Nutrition and Wellness
+                            </a>
+                        </li>
+                        <li>
+                            <a href="emer.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:text-brand-500 hover:bg-brand-50 transition-colors">
+                                <i class="fa-solid fa-truck-medical w-5 text-center text-brand-500"></i> Emergency Care
+                            </a>
+                        </li>
+                        <!-- Active Page Link Style for Home and Mobile Visits -->
+                        <li>
+                            <a href="hom.html" class="drawer-link flex items-center gap-3 px-3 py-2.5 rounded-xl font-medium text-brand-500 hover:text-brand-600 hover:bg-brand-50 transition-colors bg-brand-50/50">
+                                <i class="fa-solid fa-house-chimney-medical w-5 text-center text-brand-500"></i> Home and Mobile Visits
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Drawer Footer -->
+            <div class="p-5 border-t border-slate-100 bg-slate-50 text-center">
+                <a href="virtconsul.html" class="drawer-link w-full py-3 px-4 rounded-xl bg-brand-500 text-white font-semibold shadow-sm hover:bg-brand-600 transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-plus"></i> Book Appointment
+                </a>
+            </div>
+
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main class="flex-grow">
         
         <!-- Hero Section -->
-        <section class="py-16 md:py-24 bg-gradient-to-b from-mint-50/60 to-slate-50 border-b border-slate-100">
+        <section class="py-16 md:py-24 bg-gradient-to-b from-brand-50/60 to-slate-50 border-b border-slate-100">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <!-- Service Icon -->
-                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-mint-100 border border-mint-200/50 flex items-center justify-center text-mint-600 text-3xl shadow-sm">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-brand-100 border border-brand-200/50 flex items-center justify-center text-brand-500 text-3xl shadow-sm">
                     <i class="fa-solid fa-house-medical"></i>
                 </div>
                 
@@ -79,7 +247,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-mint-600 text-white font-semibold shadow-md hover:bg-mint-700 transition-all hover:shadow-lg">
+                    <a href="#book" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-500 text-white font-semibold shadow-md hover:bg-brand-600 transition-all hover:shadow-lg">
                         Schedule House Call
                     </a>
                     <a href="#services" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all">
@@ -93,7 +261,7 @@
         <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                    <span class="text-brand-500 font-bold uppercase tracking-wider text-xs bg-brand-100 px-3 py-1 rounded-full">
                         At-Home Care
                     </span>
                     <h2 class="text-3xl font-bold text-slate-900">
@@ -105,16 +273,16 @@
                     
                     <ul class="space-y-3 font-medium text-slate-700">
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            <i class="fa-solid fa-circle-check text-brand-500 text-lg"></i>
                             Eliminates carrier stress, car sickness, and busy waiting room encounters
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
+                            <i class="fa-solid fa-circle-check text-brand-500 text-lg"></i>
                             Ideal for multi-pet families needing simultaneous routine wellness exams
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-mint-600 text-lg"></i>
-                            Peaceful, peaceful hospice support and gentle in-home end-of-life care
+                            <i class="fa-solid fa-circle-check text-brand-500 text-lg"></i>
+                            Peaceful hospice support and gentle in-home end-of-life care
                         </li>
                     </ul>
                 </div>
@@ -122,30 +290,30 @@
                 <!-- Highlight Box -->
                 <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/80 space-y-6">
                     <h3 class="text-xl font-bold text-slate-900 flex items-center gap-3">
-                        <i class="fa-solid fa-van-shuttle text-mint-600"></i> Why Choose Mobile Visits?
+                        <i class="fa-solid fa-van-shuttle text-brand-500"></i> Why Choose Mobile Visits?
                     </h3>
                     <p class="text-slate-500 text-sm">
                         House calls offer distinct advantages for pet parents seeking personalized clinical attention:
                     </p>
                     <div class="space-y-3">
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
                             <span class="text-sm text-slate-700">Zero travel stress for fearful, reactive, or senior pets</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
                             <span class="text-sm text-slate-700">One-on-one time with your veterinarian without clinical rush</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
                             <span class="text-sm text-slate-700">Comprehensive home environment and lifestyle evaluation</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
                             <span class="text-sm text-slate-700">Convenient scheduling that fits seamlessly into your workday</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-mint-600 mt-1"></i>
+                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
                             <span class="text-sm text-slate-700">Reduced exposure to contagious illnesses in public settings</span>
                         </div>
                     </div>
@@ -163,8 +331,8 @@
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Service 1 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-500 flex items-center justify-center text-xl mb-4">
                             <i class="fa-solid fa-stethoscope"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 mb-2">Wellness & Physicals</h3>
@@ -172,8 +340,8 @@
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-500 flex items-center justify-center text-xl mb-4">
                             <i class="fa-solid fa-vial-circle-check"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 mb-2">Diagnostics & Bloodwork</h3>
@@ -181,8 +349,8 @@
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-500 flex items-center justify-center text-xl mb-4">
                             <i class="fa-solid fa-notes-medical"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 mb-2">Chronic Disease Care</h3>
@@ -190,8 +358,8 @@
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-mint-200 transition-colors">
-                        <div class="w-12 h-12 rounded-xl bg-mint-100 text-mint-600 flex items-center justify-center text-xl mb-4">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-brand-200 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-500 flex items-center justify-center text-xl mb-4">
                             <i class="fa-solid fa-hand-holding-heart"></i>
                         </div>
                         <h3 class="font-bold text-slate-900 mb-2">Hospice & Euthanasia</h3>
@@ -204,7 +372,7 @@
         <!-- Process Section -->
         <section id="process" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-mint-600 font-bold uppercase tracking-wider text-xs bg-mint-100 px-3 py-1 rounded-full">
+                <span class="text-brand-500 font-bold uppercase tracking-wider text-xs bg-brand-100 px-3 py-1 rounded-full">
                     How It Works
                 </span>
                 <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-2">Your Mobile Visit Experience</h2>
@@ -213,7 +381,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">1</div>
+                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold mb-6">1</div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Book & Verify Radius</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         Request your appointment online or by phone. We verify your address within our service area and confirm pre-visit details.
@@ -221,7 +389,7 @@
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">2</div>
+                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold mb-6">2</div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">We Arrive Ready</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         Our mobile veterinarian arrives with all necessary medical gear, vaccines, diagnostic kits, and treatments.
@@ -229,7 +397,7 @@
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                    <div class="w-10 h-10 rounded-full bg-mint-600 text-white flex items-center justify-center font-bold mb-6">3</div>
+                    <div class="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold mb-6">3</div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">Relaxed Consultation</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         Your pet receives focused examination and care in their favorite spot on the couch or rug, followed by digital record delivery.
@@ -240,16 +408,16 @@
 
         <!-- Booking CTA Section -->
         <section id="book" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-mint-600 to-mint-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
+            <div class="bg-gradient-to-br from-brand-500 to-brand-700 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
                 <h2 class="text-3xl font-bold">Ready to Book an At-Home Visit?</h2>
-                <p class="text-mint-100 max-w-xl mx-auto text-lg">
+                <p class="text-brand-100 max-w-xl mx-auto text-lg">
                     Contact our mobile care dispatch team to check availability in your neighborhood and secure your appointment.
                 </p>
                 <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="tel:+254741088855" class="bg-white text-mint-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-mint-50 transition-colors inline-flex items-center justify-center gap-2">
+                    <a href="tel:+254741088855" class="bg-white text-brand-700 font-bold px-8 py-3.5 rounded-xl shadow-md hover:bg-brand-50 transition-colors inline-flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call Mobile Coordinator
                     </a>
-                    <a href="mailto:chrismutavi152@gmail.com" class="bg-mint-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-mint-900/50 transition-colors inline-flex items-center justify-center gap-2">
+                    <a href="mailto:chrismutavi152@gmail.com" class="bg-brand-900/30 text-white border border-white/20 font-bold px-8 py-3.5 rounded-xl hover:bg-brand-900/50 transition-colors inline-flex items-center justify-center gap-2">
                         <i class="fa-solid fa-envelope"></i> Request House Visit
                     </a>
                 </div>
@@ -265,7 +433,7 @@
                     <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
                         <span>What geographic areas do mobile visits cover?</span>
                         <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                            <i class="fa-solid fa-chevron-down text-brand-500"></i>
                         </span>
                     </summary>
                     <p class="mt-4 text-slate-600 leading-relaxed text-sm">
@@ -277,7 +445,7 @@
                     <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
                         <span>What procedures cannot be performed at home?</span>
                         <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                            <i class="fa-solid fa-chevron-down text-brand-500"></i>
                         </span>
                     </summary>
                     <p class="mt-4 text-slate-600 leading-relaxed text-sm">
@@ -289,7 +457,7 @@
                     <summary class="flex items-center justify-between font-semibold text-slate-900 cursor-pointer">
                         <span>How should I prepare my home for the vet's arrival?</span>
                         <span class="transition group-open:rotate-180">
-                            <i class="fa-solid fa-chevron-down text-mint-600"></i>
+                            <i class="fa-solid fa-chevron-down text-brand-500"></i>
                         </span>
                     </summary>
                     <p class="mt-4 text-slate-600 leading-relaxed text-sm">
@@ -305,18 +473,94 @@
     <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-paw text-mint-600"></i>
+                <i class="fa-solid fa-paw text-brand-500"></i>
                 <p class="text-slate-500 text-sm">
                     &copy; 2026 Pearlvets. All rights reserved.
                 </p>
             </div>
             <div class="flex items-center gap-6 text-slate-400 text-sm">
-                <a href="#" class="hover:text-mint-600 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-mint-600 transition-colors">Terms of Service</a>
-                <a href="#" class="hover:text-mint-600 transition-colors">Contact</a>
+                <a href="#" class="hover:text-brand-500 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-brand-500 transition-colors">Terms of Service</a>
+                <a href="contact.html" class="hover:text-brand-500 transition-colors">Contact</a>
             </div>
         </div>
     </footer>
+
+    <!-- Hamburger Menu Interactive Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('menu-toggle-btn');
+            const drawerOverlay = document.getElementById('drawer-overlay');
+            const drawerPanel = document.getElementById('drawer-panel');
+            const drawerCloseBtn = document.getElementById('drawer-close-btn');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            function openMenu() {
+                drawerOverlay.classList.remove('hidden');
+                setTimeout(() => {
+                    drawerOverlay.classList.remove('opacity-0');
+                    drawerPanel.classList.remove('translate-x-full');
+                }, 10);
+                toggleBtn.setAttribute('aria-expanded', 'true');
+                if (openIcon && closeIcon) {
+                    openIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                }
+                document.body.classList.add('overflow-hidden');
+            }
+
+            function closeMenu() {
+                drawerPanel.classList.add('translate-x-full');
+                drawerOverlay.classList.add('opacity-0');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+                if (openIcon && closeIcon) {
+                    openIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+                document.body.classList.remove('overflow-hidden');
+                setTimeout(() => {
+                    drawerOverlay.classList.add('hidden');
+                }, 300);
+            }
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    const isOpen = toggleBtn.getAttribute('aria-expanded') === 'true';
+                    if (isOpen) {
+                        closeMenu();
+                    } else {
+                        openMenu();
+                    }
+                });
+            }
+
+            if (drawerCloseBtn) {
+                drawerCloseBtn.addEventListener('click', closeMenu);
+            }
+
+            if (drawerOverlay) {
+                drawerOverlay.addEventListener('click', (e) => {
+                    if (e.target === drawerOverlay) {
+                        closeMenu();
+                    }
+                });
+            }
+
+            // Automatically close drawer when clicking any menu link inside it
+            document.querySelectorAll('.drawer-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    closeMenu();
+                });
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && toggleBtn && toggleBtn.getAttribute('aria-expanded') === 'true') {
+                    closeMenu();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
