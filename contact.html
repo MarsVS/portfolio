@@ -57,6 +57,7 @@
 </head>
 <body class="bg-brand-lightBg font-sans text-slate-800 antialiased selection:bg-brand-teal selection:text-white min-h-screen flex flex-col justify-between">
 
+    <!-- Header / Navigation -->
     <nav class="bg-brand-navy text-white sticky top-0 z-50 border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -108,245 +109,195 @@
         </div>
     </nav>
 
-    <section class="py-16 sm:py-20 bg-white border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
-            <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-xs grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                
-                <div class="md:col-span-5 flex justify-center">
-                    <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                         alt="Locum Veterinary Surgeon" 
-                         class="rounded-2xl object-cover h-64 sm:h-72 w-full shadow-md">
-                </div>
+    <!-- Main Content Area -->
+    <main class="grow">
+        <!-- Let's Work Together & Contact Form Section -->
+        <section id="contact" class="py-16 sm:py-24 bg-white border-t border-slate-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                    
+                    <div class="md:col-span-5 space-y-6">
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                                Let's Work Together<br>I'm Here to Help.
+                            </h2>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2">
+                                Whether you are a pet owner, clinic, organization or partner, I'd love to hear from you.
+                            </p>
+                        </div>
 
-                <div class="md:col-span-7 space-y-4">
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                        Need a Locum<br>Veterinary Surgeon?
+                        <div class="space-y-4">
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Pet Owners</h3>
+                                    <p class="text-[11px] text-slate-500">Book a consultation or ask a question</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
+                                    <i class="fa-solid fa-stethoscope"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Clinics & Hospitals</h3>
+                                    <p class="text-[11px] text-slate-500">Request locum or surgical support</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Organizations</h3>
+                                    <p class="text-[11px] text-slate-500">Partnerships & collaborations</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-xs sm:text-sm">General Inquiries</h3>
+                                    <p class="text-[11px] text-slate-500">Send me a message</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="pt-4 space-y-2 border-t border-slate-100">
+                            <a href="tel:+254741088855" class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 hover:text-brand-teal transition">
+                                <i class="fa-solid fa-phone text-brand-teal"></i> +254 741 088 855
+                            </a>
+                            <a href="mailto:chrismutavi152@gmail.com" class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 hover:text-brand-teal transition break-all">
+                                <i class="fa-solid fa-envelope text-brand-teal"></i> chrismutavi152@gmail.com
+                            </a>
+                        </div>
+
+                        <div class="flex gap-3 pt-2">
+                            <a href="facebook.com" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="instagram.com" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="linkedin.com" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="whatsapp.com" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-7 bg-brand-lightBg p-6 sm:p-8 rounded-3xl border border-slate-200/80">
+                        <form class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Your Name" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Email Address" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition">
+                            </div>
+                            <div>
+                                <select class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition text-slate-500">
+                                    <option value="">What do you need?</option>
+                                    <option value="consultation">Book a Consultation</option>
+                                    <option value="locum">Request Locum Surgeon</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea rows="4" placeholder="Your Message" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition resize-none"></textarea>
+                            </div>
+                            <button type="button" class="w-full bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold py-3.5 rounded-xl transition shadow-xs">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section ("What Pet Parents Say") -->
+        <section class="py-16 sm:py-24 bg-brand-lightBg border-t border-slate-200">
+            <div class="max-w-2xl mx-auto px-4 sm:px-6 space-y-8">
+                
+                <div class="flex items-center gap-4">
+                    <span class="text-brand-navy text-4xl sm:text-5xl font-black leading-none select-none">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
+                        What Pet Parents Say
                     </h2>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        I offer reliable locum and emergency veterinary services for clinics and hospitals.
-                    </p>
-
-                    <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
-                        <li class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
-                            Locum & Relief Services
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
-                            Emergency & After-hours Coverage
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
-                            Surgical Assistance
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
-                            Weekend & Holiday Cover
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-circle-check text-brand-teal text-base"></i>
-                            Professional, Dependable, Discreet
-                        </li>
-                    </ul>
-
-                    <div class="pt-2">
-                        <a href="locum.html" class="inline-block bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-xl transition shadow-xs">
-                            Request a Locum
-                        </a>
-                    </div>
-
-                    <p class="text-[11px] text-slate-400 font-medium flex items-center gap-1.5 pt-1">
-                        <i class="fa-regular fa-clock"></i> Available on short notice. Send request and I will get back to you.
-                    </p>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 sm:py-24 bg-brand-lightBg border-t border-slate-200">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 space-y-8">
-            
-            <div class="flex items-center gap-4">
-                <span class="text-brand-navy text-4xl sm:text-5xl font-black leading-none select-none">
-                    <i class="fa-solid fa-quote-left"></i>
-                </span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
-                    What Pet Parents Say
-                </h2>
-            </div>
-
-            <div class="space-y-4">
-                
-                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 shadow-xs space-y-3">
-                    <div class="flex items-center justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sarah W." class="w-12 h-12 rounded-full object-cover shrink-0">
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">Sarah W.</h3>
-                                <p class="text-xs text-slate-400 font-medium">Max <span class="text-slate-400">(Golden Retriever)</span></p>
+                <div class="space-y-4">
+                    
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 shadow-xs space-y-3">
+                        <div class="flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sarah W." class="w-12 h-12 rounded-full object-cover shrink-0">
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">Sarah W.</h3>
+                                    <p class="text-xs text-slate-400 font-medium">Max <span class="text-slate-400">(Golden Retriever)</span></p>
+                                </div>
+                            </div>
+                            <div class="flex text-amber-400 text-xs gap-0.5 shrink-0">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <div class="flex text-amber-400 text-xs gap-0.5 shrink-0">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
-                        Dr. Christopher is amazing! He treated Max with so much care and explained everything clearly.
-                    </p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 shadow-xs space-y-3">
-                    <div class="flex items-center justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="James O." class="w-12 h-12 rounded-full object-cover shrink-0">
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">James O.</h3>
-                                <p class="text-xs text-slate-400 font-medium">Luna <span class="text-slate-400">(Domestic Shorthair)</span></p>
-                            </div>
-                        </div>
-                        <div class="flex text-amber-400 text-xs gap-0.5 shrink-0">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
-                        Professional, compassionate and always available. Highly recommend!
-                    </p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 shadow-xs space-y-3">
-                    <div class="flex items-center justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Linda A." class="w-12 h-12 rounded-full object-cover shrink-0">
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">Linda A.</h3>
-                                <p class="text-xs text-slate-400 font-medium">Rocky <span class="text-slate-400">(German Shepherd)</span></p>
-                            </div>
-                        </div>
-                        <div class="flex text-amber-400 text-xs gap-0.5 shrink-0">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
-                        Excellent surgeon and even better human being. Our go-to vet!
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="text-center pt-2">
-                <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl shadow-xs transition">
-                    View More Reviews
-                </button>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contact" class="py-16 sm:py-24 bg-white border-t border-slate-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
-                
-                <div class="md:col-span-5 space-y-6">
-                    <div>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                            Let's Work Together<br>I'm Here to Help.
-                        </h2>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2">
-                            Whether you are a pet owner, clinic, organization or partner, I'd love to hear from you.
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                            Dr. Christopher is amazing! He treated Max with so much care and explained everything clearly.
                         </p>
                     </div>
 
-                    <div class="space-y-4">
-                        
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
-                                <i class="fa-solid fa-user"></i>
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 shadow-xs space-y-3">
+                        <div class="flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="James O." class="w-12 h-12 rounded-full object-cover shrink-0">
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">James O.</h3>
+                                    <p class="text-xs text-slate-400 font-medium">Luna <span class="text-slate-400">(Domestic Shorthair)</span></p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Pet Owners</h3>
-                                <p class="text-[11px] text-slate-500">Book a consultation or ask a question</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
-                                <i class="fa-solid fa-stethoscope"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Clinics & Hospitals</h3>
-                                <p class="text-[11px] text-slate-500">Request locum or surgical support</p>
+                            <div class="flex text-amber-400 text-xs gap-0.5 shrink-0">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
-                                <i class="fa-solid fa-handshake"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Organizations</h3>
-                                <p class="text-[11px] text-slate-500">Partnerships & collaborations</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 shrink-0 text-xs mt-0.5">
-                                <i class="fa-solid fa-clock"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-slate-900 text-xs sm:text-sm">General Inquiries</h3>
-                                <p class="text-[11px] text-slate-500">Send me a message</p>
-                            </div>
-                        </div>
-
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                            Professional, compassionate and always available. Highly recommend!
+                        </p>
                     </div>
 
-                    <div class="pt-4 space-y-2 border-t border-slate-100">
-                        <a href="tel:+254741088855" class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 hover:text-brand-teal transition">
-                            <i class="fa-solid fa-phone text-brand-teal"></i> +254 741 088 855
-                        </a>
-                        <a href="mailto:chrismutavi152@gmail.com" class="flex items-center gap-3 text-xs sm:text-sm font-bold text-slate-800 hover:text-brand-teal transition break-all">
-                            <i class="fa-solid fa-envelope text-brand-teal"></i> chrismutavi152@gmail.com
-                        </a>
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-100 shadow-xs space-y-3">
+                        <div class="flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Linda A." class="w-12 h-12 rounded-full object-cover shrink-0">
+                                <div>
+                                    <h3 class="font-bold text-slate-900 text-sm sm:text-base leading-tight">Linda A.</h3>
+                                    <p class="text-xs text-slate-400 font-medium">Rocky <span class="text-slate-400">(German Shepherd)</span></p>
+                                </div>
+                            </div>
+                            <div class="flex text-amber-400 text-xs gap-0.5 shrink-0">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                            Excellent surgeon and even better human being. Our go-to vet!
+                        </p>
                     </div>
 
-                    <div class="flex gap-3 pt-2">
-                        <a href="facebook.com" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="instagram.com" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="linkedin.com" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="whatsapp.com" class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-brand-teal hover:text-white transition text-sm"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
                 </div>
 
-                <div class="md:col-span-7 bg-brand-lightBg p-6 sm:p-8 rounded-3xl border border-slate-200/80">
-                    <form class="space-y-4">
-                        <div>
-                            <input type="text" placeholder="Your Name" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Email Address" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition">
-                        </div>
-                        <div>
-                            <select class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition text-slate-500">
-                                <option value="">What do you need?</option>
-                                <option value="consultation">Book a Consultation</option>
-                                <option value="locum">Request Locum Surgeon</option>
-                                <option value="general">General Inquiry</option>
-                            </select>
-                        </div>
-                        <div>
-                            <textarea rows="4" placeholder="Your Message" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:border-brand-teal transition resize-none"></textarea>
-                        </div>
-                        <button type="button" class="w-full bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold py-3.5 rounded-xl transition shadow-xs">
-                            Send Message
-                        </button>
-                    </form>
+                <div class="text-center pt-2">
+                    <button class="bg-brand-teal hover:bg-brand-tealHover text-white text-xs sm:text-sm font-semibold px-8 py-3 rounded-xl shadow-xs transition">
+                        View More Reviews
+                    </button>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
+    <!-- Footer -->
     <footer class="bg-brand-navy text-white pt-16 pb-8 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
